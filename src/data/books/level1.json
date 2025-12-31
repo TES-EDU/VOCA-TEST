@@ -1,0 +1,78 @@
+{
+    "id": "book_1",
+    "title": "기초 영단어 (Basic English)",
+    "units": [
+        {
+            "id": "unit_1_1",
+            "title": "Day 1 - 과일과 채소",
+            "words": [
+                {
+                    "id": 101,
+                    "word": "apple",
+                    "meaning": "사과",
+                    "example": "I ate an apple."
+                },
+                {
+                    "id": 102,
+                    "word": "banana",
+                    "meaning": "바나나",
+                    "example": "Bananas are yellow."
+                },
+                {
+                    "id": 103,
+                    "word": "carrot",
+                    "meaning": "당근",
+                    "example": "Rabbits like carrots."
+                },
+                {
+                    "id": 104,
+                    "word": "grape",
+                    "meaning": "포도",
+                    "example": "Grapes can be purple or green."
+                },
+                {
+                    "id": 105,
+                    "word": "onion",
+                    "meaning": "양파",
+                    "example": "Onions make me cry."
+                }
+            ]
+        },
+        {
+            "id": "unit_1_2",
+            "title": "Day 2 - 동물",
+            "words": [
+                {
+                    "id": 201,
+                    "word": "dog",
+                    "meaning": "개",
+                    "example": "The dog barked."
+                },
+                {
+                    "id": 202,
+                    "word": "cat",
+                    "meaning": "고양이",
+                    "example": "The cat meowed."
+                },
+                {
+                    "id": 203,
+                    "word": "elephant",
+                    "meaning": "코끼리",
+                    "example": "Elephants are huge."
+                },
+                {
+                    "id": 204,
+                    "word": "lion",
+                    "meaning": "사자",
+                    "example": "The lion is the king of the jungle."
+                },
+                {
+                    "id": 205,
+                    "word": "tiger",
+                    "meaning": "호랑이",
+                    "example": "Tigers have stripes."
+                }
+            ]
+        }
+    ]
+}

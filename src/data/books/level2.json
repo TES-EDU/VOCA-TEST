@@ -1,0 +1,30 @@
+{
+    "id": "book_2",
+    "title": "중급 영단어 (Intermediate)",
+    "units": [
+        {
+            "id": "unit_2_1",
+            "title": "Day 1 - 감정",
+            "words": [
+                {
+                    "id": 301,
+                    "word": "happy",
+                    "meaning": "행복한",
+                    "example": "I am happy today."
+                },
+                {
+                    "id": 302,
+                    "word": "sad",
+                    "meaning": "슬픈",
+                    "example": "The movie was sad."
+                },
+                {
+                    "id": 303,
+                    "word": "angry",
+                    "meaning": "화난",
+                    "example": "He was angry at the delay."
+                }
+            ]
+        }
+    ]
+}
