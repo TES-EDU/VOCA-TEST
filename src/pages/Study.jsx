@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useData } from '../context/DataContext';
-import { ChevronLeft, ChevronRight, RotateCw, PlayCircle, Settings2 } from 'lucide-react';
+import { ChevronLeft, ChevronRight, PlayCircle, Settings2 } from 'lucide-react';
 import { playTTS } from '../utils/tts';
 
 const Study = () => {
@@ -9,7 +9,7 @@ const Study = () => {
     const navigate = useNavigate();
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isFlipped, setIsFlipped] = useState(false);
-    const [isKoreanFirst, setIsKoreanFirst] = useState(false); // Toggle state
+    const [isKoreanFirst, setIsKoreanFirst] = useState(false);
 
     if (!selectedUnit) {
         navigate('/dashboard');
@@ -55,7 +55,6 @@ const Study = () => {
         setIsFlipped(false);
     };
 
-    // Determine what to show on Front and Back based on mode
     const frontContent = isKoreanFirst ? (
         <>
             <span className="text-sm text-indigo-500 font-semibold mb-4 uppercase tracking-wider">Meaning</span>
@@ -87,9 +86,9 @@ const Study = () => {
     );
 
     return (
-        <div className="flex flex-col h-full animate-fade-in">
+        <div className="flex flex-col h-[calc(100dvh-120px)] animate-fade-in">
             {/* Top Bar with Toggle */}
-            <div className="flex justify-between items-center mb-4">
+            <div className="flex justify-between items-center mb-4 shrink-0">
                 <div className="text-sm text-slate-500">
                     {currentIndex + 1} / {words.length}
                 </div>
@@ -103,7 +102,7 @@ const Study = () => {
             </div>
 
             {/* Progress Bar */}
-            <div className="mb-6">
+            <div className="mb-4 shrink-0">
                 <div className="h-2 bg-slate-100 rounded-full overflow-hidden">
                     <div
                         className="h-full bg-indigo-500 transition-all duration-300 ease-out"
@@ -112,21 +111,12 @@ const Study = () => {
                 </div>
             </div>
 
-            {/* Flashcard Area */}
-            <div className="flex-1 flex flex-col justify-center perspective-1000 mb-8">
+            {/* Flashcard Area - Flexible */}
+            <div className="flex-1 flex flex-col justify-center perspective-1000 min-h-0 overflow-hidden">
                 <div
-                    className="relative w-full aspect-[4/5] max-h-[400px] cursor-pointer group perspective-1000"
+                    className="relative w-full aspect-[4/5] max-h-[50vh] cursor-pointer group perspective-1000 mx-auto"
                     onClick={() => {
                         if (!isFlipped) {
-                            // Play sound only when flipping to reveal (or always if preferred)
-                            // Assuming we want to hear the English word.
-                            // If isKoreanFirst is true, Front is Meaning, Back is Word. So flipping reveals Word -> Play Sound.
-                            // If isKoreanFirst is false, Front is Word, Back is Meaning. So flipping reveals Meaning.
-                            // User request: "When card is flipped, sound should play".
-                            // Usually we want to hear the English word.
-
-                            // Let's play the English word regardless of side, or only when English is visible?
-                            // "암기에서도 카드를 뒤집으면 소리가 나면 좋겠다" -> Likely implies hearing the pronunciation.
                             playTTS(currentWord.word);
                         }
                         setIsFlipped(!isFlipped);
@@ -134,21 +124,21 @@ const Study = () => {
                 >
                     <div className={`relative w-full h-full duration-500 preserve-3d transition-all ${isFlipped ? 'rotate-y-180' : ''}`}>
                         {/* Front */}
-                        <div className="absolute w-full h-full backface-hidden bg-white rounded-3xl shadow-xl border border-slate-100 flex flex-col items-center justify-center p-8">
+                        <div className="absolute w-full h-full backface-hidden bg-white rounded-3xl shadow-xl border border-slate-100 flex flex-col items-center justify-center p-6">
                             {frontContent}
                             <p className="text-slate-400 text-sm mt-auto">Tap to flip</p>
                         </div>
 
                         {/* Back */}
-                        <div className="absolute w-full h-full backface-hidden rotate-y-180 bg-indigo-600 rounded-3xl shadow-xl flex flex-col items-center justify-center p-8 text-white">
+                        <div className="absolute w-full h-full backface-hidden rotate-y-180 bg-indigo-600 rounded-3xl shadow-xl flex flex-col items-center justify-center p-6 text-white">
                             {backContent}
                         </div>
                     </div>
                 </div>
             </div>
 
-            {/* Controls */}
-            <div className="flex items-center justify-between gap-4">
+            {/* Controls - Fixed at bottom with safe area */}
+            <div className="flex items-center justify-between gap-4 pt-4 pb-6 shrink-0">
                 <button
                     onClick={handlePrev}
                     disabled={currentIndex === 0}

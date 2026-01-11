@@ -93,7 +93,8 @@ const Result = () => {
                 meaning: w.meaning,
                 example: w.example
             }));
-            navigate('/test', { state: { words: cleanWords } });
+            // Navigate directly to /study/spelling with words to avoid redirect losing state
+            navigate('/study/spelling', { state: { words: cleanWords } });
         }
     };
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useData } from '../context/DataContext';
 import { CheckCircle, XCircle } from 'lucide-react';
@@ -8,30 +8,36 @@ const Test = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
-    // Track if this is a retry session
-    const isRetry = !!location.state?.words;
+    // Use ref to capture initial state and prevent re-renders from changing it
+    const initialWordsRef = useRef(location.state?.words);
+    const isRetry = initialWordsRef.current && initialWordsRef.current.length > 0;
 
-    // Use words passed via state (retry mode) or default to unit words
     const [testWords, setTestWords] = useState([]);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [userInput, setUserInput] = useState('');
-    const [results, setResults] = useState([]); // { word, isCorrect, userAnswer }
+    const [results, setResults] = useState([]);
     const [showFeedback, setShowFeedback] = useState(false);
+    const [isInitialized, setIsInitialized] = useState(false);
 
     useEffect(() => {
-        // Prioritize retry words from location state
-        if (location.state?.words && location.state.words.length > 0) {
-            console.log('Starting retry test with words:', location.state.words);
-            setTestWords(location.state.words);
-        } else if (selectedUnit) {
-            // Normal test: Shuffle words from unit
+        // Only initialize once
+        if (isInitialized) return;
+
+        if (initialWordsRef.current && initialWordsRef.current.length > 0) {
+            // Retry mode: use passed words
+            console.log('Starting retry test with', initialWordsRef.current.length, 'words');
+            setTestWords(initialWordsRef.current);
+            setIsInitialized(true);
+        } else if (selectedUnit && selectedUnit.words) {
+            // Normal test: shuffle unit words
             const shuffled = [...selectedUnit.words].sort(() => Math.random() - 0.5);
             setTestWords(shuffled);
+            setIsInitialized(true);
         } else {
-            // No unit selected and no retry words -> go home
+            // No data available
             navigate('/dashboard');
         }
-    }, [selectedUnit, location.state, navigate]);
+    }, [selectedUnit, navigate, isInitialized]);
 
     if (testWords.length === 0) return null;
 
@@ -47,14 +53,13 @@ const Test = () => {
             ...currentWord,
             isCorrect,
             userAnswer: userInput,
-            testType: 'spell' // Reuse spell type for retry
+            testType: 'spell'
         };
 
         const newResults = [...results, result];
         setResults(newResults);
         setShowFeedback(true);
 
-        // Auto advance after delay
         setTimeout(() => {
             if (currentIndex < testWords.length - 1) {
                 setCurrentIndex(prev => prev + 1);
@@ -63,16 +68,14 @@ const Test = () => {
             } else {
                 // Test finished
                 if (!isRetry) {
-                    // Only save main test results to context
                     saveTestResults('spell', newResults);
                 }
 
                 navigate('/result', {
                     state: {
-                        // Pass results for immediate display
                         results: newResults,
                         totalWords: testWords.length,
-                        isRetryResult: isRetry, // Flag to tell Result page this is a retry view
+                        isRetryResult: isRetry,
                         score: Math.round((newResults.filter(r => r.isCorrect).length / testWords.length) * 100)
                     }
                 });
@@ -81,7 +84,7 @@ const Test = () => {
     };
 
     return (
-        <div className="flex flex-col h-[calc(100vh-100px)] animate-fade-in max-w-md mx-auto">
+        <div className="flex flex-col h-[calc(100dvh-120px)] animate-fade-in max-w-md mx-auto">
             {/* Progress */}
             <div className="mb-8">
                 <div className="flex justify-between text-sm text-slate-500 mb-2">
