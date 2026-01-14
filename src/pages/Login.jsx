@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useData } from '../context/DataContext';
 import { UserCircle, Lock } from 'lucide-react';
 
-const ADMIN_PASSWORD = 'tesengl403';
+const ADMIN_PASSWORD = '1234';
 
 const Login = () => {
     const [name, setName] = useState('');

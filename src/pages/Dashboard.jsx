@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useData } from '../context/DataContext';
 import { Book, ChevronRight, ChevronDown, GraduationCap, CheckCircle2 } from 'lucide-react';
+import { ProgressRoadmap } from './ReportCard';
 
 const Dashboard = () => {
-    const { textbooks, setSelectedTextbook, setSelectedUnit, progress } = useData();
+    const { textbooks, setSelectedTextbook, setSelectedUnit, progress, selectedTextbook, selectedUnit } = useData();
     const navigate = useNavigate();
 
     // Track which textbooks are expanded (default: first one expanded)
@@ -15,6 +16,12 @@ const Dashboard = () => {
         }
         return initial;
     });
+    const [showRoadmap, setShowRoadmap] = useState(true);
+
+    // Extract current level and unit for roadmap
+    const levelMatch = selectedTextbook?.title?.match(/Lv\.?(\d+)/i);
+    const currentLevel = levelMatch ? parseInt(levelMatch[1]) : 3;
+    const unitNumber = selectedUnit?.title?.match(/\d+/) ? parseInt(selectedUnit.title.match(/\d+/)[0]) : 1;
 
     const handleUnitSelect = (textbook, unit) => {
         setSelectedTextbook(textbook);
@@ -34,6 +41,16 @@ const Dashboard = () => {
             <div className="flex items-center justify-between">
                 <h2 className="text-xl font-bold text-slate-800">Select a Course</h2>
             </div>
+
+            {/* Progress Roadmap */}
+            <ProgressRoadmap
+                currentLevel={currentLevel}
+                currentUnit={unitNumber}
+                isOpen={showRoadmap}
+                onToggle={() => setShowRoadmap(!showRoadmap)}
+            />
+
+
 
             <div className="space-y-4">
                 {textbooks.map((book) => {
