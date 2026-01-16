@@ -1,128 +1,74 @@
-/**
- * Excel to JSON Converter for Vocabulary Data
- * 
- * Usage:
- *   node scripts/excel-to-json.js --input="path/to/file.xlsx" --book="book_3" --title="TES Step Up! VOCA Lv.3"
- * 
- * Excel Format:
- *   - Each Sheet = One Unit (Sheet1 = Unit 1, Sheet2 = Unit 2, ...)
- *   - Column A: English word
- *   - Column B: Korean meaning
- *   - Column C: Example sentence
- *   - Column D: Example translation
- */
-
-import XLSX from 'xlsx';
-import fs from 'fs';
-import path from 'path';
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+const XLSX = require('xlsx');
+import { join, dirname } from 'path';
+import { writeFileSync, readdirSync, existsSync, mkdirSync } from 'fs';
 import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const PROJECT_ROOT = join(__dirname, '..');
+const DATA_TEMPLATE_DIR = join(PROJECT_ROOT, 'data-template');
+const OUTPUT_DIR = join(PROJECT_ROOT, 'src', 'data', 'books');
 
-// Parse command line arguments
-function parseArgs() {
-    const args = {};
-    process.argv.slice(2).forEach(arg => {
-        const [key, value] = arg.replace('--', '').split('=');
-        args[key] = value;
-    });
-    return args;
+// Ensure output directory exists
+if (!existsSync(OUTPUT_DIR)) {
+    mkdirSync(OUTPUT_DIR, { recursive: true });
 }
 
-function convertExcelToJson(inputPath, bookId, bookTitle) {
-    // Read Excel file
-    const workbook = XLSX.readFile(inputPath);
+const files = readdirSync(DATA_TEMPLATE_DIR).filter(f => f.match(/TES_VOCA_Lv\d+\.xlsx/));
 
-    const units = [];
-    const bookNum = bookId.split('_')[1] || '1';
+console.log(`Found ${files.length} Excel files in ${DATA_TEMPLATE_DIR}`);
 
-    workbook.SheetNames.forEach((sheetName, index) => {
-        const unitNum = index + 1;
-        const sheet = workbook.Sheets[sheetName];
+files.forEach(file => {
+    const levelMatch = file.match(/Lv(\d+)/);
+    if (!levelMatch) return;
+    const level = parseInt(levelMatch[1]);
+    const bookId = `book_${level}`;
+    const filePath = join(DATA_TEMPLATE_DIR, file);
 
-        // Convert sheet to JSON array (skip header if exists)
-        const rows = XLSX.utils.sheet_to_json(sheet, { header: 1 });
+    console.log(`Processing Lv.${level} from ${file}...`);
 
-        // Check if first row looks like a header
-        const startRow = (rows[0] && typeof rows[0][0] === 'string' &&
-            rows[0][0].toLowerCase().includes('word')) ? 1 : 0;
+    const workbook = XLSX.readFile(filePath);
+    const units = workbook.SheetNames.map((sheetName, i) => {
+        const unitNum = i + 1;
+        const ws = workbook.Sheets[sheetName];
+        // header: 1 returns array of arrays [ [row1], [row2], ... ]
+        const rows = XLSX.utils.sheet_to_json(ws, { header: 1 });
 
-        const words = [];
-        for (let i = startRow; i < rows.length; i++) {
-            const row = rows[i];
-            if (!row || !row[0]) continue; // Skip empty rows
+        const words = rows.map((row, idx) => {
+            // Skip empty rows or rows without a word in first column
+            if (!row || row.length === 0 || !row[0]) return null;
 
-            const wordId = parseInt(`${bookNum}${String(unitNum).padStart(2, '0')}${String(i - startRow + 1).padStart(2, '0')}`);
+            // ID Generation: Level + Unit(2) + Word(2)
+            // e.g. Lv1 Unit1 Word1 -> 10101
+            const wordId = parseInt(`${level}${String(unitNum).padStart(2, '0')}${String(idx + 1).padStart(2, '0')}`);
 
-            words.push({
+            return {
                 id: wordId,
-                word: String(row[0] || '').trim(),
+                word: String(row[0]).trim(),
                 meaning: String(row[1] || '').trim(),
                 example: String(row[2] || '').trim(),
                 exampleMeaning: String(row[3] || '').trim()
-            });
-        }
+            };
+        }).filter(w => w !== null);
 
-        units.push({
-            id: `unit_${bookNum}_${unitNum}`,
+        // Remove header row if it exists and looks like a header (e.g., contains 'word' or 'child' if we mistakenly indentified data as header before)
+        // Based on inspection, the first row IS data ("child"), so we keep it.
+
+        return {
+            id: `unit_${level}_${unitNum}`,
             title: `Unit ${String(unitNum).padStart(2, '0')}`,
             words: words
-        });
+        };
     });
 
-    return {
+    const bookData = {
         id: bookId,
-        title: bookTitle,
+        title: `TES Step Up! VOCA Lv.${level}`,
         units: units
     };
-}
 
-function main() {
-    const args = parseArgs();
-
-    if (!args.input) {
-        console.error('Error: --input is required');
-        console.log('Usage: node scripts/excel-to-json.js --input="path/to/file.xlsx" --book="book_3" --title="Book Title"');
-        process.exit(1);
-    }
-
-    const inputPath = path.resolve(args.input);
-    const bookId = args.book || 'book_1';
-    const bookTitle = args.title || 'Vocabulary Book';
-
-    if (!fs.existsSync(inputPath)) {
-        console.error(`Error: File not found: ${inputPath}`);
-        process.exit(1);
-    }
-
-    console.log(`Converting: ${inputPath}`);
-    console.log(`Book ID: ${bookId}`);
-    console.log(`Book Title: ${bookTitle}`);
-
-    try {
-        const result = convertExcelToJson(inputPath, bookId, bookTitle);
-
-        // Output filename based on book ID
-        const outputDir = path.join(__dirname, '..', 'src', 'data', 'books');
-        const outputPath = path.join(outputDir, `${bookId.replace('book_', 'level')}.json`);
-
-        // Ensure output directory exists
-        if (!fs.existsSync(outputDir)) {
-            fs.mkdirSync(outputDir, { recursive: true });
-        }
-
-        // Write JSON file
-        fs.writeFileSync(outputPath, JSON.stringify(result, null, 4), 'utf8');
-
-        console.log(`\n✅ Success! Output: ${outputPath}`);
-        console.log(`   Units: ${result.units.length}`);
-        console.log(`   Total Words: ${result.units.reduce((sum, u) => sum + u.words.length, 0)}`);
-
-    } catch (error) {
-        console.error('Error during conversion:', error.message);
-        process.exit(1);
-    }
-}
-
-main();
+    const outputPath = join(OUTPUT_DIR, `level${level}.json`);
+    writeFileSync(outputPath, JSON.stringify(bookData, null, 4));
+    console.log(`Created ${outputPath} with ${units.length} units`);
+});

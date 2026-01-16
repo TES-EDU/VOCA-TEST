@@ -1,76 +1,4384 @@
 {
     "id": "book_1",
-    "title": "기초 영단어 (Basic English)",
+    "title": "TES Step Up! VOCA Lv.1",
     "units": [
         {
             "id": "unit_1_1",
-            "title": "Day 1 - 과일과 채소",
+            "title": "Unit 01",
             "words": [
                 {
-                    "id": 101,
-                    "word": "apple",
-                    "meaning": "사과",
-                    "example": "I ate an apple."
+                    "id": 10101,
+                    "word": "child",
+                    "meaning": "n. 아이, 어린이",
+                    "example": "The child is cute.",
+                    "exampleMeaning": "그 아이는 귀여워."
                 },
                 {
-                    "id": 102,
-                    "word": "banana",
-                    "meaning": "바나나",
-                    "example": "Bananas are yellow."
+                    "id": 10102,
+                    "word": "day",
+                    "meaning": "n. 날, 하루",
+                    "example": "Today is a good day.",
+                    "exampleMeaning": "오늘은 좋은 날이야."
                 },
                 {
-                    "id": 103,
-                    "word": "carrot",
-                    "meaning": "당근",
-                    "example": "Rabbits like carrots."
+                    "id": 10103,
+                    "word": "wear",
+                    "meaning": "v. 입다, 신다, 쓰다",
+                    "example": "I wear a hat.",
+                    "exampleMeaning": "나는 모자를 써."
                 },
                 {
-                    "id": 104,
-                    "word": "grape",
-                    "meaning": "포도",
-                    "example": "Grapes can be purple or green."
+                    "id": 10104,
+                    "word": "shelf",
+                    "meaning": "n. 선반",
+                    "example": "Put it on the shelf.",
+                    "exampleMeaning": "선반 위에 놓아."
                 },
                 {
-                    "id": 105,
-                    "word": "onion",
-                    "meaning": "양파",
-                    "example": "Onions make me cry."
+                    "id": 10105,
+                    "word": "have",
+                    "meaning": "v. 가지다",
+                    "example": "I have a toy.",
+                    "exampleMeaning": "나는 장난감을 가지고 있어."
+                },
+                {
+                    "id": 10106,
+                    "word": "loud",
+                    "meaning": "adj. (소리가) 큰, 시끄러운",
+                    "example": "It is loud.",
+                    "exampleMeaning": "그건 시끄러워."
+                },
+                {
+                    "id": 10107,
+                    "word": "soft",
+                    "meaning": "adj. 부드러운, 푹신한",
+                    "example": "My pillow is soft.",
+                    "exampleMeaning": "내 베개는 푹신해."
+                },
+                {
+                    "id": 10108,
+                    "word": "bicycle",
+                    "meaning": "n. 자전거",
+                    "example": "I ride a bicycle.",
+                    "exampleMeaning": "나는 자전거를 타."
+                },
+                {
+                    "id": 10109,
+                    "word": "dream",
+                    "meaning": "v. 꿈꾸다, n. (장래의) 꿈, 이상",
+                    "example": "I dream at night.",
+                    "exampleMeaning": "나는 밤에 꿈을 꿔."
+                },
+                {
+                    "id": 10110,
+                    "word": "bowl",
+                    "meaning": "n. (우묵한) 그릇",
+                    "example": "This is a bowl.",
+                    "exampleMeaning": "이건 그릇이야."
+                },
+                {
+                    "id": 10111,
+                    "word": "slow",
+                    "meaning": "adj. 느린",
+                    "example": "The turtle is slow.",
+                    "exampleMeaning": "거북이는 느려."
+                },
+                {
+                    "id": 10112,
+                    "word": "clock",
+                    "meaning": "n. 시계",
+                    "example": "I see a clock.",
+                    "exampleMeaning": "나는 시계를 봐."
+                },
+                {
+                    "id": 10113,
+                    "word": "puppy",
+                    "meaning": "n. 강아지",
+                    "example": "I have a puppy.",
+                    "exampleMeaning": "나는 강아지가 있어."
+                },
+                {
+                    "id": 10114,
+                    "word": "fun",
+                    "meaning": "n. 재미, 즐거움, adj. 재미있는",
+                    "example": "This game is fun.",
+                    "exampleMeaning": "이 게임은 재미있어."
+                },
+                {
+                    "id": 10115,
+                    "word": "lunch",
+                    "meaning": "n. 점심 식사",
+                    "example": "I eat lunch.",
+                    "exampleMeaning": "나는 점심을 먹어."
+                },
+                {
+                    "id": 10116,
+                    "word": "family",
+                    "meaning": "n. 가족",
+                    "example": "I love my family.",
+                    "exampleMeaning": "나는 가족을 사랑해."
+                },
+                {
+                    "id": 10117,
+                    "word": "call",
+                    "meaning": "v. 전화하다, 부르다",
+                    "example": "Call me, please.",
+                    "exampleMeaning": "전화해 줘."
+                },
+                {
+                    "id": 10118,
+                    "word": "run",
+                    "meaning": "v. 달리다",
+                    "example": "I run fast.",
+                    "exampleMeaning": "나는 빨리 달려."
+                },
+                {
+                    "id": 10119,
+                    "word": "many",
+                    "meaning": "adj. 많은",
+                    "example": "I have many books.",
+                    "exampleMeaning": "나는 책이 많아."
+                },
+                {
+                    "id": 10120,
+                    "word": "store",
+                    "meaning": "n. 가게",
+                    "example": "We go to the store.",
+                    "exampleMeaning": "우리는 가게에 가."
                 }
             ]
         },
         {
             "id": "unit_1_2",
-            "title": "Day 2 - 동물",
+            "title": "Unit 02",
             "words": [
                 {
-                    "id": 201,
-                    "word": "dog",
-                    "meaning": "개",
-                    "example": "The dog barked."
+                    "id": 10201,
+                    "word": "bath",
+                    "meaning": "n. 목욕",
+                    "example": "I take a bath.",
+                    "exampleMeaning": "나는 목욕을 해."
                 },
                 {
-                    "id": 202,
-                    "word": "cat",
-                    "meaning": "고양이",
-                    "example": "The cat meowed."
+                    "id": 10202,
+                    "word": "kitchen",
+                    "meaning": "n. 부엌, 주방",
+                    "example": "This is the kitchen.",
+                    "exampleMeaning": "여기는 부엌이야."
                 },
                 {
-                    "id": 203,
+                    "id": 10203,
+                    "word": "eat",
+                    "meaning": "v. 먹다",
+                    "example": "I eat rice.",
+                    "exampleMeaning": "나는 밥을 먹어."
+                },
+                {
+                    "id": 10204,
+                    "word": "school",
+                    "meaning": "n. 학교",
+                    "example": "I go to school.",
+                    "exampleMeaning": "나는 학교에 가."
+                },
+                {
+                    "id": 10205,
+                    "word": "friend",
+                    "meaning": "n. 친구",
+                    "example": "He is my friend.",
+                    "exampleMeaning": "그는 내 친구야."
+                },
+                {
+                    "id": 10206,
+                    "word": "name",
+                    "meaning": "n. 이름",
+                    "example": "My name is Mina.",
+                    "exampleMeaning": "내 이름은 미나야."
+                },
+                {
+                    "id": 10207,
+                    "word": "cute",
+                    "meaning": "adj. 귀여운",
+                    "example": "The cat is cute.",
+                    "exampleMeaning": "그 고양이는 귀여워."
+                },
+                {
+                    "id": 10208,
+                    "word": "teach",
+                    "meaning": "v. 가르치다",
+                    "example": "I teach English.",
+                    "exampleMeaning": "나는 영어를 가르쳐."
+                },
+                {
+                    "id": 10209,
+                    "word": "dinner",
+                    "meaning": "n. 저녁 식사",
+                    "example": "We eat dinner.",
+                    "exampleMeaning": "우리는 저녁을 먹어."
+                },
+                {
+                    "id": 10210,
+                    "word": "sit",
+                    "meaning": "v. 앉다",
+                    "example": "Please sit down.",
+                    "exampleMeaning": "앉아 주세요."
+                },
+                {
+                    "id": 10211,
+                    "word": "fine",
+                    "meaning": "adj. 좋은, 괜찮은",
+                    "example": "This book is good.",
+                    "exampleMeaning": "이 책은 좋아."
+                },
+                {
+                    "id": 10212,
+                    "word": "like",
+                    "meaning": "v. 좋아하다, prep. ~처럼, ~같은",
+                    "example": "I like apples.",
+                    "exampleMeaning": "나는 사과를 좋아해."
+                },
+                {
+                    "id": 10213,
+                    "word": "old",
+                    "meaning": "adj. 오래된, 낡은, 나이가 든, 늙은",
+                    "example": "This toy is old.",
+                    "exampleMeaning": "이 장난감은 오래됐어."
+                },
+                {
+                    "id": 10214,
+                    "word": "snack",
+                    "meaning": "n. 간식, 과자",
+                    "example": "I eat a snack.",
+                    "exampleMeaning": "나는 간식을 먹어."
+                },
+                {
+                    "id": 10215,
+                    "word": "say",
+                    "meaning": "v. 말하다",
+                    "example": "I say hello.",
+                    "exampleMeaning": "나는 인사해."
+                },
+                {
+                    "id": 10216,
+                    "word": "ready",
+                    "meaning": "adj. 준비된",
+                    "example": "I am ready.",
+                    "exampleMeaning": "나는 준비됐어."
+                },
+                {
+                    "id": 10217,
+                    "word": "wood",
+                    "meaning": "n. 나무, 목재",
+                    "example": "I see a tree.",
+                    "exampleMeaning": "나는 나무를 봐."
+                },
+                {
+                    "id": 10218,
+                    "word": "student",
+                    "meaning": "n. 학생",
+                    "example": "I am a student.",
+                    "exampleMeaning": "나는 학생이야."
+                },
+                {
+                    "id": 10219,
+                    "word": "go",
+                    "meaning": "v. 가다",
+                    "example": "Let’s go!",
+                    "exampleMeaning": "가자!"
+                },
+                {
+                    "id": 10220,
+                    "word": "closet",
+                    "meaning": "n. 옷장",
+                    "example": "Open the closet.",
+                    "exampleMeaning": "옷장을 열어."
+                }
+            ]
+        },
+        {
+            "id": "unit_1_3",
+            "title": "Unit 03",
+            "words": [
+                {
+                    "id": 10301,
+                    "word": "meal",
+                    "meaning": "n. 식사",
+                    "example": "I have a meal.",
+                    "exampleMeaning": "나는 식사를 해."
+                },
+                {
+                    "id": 10302,
+                    "word": "do",
+                    "meaning": "v. 하다",
+                    "example": "I do my homework.",
+                    "exampleMeaning": "나는 숙제를 해."
+                },
+                {
+                    "id": 10303,
                     "word": "elephant",
-                    "meaning": "코끼리",
-                    "example": "Elephants are huge."
+                    "meaning": "n. 코끼리",
+                    "example": "I see an elephant.",
+                    "exampleMeaning": "나는 코끼리를 봐."
                 },
                 {
-                    "id": 204,
-                    "word": "lion",
-                    "meaning": "사자",
-                    "example": "The lion is the king of the jungle."
+                    "id": 10304,
+                    "word": "late",
+                    "meaning": "adj. 늦은, adv. 늦게",
+                    "example": "He is late.",
+                    "exampleMeaning": "그는 늦었어."
                 },
                 {
-                    "id": 205,
-                    "word": "tiger",
-                    "meaning": "호랑이",
-                    "example": "Tigers have stripes."
+                    "id": 10305,
+                    "word": "same",
+                    "meaning": "adj. 같은, 비슷한",
+                    "example": "We wear the same shirt.",
+                    "exampleMeaning": "우리는 같은 셔츠를 입었어."
+                },
+                {
+                    "id": 10306,
+                    "word": "basket",
+                    "meaning": "n. 바구니",
+                    "example": "This is a basket.",
+                    "exampleMeaning": "이건 바구니야."
+                },
+                {
+                    "id": 10307,
+                    "word": "salt",
+                    "meaning": "n. 소금",
+                    "example": "Pass me the salt.",
+                    "exampleMeaning": "소금을 건네줘."
+                },
+                {
+                    "id": 10308,
+                    "word": "read",
+                    "meaning": "v. 읽다",
+                    "example": "I read a book.",
+                    "exampleMeaning": "나는 책을 읽어."
+                },
+                {
+                    "id": 10309,
+                    "word": "teacher",
+                    "meaning": "n. 선생님",
+                    "example": "She is my teacher.",
+                    "exampleMeaning": "그녀는 내 선생님이야."
+                },
+                {
+                    "id": 10310,
+                    "word": "week",
+                    "meaning": "n. 주, 일주일",
+                    "example": "See you next week.",
+                    "exampleMeaning": "다음 주에 보자."
+                },
+                {
+                    "id": 10311,
+                    "word": "easy",
+                    "meaning": "adj. 쉬운",
+                    "example": "This is easy.",
+                    "exampleMeaning": "이건 쉬워."
+                },
+                {
+                    "id": 10312,
+                    "word": "new",
+                    "meaning": "adj. 새로운",
+                    "example": "This is a new toy.",
+                    "exampleMeaning": "이건 새 장난감이야."
+                },
+                {
+                    "id": 10313,
+                    "word": "class",
+                    "meaning": "n. 학급, 반, 수업",
+                    "example": "I go to class.",
+                    "exampleMeaning": "나는 수업에 가."
+                },
+                {
+                    "id": 10314,
+                    "word": "meet",
+                    "meaning": "v. 만나다",
+                    "example": "I meet my friend.",
+                    "exampleMeaning": "나는 친구를 만나."
+                },
+                {
+                    "id": 10315,
+                    "word": "home",
+                    "meaning": "n. 집, adv. 집에, 집으로",
+                    "example": "I go home.",
+                    "exampleMeaning": "나는 집에 가."
+                },
+                {
+                    "id": 10316,
+                    "word": "look",
+                    "meaning": "v. 보다",
+                    "example": "I see a bird.",
+                    "exampleMeaning": "나는 새를 봐."
+                },
+                {
+                    "id": 10317,
+                    "word": "fire",
+                    "meaning": "n. 불",
+                    "example": "Look at the fire.",
+                    "exampleMeaning": "불을 봐."
+                },
+                {
+                    "id": 10318,
+                    "word": "bread",
+                    "meaning": "n. 빵",
+                    "example": "I eat bread.",
+                    "exampleMeaning": "나는 빵을 먹어."
+                },
+                {
+                    "id": 10319,
+                    "word": "together",
+                    "meaning": "adv. 함께",
+                    "example": "We play together.",
+                    "exampleMeaning": "우리는 함께 놀아."
+                },
+                {
+                    "id": 10320,
+                    "word": "talk",
+                    "meaning": "v. 말하다, 이야기하다",
+                    "example": "Let’s talk!",
+                    "exampleMeaning": "이야기하자!"
+                }
+            ]
+        },
+        {
+            "id": "unit_1_4",
+            "title": "Unit 04",
+            "words": [
+                {
+                    "id": 10401,
+                    "word": "garden",
+                    "meaning": "n. 정원",
+                    "example": "I play in the garden.",
+                    "exampleMeaning": "나는 정원에서 놀아."
+                },
+                {
+                    "id": 10402,
+                    "word": "bottle",
+                    "meaning": "n. 병",
+                    "example": "This is a bottle.",
+                    "exampleMeaning": "이건 병이야."
+                },
+                {
+                    "id": 10403,
+                    "word": "give",
+                    "meaning": "v. 주다",
+                    "example": "Give me the ball.",
+                    "exampleMeaning": "공을 줘."
+                },
+                {
+                    "id": 10404,
+                    "word": "use",
+                    "meaning": "v. 사용하다",
+                    "example": "I use a pen.",
+                    "exampleMeaning": "나는 펜을 써."
+                },
+                {
+                    "id": 10405,
+                    "word": "rainbow",
+                    "meaning": "n. 무지개",
+                    "example": "I see a rainbow.",
+                    "exampleMeaning": "나는 무지개를 봐."
+                },
+                {
+                    "id": 10406,
+                    "word": "sad",
+                    "meaning": "adj. 슬픈",
+                    "example": "She is sad.",
+                    "exampleMeaning": "그녀는 슬퍼."
+                },
+                {
+                    "id": 10407,
+                    "word": "in",
+                    "meaning": "prep. ~의 안에, adv. 안으로, 안에",
+                    "example": "Go inside.",
+                    "exampleMeaning": "안으로 가."
+                },
+                {
+                    "id": 10408,
+                    "word": "funny",
+                    "meaning": "adj. 웃기는, 재미있는",
+                    "example": "This movie is funny.",
+                    "exampleMeaning": "이 영화는 웃겨."
+                },
+                {
+                    "id": 10409,
+                    "word": "market",
+                    "meaning": "n. 시장",
+                    "example": "We go to the market.",
+                    "exampleMeaning": "우리는 시장에 가."
+                },
+                {
+                    "id": 10410,
+                    "word": "back",
+                    "meaning": "adj. 뒤의, adv. 뒤로, 뒤에, n. 뒤",
+                    "example": "The cat is back there.",
+                    "exampleMeaning": "고양이는 저기 뒤에 있어."
+                },
+                {
+                    "id": 10411,
+                    "word": "walk",
+                    "meaning": "v. 걷다",
+                    "example": "I walk to school.",
+                    "exampleMeaning": "나는 학교까지 걸어가."
+                },
+                {
+                    "id": 10412,
+                    "word": "notebook",
+                    "meaning": "n. 공책",
+                    "example": "This is my notebook.",
+                    "exampleMeaning": "이건 내 공책이야."
+                },
+                {
+                    "id": 10413,
+                    "word": "goat",
+                    "meaning": "n. 염소",
+                    "example": "I see a goat.",
+                    "exampleMeaning": "나는 염소를 봐."
+                },
+                {
+                    "id": 10414,
+                    "word": "wash",
+                    "meaning": "v. 씻다",
+                    "example": "Wash your hands.",
+                    "exampleMeaning": "손을 씻어."
+                },
+                {
+                    "id": 10415,
+                    "word": "camp",
+                    "meaning": "v. 야영하다",
+                    "example": "We camp in the tent.",
+                    "exampleMeaning": "우리는 텐트에서 야영해."
+                },
+                {
+                    "id": 10416,
+                    "word": "smile",
+                    "meaning": "v. 미소 짓다, n. 미소",
+                    "example": "I smile at you.",
+                    "exampleMeaning": "나는 너에게 미소 지어."
+                },
+                {
+                    "id": 10417,
+                    "word": "hair",
+                    "meaning": "n. 머리카락, 털",
+                    "example": "Brush your hair.",
+                    "exampleMeaning": "머리를 빗어."
+                },
+                {
+                    "id": 10418,
+                    "word": "flower",
+                    "meaning": "n. 꽃",
+                    "example": "I pick a flower.",
+                    "exampleMeaning": "나는 꽃을 따."
+                },
+                {
+                    "id": 10419,
+                    "word": "body",
+                    "meaning": "n. 몸, 신체",
+                    "example": "This is my body.",
+                    "exampleMeaning": "이건 내 몸이야."
+                },
+                {
+                    "id": 10420,
+                    "word": "sick",
+                    "meaning": "adj. 아픈",
+                    "example": "He is sick.",
+                    "exampleMeaning": "그는 아파."
+                }
+            ]
+        },
+        {
+            "id": "unit_1_5",
+            "title": "Unit 05",
+            "words": [
+                {
+                    "id": 10501,
+                    "word": "sea",
+                    "meaning": "n. 바다",
+                    "example": "I swim in the sea.",
+                    "exampleMeaning": "나는 바다에서 수영해."
+                },
+                {
+                    "id": 10502,
+                    "word": "button",
+                    "meaning": "n. (옷의) 단추, (기계의) 버튼",
+                    "example": "Push the button.",
+                    "exampleMeaning": "버튼을 눌러."
+                },
+                {
+                    "id": 10503,
+                    "word": "stair",
+                    "meaning": "n. 계단",
+                    "example": "Go up the stairs.",
+                    "exampleMeaning": "계단을 올라가."
+                },
+                {
+                    "id": 10504,
+                    "word": "kite",
+                    "meaning": "n. 연",
+                    "example": "I fly a kite.",
+                    "exampleMeaning": "나는 연을 날려."
+                },
+                {
+                    "id": 10505,
+                    "word": "make",
+                    "meaning": "v. 만들다",
+                    "example": "Let’s make a cake.",
+                    "exampleMeaning": "케이크를 만들자."
+                },
+                {
+                    "id": 10506,
+                    "word": "only",
+                    "meaning": "adj. 유일한, 단 하나의",
+                    "example": "This is the only one.",
+                    "exampleMeaning": "이건 하나뿐이야."
+                },
+                {
+                    "id": 10507,
+                    "word": "morning",
+                    "meaning": "n. 아침, 오전",
+                    "example": "Good morning!",
+                    "exampleMeaning": "좋은 아침이야!"
+                },
+                {
+                    "id": 10508,
+                    "word": "jungle",
+                    "meaning": "n. 밀림, 정글",
+                    "example": "A tiger lives in the jungle.",
+                    "exampleMeaning": "호랑이는 정글에 살아."
+                },
+                {
+                    "id": 10509,
+                    "word": "full",
+                    "meaning": "adj. 가득 찬",
+                    "example": "My bag is full.",
+                    "exampleMeaning": "내 가방이 가득해."
+                },
+                {
+                    "id": 10510,
+                    "word": "farm",
+                    "meaning": "n. 농장",
+                    "example": "I go to the farm.",
+                    "exampleMeaning": "나는 농장에 가."
+                },
+                {
+                    "id": 10511,
+                    "word": "different",
+                    "meaning": "adj. 다른",
+                    "example": "This is a different toy.",
+                    "exampleMeaning": "이건 다른 장난감이야."
+                },
+                {
+                    "id": 10512,
+                    "word": "house",
+                    "meaning": "n. 집",
+                    "example": "Come to my house.",
+                    "exampleMeaning": "우리 집에 와."
+                },
+                {
+                    "id": 10513,
+                    "word": "build",
+                    "meaning": "v. (건물·도로를) 짓다",
+                    "example": "We build a house.",
+                    "exampleMeaning": "우리는 집을 지어."
+                },
+                {
+                    "id": 10514,
+                    "word": "art",
+                    "meaning": "n. 미술(품), 예술",
+                    "example": "I like art.",
+                    "exampleMeaning": "나는 미술을 좋아해."
+                },
+                {
+                    "id": 10515,
+                    "word": "living room",
+                    "meaning": "n. 거실",
+                    "example": "We sit in the living room.",
+                    "exampleMeaning": "우리는 거실에 앉아."
+                },
+                {
+                    "id": 10516,
+                    "word": "ride",
+                    "meaning": "v. (자전거·차 등을) 타다, n. 타기, 탈 것",
+                    "example": "I ride a bike.",
+                    "exampleMeaning": "나는 자전거를 타."
+                },
+                {
+                    "id": 10517,
+                    "word": "long",
+                    "meaning": "adj. (길이가) 긴, (시간이) 오랜",
+                    "example": "This rope is long.",
+                    "exampleMeaning": "이 줄은 길어."
+                },
+                {
+                    "id": 10518,
+                    "word": "know",
+                    "meaning": "v. 알다, 이해하다",
+                    "example": "I know the answer.",
+                    "exampleMeaning": "나는 답을 알아."
+                },
+                {
+                    "id": 10519,
+                    "word": "catch",
+                    "meaning": "v. 잡다",
+                    "example": "Catch the ball!",
+                    "exampleMeaning": "공을 잡아!"
+                },
+                {
+                    "id": 10520,
+                    "word": "sleep",
+                    "meaning": "v. 자다",
+                    "example": "I sleep well.",
+                    "exampleMeaning": "나는 잘 자."
+                }
+            ]
+        },
+        {
+            "id": "unit_1_6",
+            "title": "Unit 06",
+            "words": [
+                {
+                    "id": 10601,
+                    "word": "before",
+                    "meaning": "prep. ~앞에, ~전에, conj. ~하기 전에",
+                    "example": "Stand in front of the door.",
+                    "exampleMeaning": "문 앞에 서."
+                },
+                {
+                    "id": 10602,
+                    "word": "race",
+                    "meaning": "n. 경주, 경기",
+                    "example": "I run in a race.",
+                    "exampleMeaning": "나는 경주를 해."
+                },
+                {
+                    "id": 10603,
+                    "word": "excited",
+                    "meaning": "adj. 흥분한, 신이 난",
+                    "example": "I am excited.",
+                    "exampleMeaning": "나는 신났어."
+                },
+                {
+                    "id": 10604,
+                    "word": "farmer",
+                    "meaning": "n. 농부",
+                    "example": "The farmer has cows.",
+                    "exampleMeaning": "농부는 소를 키워."
+                },
+                {
+                    "id": 10605,
+                    "word": "bake",
+                    "meaning": "v. 굽다",
+                    "example": "Mom will bake a cake.",
+                    "exampleMeaning": "엄마가 케이크를 구워."
+                },
+                {
+                    "id": 10606,
+                    "word": "mountain",
+                    "meaning": "n. 산",
+                    "example": "I see a mountain.",
+                    "exampleMeaning": "나는 산을 봐."
+                },
+                {
+                    "id": 10607,
+                    "word": "uncle",
+                    "meaning": "n. 삼촌, 고모부, 이모부",
+                    "example": "My uncle is funny.",
+                    "exampleMeaning": "내 삼촌은 재미있어."
+                },
+                {
+                    "id": 10608,
+                    "word": "find",
+                    "meaning": "v. 찾다",
+                    "example": "I find a toy.",
+                    "exampleMeaning": "나는 장난감을 찾아."
+                },
+                {
+                    "id": 10609,
+                    "word": "dolphin",
+                    "meaning": "n. 돌고래",
+                    "example": "I see a dolphin.",
+                    "exampleMeaning": "나는 돌고래를 봐."
+                },
+                {
+                    "id": 10610,
+                    "word": "clean",
+                    "meaning": "adj. 깨끗한, v. 청소하다",
+                    "example": "I clean my room.",
+                    "exampleMeaning": "나는 방을 청소해."
+                },
+                {
+                    "id": 10611,
+                    "word": "hand",
+                    "meaning": "n. 손",
+                    "example": "Hold my hand.",
+                    "exampleMeaning": "내 손을 잡아."
+                },
+                {
+                    "id": 10612,
+                    "word": "brave",
+                    "meaning": "adj. 용감한",
+                    "example": "The dog is brave.",
+                    "exampleMeaning": "그 강아지는 용감해."
+                },
+                {
+                    "id": 10613,
+                    "word": "buy",
+                    "meaning": "v. 사다",
+                    "example": "I buy an apple.",
+                    "exampleMeaning": "나는 사과를 사."
+                },
+                {
+                    "id": 10614,
+                    "word": "see",
+                    "meaning": "v. 보다",
+                    "example": "Look at the sky.",
+                    "exampleMeaning": "하늘을 봐."
+                },
+                {
+                    "id": 10615,
+                    "word": "tell",
+                    "meaning": "v. 말하다",
+                    "example": "She says hello.",
+                    "exampleMeaning": "그녀는 안녕이라고 말해."
+                },
+                {
+                    "id": 10616,
+                    "word": "night",
+                    "meaning": "n. 밤",
+                    "example": "It is night.",
+                    "exampleMeaning": "지금은 밤이야."
+                },
+                {
+                    "id": 10617,
+                    "word": "deep",
+                    "meaning": "adj. 깊은",
+                    "example": "This water is deep.",
+                    "exampleMeaning": "이 물은 깊어."
+                },
+                {
+                    "id": 10618,
+                    "word": "get",
+                    "meaning": "v. 받다, 얻다",
+                    "example": "I get a gift.",
+                    "exampleMeaning": "나는 선물을 받아."
+                },
+                {
+                    "id": 10619,
+                    "word": "work",
+                    "meaning": "v. 일하다, n. 일, 작업",
+                    "example": "I work at home.",
+                    "exampleMeaning": "나는 집에서 일해."
+                },
+                {
+                    "id": 10620,
+                    "word": "bedroom",
+                    "meaning": "n. 침실",
+                    "example": "This is my bedroom.",
+                    "exampleMeaning": "이건 내 침실이야."
+                }
+            ]
+        },
+        {
+            "id": "unit_1_7",
+            "title": "Unit 07",
+            "words": [
+                {
+                    "id": 10701,
+                    "word": "king",
+                    "meaning": "n. 왕",
+                    "example": "The king has a crown.",
+                    "exampleMeaning": "그 왕은 왕관이 있어."
+                },
+                {
+                    "id": 10702,
+                    "word": "photo",
+                    "meaning": "n. 사진",
+                    "example": "This is my picture.",
+                    "exampleMeaning": "이건 내 사진이야."
+                },
+                {
+                    "id": 10703,
+                    "word": "hot",
+                    "meaning": "adj. 뜨거운, 더운",
+                    "example": "The soup is hot.",
+                    "exampleMeaning": "수프가 뜨거워."
+                },
+                {
+                    "id": 10704,
+                    "word": "octopus",
+                    "meaning": "n. 문어",
+                    "example": "I see an octopus.",
+                    "exampleMeaning": "나는 문어를 봐."
+                },
+                {
+                    "id": 10705,
+                    "word": "leaf",
+                    "meaning": "n. 잎",
+                    "example": "This is a leaf.",
+                    "exampleMeaning": "이건 나뭇잎이야."
+                },
+                {
+                    "id": 10706,
+                    "word": "hospital",
+                    "meaning": "n. 병원",
+                    "example": "She is in the hospital.",
+                    "exampleMeaning": "그녀는 병원에 있어."
+                },
+                {
+                    "id": 10707,
+                    "word": "break",
+                    "meaning": "v. 깨(지)다, 부수다, 부서지다",
+                    "example": "Don’t break the toy.",
+                    "exampleMeaning": "장난감을 부수지 마."
+                },
+                {
+                    "id": 10708,
+                    "word": "kid",
+                    "meaning": "n. 아이, 어린이",
+                    "example": "The child is happy.",
+                    "exampleMeaning": "그 아이는 행복해."
+                },
+                {
+                    "id": 10709,
+                    "word": "people",
+                    "meaning": "n. 사람들",
+                    "example": "Many people are here.",
+                    "exampleMeaning": "많은 사람이 있어."
+                },
+                {
+                    "id": 10710,
+                    "word": "fly",
+                    "meaning": "v. 날다",
+                    "example": "Birds can fly.",
+                    "exampleMeaning": "새는 날 수 있어."
+                },
+                {
+                    "id": 10711,
+                    "word": "building",
+                    "meaning": "n. 건물, 건축",
+                    "example": "That is a big building.",
+                    "exampleMeaning": "저건 큰 건물이야."
+                },
+                {
+                    "id": 10712,
+                    "word": "after",
+                    "meaning": "prep. [위치] ~뒤에, [시간] ~후에, conj. ~한 뒤(후)에",
+                    "example": "The cat is behind the box.",
+                    "exampleMeaning": "고양이가 상자 뒤에 있어."
+                },
+                {
+                    "id": 10713,
+                    "word": "weather",
+                    "meaning": "n. 날씨",
+                    "example": "The weather is nice.",
+                    "exampleMeaning": "날씨가 좋아."
+                },
+                {
+                    "id": 10714,
+                    "word": "trip",
+                    "meaning": "n. 여행",
+                    "example": "I go on a trip.",
+                    "exampleMeaning": "나는 여행을 가."
+                },
+                {
+                    "id": 10715,
+                    "word": "fast",
+                    "meaning": "adj. 빠른, adv. 빨리",
+                    "example": "He runs fast.",
+                    "exampleMeaning": "그는 빨리 달려."
+                },
+                {
+                    "id": 10716,
+                    "word": "act",
+                    "meaning": "v. 행동하다",
+                    "example": "Be kind and act well.",
+                    "exampleMeaning": "친절하게 행동해."
+                },
+                {
+                    "id": 10717,
+                    "word": "hole",
+                    "meaning": "n. 구멍",
+                    "example": "There is a hole.",
+                    "exampleMeaning": "구멍이 있어."
+                },
+                {
+                    "id": 10718,
+                    "word": "watch",
+                    "meaning": "v. 보다",
+                    "example": "Look over there.",
+                    "exampleMeaning": "저기 봐."
+                },
+                {
+                    "id": 10719,
+                    "word": "towel",
+                    "meaning": "n. 수건",
+                    "example": "Use a towel.",
+                    "exampleMeaning": "수건을 써."
+                },
+                {
+                    "id": 10720,
+                    "word": "cheese",
+                    "meaning": "n. 치즈",
+                    "example": "I eat cheese.",
+                    "exampleMeaning": "나는 치즈를 먹어."
+                }
+            ]
+        },
+        {
+            "id": "unit_1_8",
+            "title": "Unit 08",
+            "words": [
+                {
+                    "id": 10801,
+                    "word": "animal",
+                    "meaning": "n. 동물",
+                    "example": "I see an animal.",
+                    "exampleMeaning": "나는 동물을 봐."
+                },
+                {
+                    "id": 10802,
+                    "word": "on",
+                    "meaning": "prep. ~의 위에",
+                    "example": "The book is on the desk.",
+                    "exampleMeaning": "책이 책상 위에 있어."
+                },
+                {
+                    "id": 10803,
+                    "word": "giraffe",
+                    "meaning": "n. 기린",
+                    "example": "The giraffe is tall.",
+                    "exampleMeaning": "기린은 키가 커."
+                },
+                {
+                    "id": 10804,
+                    "word": "sugar",
+                    "meaning": "n. 설탕",
+                    "example": "I like sugar.",
+                    "exampleMeaning": "나는 설탕을 좋아해."
+                },
+                {
+                    "id": 10805,
+                    "word": "climb",
+                    "meaning": "v. 오르다, 등반하다",
+                    "example": "Let’s climb the tree.",
+                    "exampleMeaning": "나무를 타자."
+                },
+                {
+                    "id": 10806,
+                    "word": "aunt",
+                    "meaning": "n. 이모, 고모, 숙모",
+                    "example": "My aunt is nice.",
+                    "exampleMeaning": "이모는 친절해."
+                },
+                {
+                    "id": 10807,
+                    "word": "pea",
+                    "meaning": "n. 완두콩",
+                    "example": "I eat a pea.",
+                    "exampleMeaning": "나는 완두콩을 먹어."
+                },
+                {
+                    "id": 10808,
+                    "word": "want",
+                    "meaning": "v. 원하다",
+                    "example": "I want a toy.",
+                    "exampleMeaning": "나는 장난감을 원해."
+                },
+                {
+                    "id": 10809,
+                    "word": "safe",
+                    "meaning": "adj. 안전한",
+                    "example": "This is safe.",
+                    "exampleMeaning": "이건 안전해."
+                },
+                {
+                    "id": 10810,
+                    "word": "stand",
+                    "meaning": "v. 서다",
+                    "example": "Please stand up.",
+                    "exampleMeaning": "일어나 주세요."
+                },
+                {
+                    "id": 10811,
+                    "word": "camera",
+                    "meaning": "n. 사진기",
+                    "example": "This is my camera.",
+                    "exampleMeaning": "이건 내 카메라야."
+                },
+                {
+                    "id": 10812,
+                    "word": "dry",
+                    "meaning": "adj. 마른, 건조한",
+                    "example": "My socks are dry.",
+                    "exampleMeaning": "내 양말이 말랐어."
+                },
+                {
+                    "id": 10813,
+                    "word": "backpack",
+                    "meaning": "n. 배낭",
+                    "example": "My backpack is blue.",
+                    "exampleMeaning": "내 가방은 파란색이야."
+                },
+                {
+                    "id": 10814,
+                    "word": "sunflower",
+                    "meaning": "n. 해바라기",
+                    "example": "I see a sunflower.",
+                    "exampleMeaning": "나는 해바라기를 봐."
+                },
+                {
+                    "id": 10815,
+                    "word": "grow",
+                    "meaning": "v. 자라다, 성장하다, 기르다, 재배하다",
+                    "example": "Trees grow fast.",
+                    "exampleMeaning": "나무가 빨리 자라."
+                },
+                {
+                    "id": 10816,
+                    "word": "hard",
+                    "meaning": "adj. 단단한, 굳은, 어려운",
+                    "example": "This test is hard.",
+                    "exampleMeaning": "이 시험은 어려워."
+                },
+                {
+                    "id": 10817,
+                    "word": "smell",
+                    "meaning": "v. 냄새를 맡다, 냄새가 나다",
+                    "example": "I smell pizza.",
+                    "exampleMeaning": "나는 피자 냄새를 맡아."
+                },
+                {
+                    "id": 10818,
+                    "word": "rose",
+                    "meaning": "n. 장미",
+                    "example": "The rose is red.",
+                    "exampleMeaning": "장미는 빨개."
+                },
+                {
+                    "id": 10819,
+                    "word": "restaurant",
+                    "meaning": "n. 식당",
+                    "example": "We go to the restaurant.",
+                    "exampleMeaning": "우리는 식당에 가."
+                },
+                {
+                    "id": 10820,
+                    "word": "number",
+                    "meaning": "n. 수, 숫자, 번호",
+                    "example": "What number is it?",
+                    "exampleMeaning": "그건 몇 번이야?"
+                }
+            ]
+        },
+        {
+            "id": "unit_1_9",
+            "title": "Unit 09",
+            "words": [
+                {
+                    "id": 10901,
+                    "word": "butter",
+                    "meaning": "n. 버터",
+                    "example": "I like butter on bread.",
+                    "exampleMeaning": "나는 빵에 버터를 좋아해."
+                },
+                {
+                    "id": 10902,
+                    "word": "quick",
+                    "meaning": "adj. 빠른, 신속한",
+                    "example": "The rabbit is quick.",
+                    "exampleMeaning": "토끼는 빨라."
+                },
+                {
+                    "id": 10903,
+                    "word": "taste",
+                    "meaning": "v. ~한 맛이 나다, n. 맛",
+                    "example": "This candy tastes good.",
+                    "exampleMeaning": "이 사탕은 맛있어."
+                },
+                {
+                    "id": 10904,
+                    "word": "river",
+                    "meaning": "n. 강, 하천",
+                    "example": "We play by the river.",
+                    "exampleMeaning": "우리는 강가에서 놀아."
+                },
+                {
+                    "id": 10905,
+                    "word": "near",
+                    "meaning": "adj. 가까운, prep. ~가까이에, ~근처에",
+                    "example": "My house is near the park.",
+                    "exampleMeaning": "우리 집은 공원 근처야."
+                },
+                {
+                    "id": 10906,
+                    "word": "draw",
+                    "meaning": "v. 그리다",
+                    "example": "I draw a cat.",
+                    "exampleMeaning": "나는 고양이를 그려."
+                },
+                {
+                    "id": 10907,
+                    "word": "afternoon",
+                    "meaning": "n. 오후",
+                    "example": "It is afternoon now.",
+                    "exampleMeaning": "지금은 오후야."
+                },
+                {
+                    "id": 10908,
+                    "word": "cook",
+                    "meaning": "v. 요리하다",
+                    "example": "Mom can cook well.",
+                    "exampleMeaning": "엄마는 요리를 잘해."
+                },
+                {
+                    "id": 10909,
+                    "word": "clothes",
+                    "meaning": "n. 옷, 의복",
+                    "example": "I fold my clothes.",
+                    "exampleMeaning": "나는 옷을 개어."
+                },
+                {
+                    "id": 10910,
+                    "word": "rainy",
+                    "meaning": "adj. 비가 오는",
+                    "example": "It is rainy today.",
+                    "exampleMeaning": "오늘은 비가 와."
+                },
+                {
+                    "id": 10911,
+                    "word": "mouth",
+                    "meaning": "n. 입",
+                    "example": "Open your mouth.",
+                    "exampleMeaning": "입을 열어."
+                },
+                {
+                    "id": 10912,
+                    "word": "large",
+                    "meaning": "adj. (크기가) 큰, (양이) 많은",
+                    "example": "The elephant is large.",
+                    "exampleMeaning": "코끼리는 커."
+                },
+                {
+                    "id": 10913,
+                    "word": "study",
+                    "meaning": "v. 공부하다",
+                    "example": "Let’s study English.",
+                    "exampleMeaning": "우리 영어 공부하자."
+                },
+                {
+                    "id": 10914,
+                    "word": "onion",
+                    "meaning": "n. 양파",
+                    "example": "I cut the onion.",
+                    "exampleMeaning": "나는 양파를 잘라."
+                },
+                {
+                    "id": 10915,
+                    "word": "glue",
+                    "meaning": "n. 풀, 접착제",
+                    "example": "Use glue for this.",
+                    "exampleMeaning": "여기 접착제를 써."
+                },
+                {
+                    "id": 10916,
+                    "word": "worm",
+                    "meaning": "n. (기어 다니는) 벌레",
+                    "example": "The worm is small.",
+                    "exampleMeaning": "벌레가 작아."
+                },
+                {
+                    "id": 10917,
+                    "word": "dress",
+                    "meaning": "n. 드레스, 원피스, v. 옷을 입다",
+                    "example": "She wears a dress.",
+                    "exampleMeaning": "그녀는 드레스를 입어."
+                },
+                {
+                    "id": 10918,
+                    "word": "help",
+                    "meaning": "v. 돕다, 도와주다, n. 도움",
+                    "example": "Can you help me?",
+                    "exampleMeaning": "나 좀 도와줄래?"
+                },
+                {
+                    "id": 10919,
+                    "word": "fill",
+                    "meaning": "v. 채우다",
+                    "example": "Fill the cup with water.",
+                    "exampleMeaning": "컵에 물을 채워."
+                },
+                {
+                    "id": 10920,
+                    "word": "send",
+                    "meaning": "v. 보내다",
+                    "example": "I send a card.",
+                    "exampleMeaning": "나는 카드를 보내."
+                }
+            ]
+        },
+        {
+            "id": "unit_1_10",
+            "title": "Unit 10",
+            "words": [
+                {
+                    "id": 11001,
+                    "word": "butterfly",
+                    "meaning": "n. 나비",
+                    "example": "The butterfly is pretty.",
+                    "exampleMeaning": "나비가 예뻐."
+                },
+                {
+                    "id": 11002,
+                    "word": "elbow",
+                    "meaning": "n. 팔꿈치",
+                    "example": "I hurt my elbow.",
+                    "exampleMeaning": "팔꿈치를 다쳤어."
+                },
+                {
+                    "id": 11003,
+                    "word": "sell",
+                    "meaning": "v. 팔다",
+                    "example": "They sell toys.",
+                    "exampleMeaning": "그들은 장난감을 팔아."
+                },
+                {
+                    "id": 11004,
+                    "word": "sport",
+                    "meaning": "n. 스포츠, 운동",
+                    "example": "I like sport.",
+                    "exampleMeaning": "나는 운동을 좋아해."
+                },
+                {
+                    "id": 11005,
+                    "word": "become",
+                    "meaning": "v. ~이 되다, ~해지다",
+                    "example": "You can become a hero.",
+                    "exampleMeaning": "너는 영웅이 될 수 있어."
+                },
+                {
+                    "id": 11006,
+                    "word": "playground",
+                    "meaning": "n. 놀이터, 운동장",
+                    "example": "We play at the playground.",
+                    "exampleMeaning": "우리는 놀이터에서 놀아."
+                },
+                {
+                    "id": 11007,
+                    "word": "helmet",
+                    "meaning": "n. 헬멧",
+                    "example": "Wear your helmet.",
+                    "exampleMeaning": "헬멧을 써."
+                },
+                {
+                    "id": 11008,
+                    "word": "start",
+                    "meaning": "v. 시작하다",
+                    "example": "Let’s start the game.",
+                    "exampleMeaning": "게임을 시작하자."
+                },
+                {
+                    "id": 11009,
+                    "word": "cut",
+                    "meaning": "v. 자르다",
+                    "example": "I cut the paper.",
+                    "exampleMeaning": "나는 종이를 잘라."
+                },
+                {
+                    "id": 11010,
+                    "word": "short",
+                    "meaning": "adj. (길이가) 짧은, 키가 작은",
+                    "example": "He is short.",
+                    "exampleMeaning": "그는 키가 작아."
+                },
+                {
+                    "id": 11011,
+                    "word": "sunny",
+                    "meaning": "adj. 화창한",
+                    "example": "It is sunny today.",
+                    "exampleMeaning": "오늘은 화창해."
+                },
+                {
+                    "id": 11012,
+                    "word": "tent",
+                    "meaning": "n. 텐트",
+                    "example": "We sleep in a tent.",
+                    "exampleMeaning": "우리는 텐트에서 자."
+                },
+                {
+                    "id": 11013,
+                    "word": "young",
+                    "meaning": "adj. (나이가) 어린",
+                    "example": "She is young.",
+                    "exampleMeaning": "그녀는 어려."
+                },
+                {
+                    "id": 11014,
+                    "word": "high",
+                    "meaning": "adj. 높은, adv. 높이, 위로",
+                    "example": "The kite goes high.",
+                    "exampleMeaning": "연이 높이 날아가."
+                },
+                {
+                    "id": 11015,
+                    "word": "map",
+                    "meaning": "n. 지도",
+                    "example": "This is a map.",
+                    "exampleMeaning": "이건 지도야."
+                },
+                {
+                    "id": 11016,
+                    "word": "next",
+                    "meaning": "adj. 다음의, adv. 다음에, 다음으로",
+                    "example": "Next is my turn.",
+                    "exampleMeaning": "다음은 내 차례야."
+                },
+                {
+                    "id": 11017,
+                    "word": "hear",
+                    "meaning": "v. 듣다, 들리다",
+                    "example": "I hear a bird.",
+                    "exampleMeaning": "나는 새소리를 들어."
+                },
+                {
+                    "id": 11018,
+                    "word": "evening",
+                    "meaning": "n. 저녁",
+                    "example": "It is evening now.",
+                    "exampleMeaning": "지금은 저녁이야."
+                },
+                {
+                    "id": 11019,
+                    "word": "show",
+                    "meaning": "v. 보여주다",
+                    "example": "I will show you.",
+                    "exampleMeaning": "내가 보여줄게."
+                },
+                {
+                    "id": 11020,
+                    "word": "pond",
+                    "meaning": "n. 연못",
+                    "example": "Fish are in the pond.",
+                    "exampleMeaning": "연못에 물고기가 있어."
+                }
+            ]
+        },
+        {
+            "id": "unit_1_11",
+            "title": "Unit 11",
+            "words": [
+                {
+                    "id": 11101,
+                    "word": "tall",
+                    "meaning": "adj. 키가 큰",
+                    "example": "He is tall.",
+                    "exampleMeaning": "그는 키가 커."
+                },
+                {
+                    "id": 11102,
+                    "word": "think",
+                    "meaning": "v. 생각하다",
+                    "example": "I think it's fun.",
+                    "exampleMeaning": "나는 그게 재미있다고 생각해."
+                },
+                {
+                    "id": 11103,
+                    "word": "bakery",
+                    "meaning": "n. 빵집, 제과점",
+                    "example": "Let’s go to the bakery.",
+                    "exampleMeaning": "빵집에 가자."
+                },
+                {
+                    "id": 11104,
+                    "word": "learn",
+                    "meaning": "v. 배우다",
+                    "example": "We learn English.",
+                    "exampleMeaning": "우리는 영어를 배워."
+                },
+                {
+                    "id": 11105,
+                    "word": "season",
+                    "meaning": "n. 계절",
+                    "example": "Spring is my favorite season.",
+                    "exampleMeaning": "봄은 내가 좋아하는 계절이야."
+                },
+                {
+                    "id": 11106,
+                    "word": "lady",
+                    "meaning": "n. 여성, 숙녀",
+                    "example": "The lady is kind.",
+                    "exampleMeaning": "그 여자는 친절해."
+                },
+                {
+                    "id": 11107,
+                    "word": "road",
+                    "meaning": "n. 도로, 길",
+                    "example": "This is a long road.",
+                    "exampleMeaning": "이건 긴 길이야."
+                },
+                {
+                    "id": 11108,
+                    "word": "put",
+                    "meaning": "v. 놓다, 두다",
+                    "example": "Put it on the desk.",
+                    "exampleMeaning": "책상 위에 놓아."
+                },
+                {
+                    "id": 11109,
+                    "word": "close",
+                    "meaning": "v. 닫다, adj. 가까운",
+                    "example": "Close the door.",
+                    "exampleMeaning": "문을 닫아."
+                },
+                {
+                    "id": 11110,
+                    "word": "under",
+                    "meaning": "prep. ~아래에",
+                    "example": "The cat is under the table.",
+                    "exampleMeaning": "고양이가 탁자 아래 있어."
+                },
+                {
+                    "id": 11111,
+                    "word": "face",
+                    "meaning": "n. 얼굴",
+                    "example": "Wash your face.",
+                    "exampleMeaning": "얼굴을 씻어."
+                },
+                {
+                    "id": 11112,
+                    "word": "strong",
+                    "meaning": "adj. 강한, 힘이 센",
+                    "example": "He is strong.",
+                    "exampleMeaning": "그는 힘이 세."
+                },
+                {
+                    "id": 11113,
+                    "word": "cloudy",
+                    "meaning": "adj. 흐린, 구름이 낀",
+                    "example": "It is cloudy today.",
+                    "exampleMeaning": "오늘은 흐려."
+                },
+                {
+                    "id": 11114,
+                    "word": "push",
+                    "meaning": "v. 밀다",
+                    "example": "Push the button.",
+                    "exampleMeaning": "버튼을 눌러."
+                },
+                {
+                    "id": 11115,
+                    "word": "sorry",
+                    "meaning": "adj. 미안한",
+                    "example": "I am sorry.",
+                    "exampleMeaning": "미안해."
+                },
+                {
+                    "id": 11116,
+                    "word": "swim",
+                    "meaning": "v. 수영하다",
+                    "example": "Can you swim?",
+                    "exampleMeaning": "너 수영할 수 있어?"
+                },
+                {
+                    "id": 11117,
+                    "word": "drink",
+                    "meaning": "v. 마시다",
+                    "example": "I drink water.",
+                    "exampleMeaning": "나는 물을 마셔."
+                },
+                {
+                    "id": 11118,
+                    "word": "story",
+                    "meaning": "n. 이야기, 소설",
+                    "example": "Tell me a story.",
+                    "exampleMeaning": "이야기 하나 해줘."
+                },
+                {
+                    "id": 11119,
+                    "word": "first",
+                    "meaning": "adj. 첫, 처음의, adv. 우선, 먼저",
+                    "example": "I am first.",
+                    "exampleMeaning": "내가 첫 번째야."
+                },
+                {
+                    "id": 11120,
+                    "word": "orange",
+                    "meaning": "n. 오렌지",
+                    "example": "I like orange juice.",
+                    "exampleMeaning": "나는 오렌지 주스를 좋아해."
+                }
+            ]
+        },
+        {
+            "id": "unit_1_12",
+            "title": "Unit 12",
+            "words": [
+                {
+                    "id": 11201,
+                    "word": "spider",
+                    "meaning": "n. 거미",
+                    "example": "The spider is small.",
+                    "exampleMeaning": "그 거미는 작아."
+                },
+                {
+                    "id": 11202,
+                    "word": "sky",
+                    "meaning": "n. 하늘",
+                    "example": "The sky is blue.",
+                    "exampleMeaning": "하늘이 파래."
+                },
+                {
+                    "id": 11203,
+                    "word": "listen",
+                    "meaning": "v. 듣다",
+                    "example": "Listen to the music.",
+                    "exampleMeaning": "음악을 들어봐."
+                },
+                {
+                    "id": 11204,
+                    "word": "letter",
+                    "meaning": "n. 편지",
+                    "example": "I got a letter.",
+                    "exampleMeaning": "편지를 받았어."
+                },
+                {
+                    "id": 11205,
+                    "word": "trumpet",
+                    "meaning": "n. 트럼펫",
+                    "example": "He plays the trumpet.",
+                    "exampleMeaning": "그는 트럼펫을 불어."
+                },
+                {
+                    "id": 11206,
+                    "word": "fall",
+                    "meaning": "v. 떨어지다, 내리다, n. 가을",
+                    "example": "Leaves fall in autumn.",
+                    "exampleMeaning": "가을에 나뭇잎이 떨어져."
+                },
+                {
+                    "id": 11207,
+                    "word": "scary",
+                    "meaning": "adj. 무서운, 두려운",
+                    "example": "That movie is scary.",
+                    "exampleMeaning": "그 영화는 무서워."
+                },
+                {
+                    "id": 11208,
+                    "word": "vegetable",
+                    "meaning": "n. 채소",
+                    "example": "I eat a vegetable.",
+                    "exampleMeaning": "나는 채소를 먹어."
+                },
+                {
+                    "id": 11209,
+                    "word": "from",
+                    "meaning": "prep. ~부터, ~에서",
+                    "example": "This gift is from Mom.",
+                    "exampleMeaning": "이 선물은 엄마가 주셨어."
+                },
+                {
+                    "id": 11210,
+                    "word": "circle",
+                    "meaning": "n. 동그라미, 원",
+                    "example": "Draw a big circle.",
+                    "exampleMeaning": "큰 동그라미를 그려봐."
+                },
+                {
+                    "id": 11211,
+                    "word": "time",
+                    "meaning": "n. 시간",
+                    "example": "What time is it?",
+                    "exampleMeaning": "지금 몇 시야?"
+                },
+                {
+                    "id": 11212,
+                    "word": "yummy",
+                    "meaning": "adj. 맛있는",
+                    "example": "This cake is yummy.",
+                    "exampleMeaning": "이 케이크 맛있어."
+                },
+                {
+                    "id": 11213,
+                    "word": "tower",
+                    "meaning": "n. 탑",
+                    "example": "Look at the tower.",
+                    "exampleMeaning": "저 탑을 봐."
+                },
+                {
+                    "id": 11214,
+                    "word": "queen",
+                    "meaning": "n. 여왕, 왕비",
+                    "example": "She is the queen.",
+                    "exampleMeaning": "그녀는 여왕이야."
+                },
+                {
+                    "id": 11215,
+                    "word": "thank",
+                    "meaning": "v. 고마워하다, 감사하다",
+                    "example": "Thank you, Dad.",
+                    "exampleMeaning": "아빠, 고마워요."
+                },
+                {
+                    "id": 11216,
+                    "word": "bridge",
+                    "meaning": "n. 다리",
+                    "example": "The bridge is long.",
+                    "exampleMeaning": "다리는 길어."
+                },
+                {
+                    "id": 11217,
+                    "word": "open",
+                    "meaning": "adj. 열려 있는, v. 열다",
+                    "example": "Open the box.",
+                    "exampleMeaning": "상자를 열어봐."
+                },
+                {
+                    "id": 11218,
+                    "word": "end",
+                    "meaning": "v. 끝나다",
+                    "example": "The game will end soon.",
+                    "exampleMeaning": "곧 게임이 끝날 거야."
+                },
+                {
+                    "id": 11219,
+                    "word": "visit",
+                    "meaning": "v. 방문하다",
+                    "example": "Let’s visit Grandma.",
+                    "exampleMeaning": "할머니 댁에 가자."
+                },
+                {
+                    "id": 11220,
+                    "word": "out",
+                    "meaning": "adv. 밖으로, 밖에",
+                    "example": "Let’s go out.",
+                    "exampleMeaning": "밖에 나가자."
+                }
+            ]
+        },
+        {
+            "id": "unit_1_13",
+            "title": "Unit 13",
+            "words": [
+                {
+                    "id": 11301,
+                    "word": "feel",
+                    "meaning": "v. (기분·감정이) 들다",
+                    "example": "I feel happy.",
+                    "exampleMeaning": "나는 기분이 좋아."
+                },
+                {
+                    "id": 11302,
+                    "word": "sandwich",
+                    "meaning": "n. 샌드위치",
+                    "example": "I eat a sandwich.",
+                    "exampleMeaning": "나는 샌드위치를 먹어."
+                },
+                {
+                    "id": 11303,
+                    "word": "winter",
+                    "meaning": "n. 겨울",
+                    "example": "Winter is cold.",
+                    "exampleMeaning": "겨울은 추워."
+                },
+                {
+                    "id": 11304,
+                    "word": "pilot",
+                    "meaning": "n. 비행 조종사",
+                    "example": "The pilot flies a plane.",
+                    "exampleMeaning": "조종사가 비행기를 몰아."
+                },
+                {
+                    "id": 11305,
+                    "word": "window",
+                    "meaning": "n. 창문",
+                    "example": "Open the window.",
+                    "exampleMeaning": "창문을 열어."
+                },
+                {
+                    "id": 11306,
+                    "word": "every",
+                    "meaning": "adj. 모든, 매, 마다",
+                    "example": "Every child is special.",
+                    "exampleMeaning": "모든 아이는 특별해."
+                },
+                {
+                    "id": 11307,
+                    "word": "beautiful",
+                    "meaning": "adj. 아름다운",
+                    "example": "She is beautiful.",
+                    "exampleMeaning": "그녀는 예뻐."
+                },
+                {
+                    "id": 11308,
+                    "word": "alone",
+                    "meaning": "adj. 혼자인, adv. 혼자, 홀로",
+                    "example": "He sits alone.",
+                    "exampleMeaning": "그는 혼자 앉아 있어."
+                },
+                {
+                    "id": 11309,
+                    "word": "fix",
+                    "meaning": "v. 고치다, 수리하다, 고정시키다",
+                    "example": "Dad can fix the toy.",
+                    "exampleMeaning": "아빠가 장난감을 고쳐줘."
+                },
+                {
+                    "id": 11310,
+                    "word": "pan",
+                    "meaning": "n. 납작한 냄비",
+                    "example": "Put eggs in the pan.",
+                    "exampleMeaning": "팬에 달걀을 넣어."
+                },
+                {
+                    "id": 11311,
+                    "word": "train",
+                    "meaning": "n. 기차, 열차",
+                    "example": "The train is fast.",
+                    "exampleMeaning": "기차가 빨라."
+                },
+                {
+                    "id": 11312,
+                    "word": "strawberry",
+                    "meaning": "n. 딸기",
+                    "example": "I like a strawberry.",
+                    "exampleMeaning": "나는 딸기를 좋아해."
+                },
+                {
+                    "id": 11313,
+                    "word": "light",
+                    "meaning": "adj. 가벼운, n. 빛",
+                    "example": "The light is on.",
+                    "exampleMeaning": "불이 켜졌어."
+                },
+                {
+                    "id": 11314,
+                    "word": "hippo",
+                    "meaning": "n. 하마",
+                    "example": "A hippo is big.",
+                    "exampleMeaning": "하마는 커."
+                },
+                {
+                    "id": 11315,
+                    "word": "warm",
+                    "meaning": "adj. 따뜻한",
+                    "example": "It is warm today.",
+                    "exampleMeaning": "오늘은 따뜻해."
+                },
+                {
+                    "id": 11316,
+                    "word": "live",
+                    "meaning": "v. 살다",
+                    "example": "I live in Seoul.",
+                    "exampleMeaning": "나는 서울에 살아."
+                },
+                {
+                    "id": 11317,
+                    "word": "write",
+                    "meaning": "v. (글을) 쓰다",
+                    "example": "I can write my name.",
+                    "exampleMeaning": "나는 내 이름을 쓸 수 있어."
+                },
+                {
+                    "id": 11318,
+                    "word": "tooth",
+                    "meaning": "n. 이, 치아",
+                    "example": "Brush your tooth.",
+                    "exampleMeaning": "이를 닦아."
+                },
+                {
+                    "id": 11319,
+                    "word": "shout",
+                    "meaning": "v. 외치다",
+                    "example": "Don’t shout in class.",
+                    "exampleMeaning": "수업 시간에 소리 지르지 마."
+                },
+                {
+                    "id": 11320,
+                    "word": "take",
+                    "meaning": "v. 가지고 가다, 데리고 가다",
+                    "example": "Take the ball.",
+                    "exampleMeaning": "공을 가져가."
+                }
+            ]
+        },
+        {
+            "id": "unit_1_14",
+            "title": "Unit 14",
+            "words": [
+                {
+                    "id": 11401,
+                    "word": "hungry",
+                    "meaning": "adj. 배고픈",
+                    "example": "I am hungry.",
+                    "exampleMeaning": "나 배고파."
+                },
+                {
+                    "id": 11402,
+                    "word": "life",
+                    "meaning": "n. 생명, 삶, 생활",
+                    "example": "Life is fun.",
+                    "exampleMeaning": "삶은 즐거워."
+                },
+                {
+                    "id": 11403,
+                    "word": "bubble",
+                    "meaning": "n. (-s) 거품, 비눗방울",
+                    "example": "A bubble is big.",
+                    "exampleMeaning": "비눗방울이 커."
+                },
+                {
+                    "id": 11404,
+                    "word": "sure",
+                    "meaning": "adj. 확신하는",
+                    "example": "I am sure.",
+                    "exampleMeaning": "나는 확신해."
+                },
+                {
+                    "id": 11405,
+                    "word": "water",
+                    "meaning": "n. 물, v. 물을 주다",
+                    "example": "I drink water.",
+                    "exampleMeaning": "나는 물을 마셔."
+                },
+                {
+                    "id": 11406,
+                    "word": "dinosaur",
+                    "meaning": "n. 공룡",
+                    "example": "The dinosaur is tall.",
+                    "exampleMeaning": "공룡은 키가 커."
+                },
+                {
+                    "id": 11407,
+                    "word": "quiet",
+                    "meaning": "adj. 조용한",
+                    "example": "Be quiet, please.",
+                    "exampleMeaning": "조용히 해 주세요."
+                },
+                {
+                    "id": 11408,
+                    "word": "summer",
+                    "meaning": "n. 여름",
+                    "example": "Summer is hot.",
+                    "exampleMeaning": "여름은 더워."
+                },
+                {
+                    "id": 11409,
+                    "word": "top",
+                    "meaning": "n. 맨 위, 꼭대기, adj. 맨 위의",
+                    "example": "I am at the top.",
+                    "exampleMeaning": "나는 꼭대기에 있어."
+                },
+                {
+                    "id": 11410,
+                    "word": "soccer",
+                    "meaning": "n. 축구",
+                    "example": "I play soccer.",
+                    "exampleMeaning": "나는 축구를 해."
+                },
+                {
+                    "id": 11411,
+                    "word": "shake",
+                    "meaning": "v. 흔들(리)다",
+                    "example": "Shake your hand.",
+                    "exampleMeaning": "손을 흔들어 봐."
+                },
+                {
+                    "id": 11412,
+                    "word": "wet",
+                    "meaning": "adj. 젖은",
+                    "example": "My shirt is wet.",
+                    "exampleMeaning": "내 셔츠가 젖었어."
+                },
+                {
+                    "id": 11413,
+                    "word": "claw",
+                    "meaning": "n. (동물의) 발톱",
+                    "example": "The cat has a claw.",
+                    "exampleMeaning": "고양이에게 발톱이 있어."
+                },
+                {
+                    "id": 11414,
+                    "word": "barn",
+                    "meaning": "n. 헛간",
+                    "example": "The cow is in the barn.",
+                    "exampleMeaning": "소가 헛간에 있어."
+                },
+                {
+                    "id": 11415,
+                    "word": "weak",
+                    "meaning": "adj. 약한",
+                    "example": "The baby is weak.",
+                    "exampleMeaning": "아기는 약해."
+                },
+                {
+                    "id": 11416,
+                    "word": "enjoy",
+                    "meaning": "v. 즐기다",
+                    "example": "I enjoy the game.",
+                    "exampleMeaning": "나는 게임을 즐겨."
+                },
+                {
+                    "id": 11417,
+                    "word": "into",
+                    "meaning": "prep. ~안으로, ~안에",
+                    "example": "Put the toy into the box.",
+                    "exampleMeaning": "장난감을 상자에 넣어."
+                },
+                {
+                    "id": 11418,
+                    "word": "month",
+                    "meaning": "n. 달, 월",
+                    "example": "August is a hot month.",
+                    "exampleMeaning": "8월은 더운 달이야."
+                },
+                {
+                    "id": 11419,
+                    "word": "mop",
+                    "meaning": "n. 대걸레",
+                    "example": "I use a mop.",
+                    "exampleMeaning": "나는 대걸레를 써."
+                },
+                {
+                    "id": 11420,
+                    "word": "hit",
+                    "meaning": "v. 때리다, 치다",
+                    "example": "Don’t hit your friend.",
+                    "exampleMeaning": "친구를 때리지 마."
+                }
+            ]
+        },
+        {
+            "id": "unit_1_15",
+            "title": "Unit 15",
+            "words": [
+                {
+                    "id": 11501,
+                    "word": "cookie",
+                    "meaning": "n. 쿠키",
+                    "example": "I eat a cookie.",
+                    "exampleMeaning": "나는 쿠키를 먹어."
+                },
+                {
+                    "id": 11502,
+                    "word": "spring",
+                    "meaning": "n. 봄",
+                    "example": "Spring is here.",
+                    "exampleMeaning": "봄이 왔어."
+                },
+                {
+                    "id": 11503,
+                    "word": "gas",
+                    "meaning": "n. 기체, 가스, (난방·조리용) 가스, 휘발유, 기름",
+                    "example": "The gas is hot.",
+                    "exampleMeaning": "가스가 뜨거워."
+                },
+                {
+                    "id": 11504,
+                    "word": "heavy",
+                    "meaning": "adj. 무거운",
+                    "example": "This bag is heavy.",
+                    "exampleMeaning": "이 가방은 무거워."
+                },
+                {
+                    "id": 11505,
+                    "word": "paint",
+                    "meaning": "v. 페인트칠하다",
+                    "example": "Let’s paint a picture.",
+                    "exampleMeaning": "그림을 그리자."
+                },
+                {
+                    "id": 11506,
+                    "word": "chick",
+                    "meaning": "n. 병아리",
+                    "example": "The chick is yellow.",
+                    "exampleMeaning": "병아리는 노란색이야."
+                },
+                {
+                    "id": 11507,
+                    "word": "paw",
+                    "meaning": "n. (동물의) 발",
+                    "example": "The cat has a paw.",
+                    "exampleMeaning": "고양이에게 발이 있어."
+                },
+                {
+                    "id": 11508,
+                    "word": "love",
+                    "meaning": "v. 사랑하다",
+                    "example": "I love my mom.",
+                    "exampleMeaning": "나는 엄마를 사랑해."
+                },
+                {
+                    "id": 11509,
+                    "word": "stone",
+                    "meaning": "n. 돌",
+                    "example": "This is a stone.",
+                    "exampleMeaning": "이건 돌이야."
+                },
+                {
+                    "id": 11510,
+                    "word": "again",
+                    "meaning": "adv. 다시, 한번 더",
+                    "example": "Try it again.",
+                    "exampleMeaning": "다시 해봐."
+                },
+                {
+                    "id": 11511,
+                    "word": "baker",
+                    "meaning": "n. 제빵사",
+                    "example": "The baker is nice.",
+                    "exampleMeaning": "빵집 아저씨는 친절해."
+                },
+                {
+                    "id": 11512,
+                    "word": "ocean",
+                    "meaning": "n. 바다, 해양",
+                    "example": "The ocean is big.",
+                    "exampleMeaning": "바다는 커."
+                },
+                {
+                    "id": 11513,
+                    "word": "stop",
+                    "meaning": "v. 멈추다, 그만하다",
+                    "example": "Stop right now.",
+                    "exampleMeaning": "지금 멈춰."
+                },
+                {
+                    "id": 11514,
+                    "word": "snowy",
+                    "meaning": "adj. 눈이 오는",
+                    "example": "It is snowy today.",
+                    "exampleMeaning": "오늘 눈이 와."
+                },
+                {
+                    "id": 11515,
+                    "word": "scarf",
+                    "meaning": "n. 스카프, 목도리",
+                    "example": "I wear a scarf.",
+                    "exampleMeaning": "나는 목도리를 해."
+                },
+                {
+                    "id": 11516,
+                    "word": "park",
+                    "meaning": "n. 공원",
+                    "example": "We play at the park.",
+                    "exampleMeaning": "우리는 공원에서 놀아."
+                },
+                {
+                    "id": 11517,
+                    "word": "low",
+                    "meaning": "adj. (높이가) 낮은, (양·정도가) 적은",
+                    "example": "The bed is low.",
+                    "exampleMeaning": "침대가 낮아."
+                },
+                {
+                    "id": 11518,
+                    "word": "color",
+                    "meaning": "n. 색깔",
+                    "example": "I like this color.",
+                    "exampleMeaning": "나는 이 색이 좋아."
+                },
+                {
+                    "id": 11519,
+                    "word": "mix",
+                    "meaning": "v. 섞다, 혼합하다",
+                    "example": "Mix red and blue.",
+                    "exampleMeaning": "빨강과 파랑을 섞어."
+                },
+                {
+                    "id": 11520,
+                    "word": "wait",
+                    "meaning": "v. 기다리다",
+                    "example": "Wait for me.",
+                    "exampleMeaning": "나를 기다려."
+                }
+            ]
+        },
+        {
+            "id": "unit_1_16",
+            "title": "Unit 16",
+            "words": [
+                {
+                    "id": 11601,
+                    "word": "hose",
+                    "meaning": "n. 호스",
+                    "example": "I use a hose.",
+                    "exampleMeaning": "나는 호스를 써."
+                },
+                {
+                    "id": 11602,
+                    "word": "umbrella",
+                    "meaning": "n. 우산",
+                    "example": "Take your umbrella.",
+                    "exampleMeaning": "우산을 가져가."
+                },
+                {
+                    "id": 11603,
+                    "word": "wide",
+                    "meaning": "adj. (폭이) 넓은",
+                    "example": "The road is wide.",
+                    "exampleMeaning": "길이 넓어."
+                },
+                {
+                    "id": 11604,
+                    "word": "weekend",
+                    "meaning": "n. 주말",
+                    "example": "I play on the weekend.",
+                    "exampleMeaning": "주말에 놀자."
+                },
+                {
+                    "id": 11605,
+                    "word": "blow",
+                    "meaning": "v. 불다",
+                    "example": "The wind will blow.",
+                    "exampleMeaning": "바람이 불 거야."
+                },
+                {
+                    "id": 11606,
+                    "word": "tennis",
+                    "meaning": "n. 테니스",
+                    "example": "Let’s play tennis.",
+                    "exampleMeaning": "테니스를 치자."
+                },
+                {
+                    "id": 11607,
+                    "word": "fry",
+                    "meaning": "v. (기름에) 튀기다",
+                    "example": "Mom will fry eggs.",
+                    "exampleMeaning": "엄마가 달걀을 튀겨."
+                },
+                {
+                    "id": 11608,
+                    "word": "shoe",
+                    "meaning": "n. 신발 한 짝",
+                    "example": "This is my shoe.",
+                    "exampleMeaning": "이건 내 신발이야."
+                },
+                {
+                    "id": 11609,
+                    "word": "police",
+                    "meaning": "n. 경찰",
+                    "example": "The police can help.",
+                    "exampleMeaning": "경찰이 도와줄 수 있어."
+                },
+                {
+                    "id": 11610,
+                    "word": "foot",
+                    "meaning": "n. 발",
+                    "example": "My foot hurts.",
+                    "exampleMeaning": "발이 아파."
+                },
+                {
+                    "id": 11611,
+                    "word": "man",
+                    "meaning": "n. 남자",
+                    "example": "The man is tall.",
+                    "exampleMeaning": "그 남자는 키가 커."
+                },
+                {
+                    "id": 11612,
+                    "word": "drawing",
+                    "meaning": "n. 그림",
+                    "example": "This is my drawing.",
+                    "exampleMeaning": "이건 내 그림이야."
+                },
+                {
+                    "id": 11613,
+                    "word": "lazy",
+                    "meaning": "adj. 게으른",
+                    "example": "He is lazy.",
+                    "exampleMeaning": "그는 게으르다."
+                },
+                {
+                    "id": 11614,
+                    "word": "bank",
+                    "meaning": "n. 은행",
+                    "example": "Let’s go to the bank.",
+                    "exampleMeaning": "은행에 가자."
+                },
+                {
+                    "id": 11615,
+                    "word": "speak",
+                    "meaning": "v. 말하다",
+                    "example": "I can speak English.",
+                    "exampleMeaning": "나는 영어를 말할 수 있어."
+                },
+                {
+                    "id": 11616,
+                    "word": "crab",
+                    "meaning": "n. 게",
+                    "example": "A crab has claws.",
+                    "exampleMeaning": "게는 집게가 있어."
+                },
+                {
+                    "id": 11617,
+                    "word": "cousin",
+                    "meaning": "n. 사촌",
+                    "example": "My cousin is funny.",
+                    "exampleMeaning": "내 사촌은 재미있어."
+                },
+                {
+                    "id": 11618,
+                    "word": "wake",
+                    "meaning": "v. (잠에서) 깨다, 깨우다",
+                    "example": "Wake up now!",
+                    "exampleMeaning": "지금 일어나!"
+                },
+                {
+                    "id": 11619,
+                    "word": "inside",
+                    "meaning": "n. 안, 내부, adv. 안으로, 안에",
+                    "example": "The cat is inside.",
+                    "exampleMeaning": "고양이가 안에 있어."
+                },
+                {
+                    "id": 11620,
+                    "word": "drive",
+                    "meaning": "v. 운전하다",
+                    "example": "Dad will drive.",
+                    "exampleMeaning": "아빠가 운전할 거야."
+                }
+            ]
+        },
+        {
+            "id": "unit_1_17",
+            "title": "Unit 17",
+            "words": [
+                {
+                    "id": 11701,
+                    "word": "ask",
+                    "meaning": "v. 묻다, 질문하다",
+                    "example": "Can I ask a question?",
+                    "exampleMeaning": "질문해도 될까?"
+                },
+                {
+                    "id": 11702,
+                    "word": "shine",
+                    "meaning": "v. 빛나다",
+                    "example": "The sun will shine.",
+                    "exampleMeaning": "해가 빛날 거야."
+                },
+                {
+                    "id": 11703,
+                    "word": "everyday",
+                    "meaning": "adj. 매일의, 일상의",
+                    "example": "I brush my teeth everyday.",
+                    "exampleMeaning": "나는 매일 양치를 해."
+                },
+                {
+                    "id": 11704,
+                    "word": "year",
+                    "meaning": "n. 해, 연(年), 나이",
+                    "example": "I am 8 years old this year.",
+                    "exampleMeaning": "나는 올해 8살이야."
+                },
+                {
+                    "id": 11705,
+                    "word": "idea",
+                    "meaning": "n. 생각",
+                    "example": "That’s a good idea.",
+                    "exampleMeaning": "그건 좋은 생각이야."
+                },
+                {
+                    "id": 11706,
+                    "word": "chef",
+                    "meaning": "n. 요리사",
+                    "example": "The chef is cooking.",
+                    "exampleMeaning": "요리사가 요리 중이야."
+                },
+                {
+                    "id": 11707,
+                    "word": "picture",
+                    "meaning": "n. 그림, 사진",
+                    "example": "Look at this picture.",
+                    "exampleMeaning": "이 그림을 봐."
+                },
+                {
+                    "id": 11708,
+                    "word": "sing",
+                    "meaning": "v. 노래하다",
+                    "example": "Let’s sing a song.",
+                    "exampleMeaning": "노래를 부르자."
+                },
+                {
+                    "id": 11709,
+                    "word": "soup",
+                    "meaning": "n. 수프",
+                    "example": "I like hot soup.",
+                    "exampleMeaning": "나는 뜨거운 수프가 좋아."
+                },
+                {
+                    "id": 11710,
+                    "word": "outside",
+                    "meaning": "n. 바깥(쪽), adv. 밖에, 밖으로",
+                    "example": "Let’s play outside.",
+                    "exampleMeaning": "밖에서 놀자."
+                },
+                {
+                    "id": 11711,
+                    "word": "noon",
+                    "meaning": "n. 정오, 낮 12시",
+                    "example": "It’s noon now.",
+                    "exampleMeaning": "지금 정오야."
+                },
+                {
+                    "id": 11712,
+                    "word": "guitar",
+                    "meaning": "n. 기타",
+                    "example": "She plays the guitar.",
+                    "exampleMeaning": "그녀는 기타를 쳐."
+                },
+                {
+                    "id": 11713,
+                    "word": "dark",
+                    "meaning": "adj. 어두운",
+                    "example": "It is dark at night.",
+                    "exampleMeaning": "밤에는 어두워."
+                },
+                {
+                    "id": 11714,
+                    "word": "broom",
+                    "meaning": "n. 빗자루",
+                    "example": "I use a broom.",
+                    "exampleMeaning": "나는 빗자루를 써."
+                },
+                {
+                    "id": 11715,
+                    "word": "dirty",
+                    "meaning": "adj. 더러운",
+                    "example": "My hands are dirty.",
+                    "exampleMeaning": "내 손이 더러워."
+                },
+                {
+                    "id": 11716,
+                    "word": "forest",
+                    "meaning": "n. 숲",
+                    "example": "We went to the forest.",
+                    "exampleMeaning": "우리는 숲에 갔어."
+                },
+                {
+                    "id": 11717,
+                    "word": "nut",
+                    "meaning": "n. 견과",
+                    "example": "I ate a nut.",
+                    "exampleMeaning": "나는 견과류를 먹었어."
+                },
+                {
+                    "id": 11718,
+                    "word": "touch",
+                    "meaning": "v. 만지다",
+                    "example": "Don’t touch that!",
+                    "exampleMeaning": "그거 만지지 마!"
+                },
+                {
+                    "id": 11719,
+                    "word": "shape",
+                    "meaning": "n. 모양, 형태",
+                    "example": "This shape is round.",
+                    "exampleMeaning": "이 모양은 동그래."
+                },
+                {
+                    "id": 11720,
+                    "word": "mixture",
+                    "meaning": "n. 혼합, 혼합물",
+                    "example": "Let’s mix the colors.",
+                    "exampleMeaning": "색을 섞자."
+                }
+            ]
+        },
+        {
+            "id": "unit_1_18",
+            "title": "Unit 18",
+            "words": [
+                {
+                    "id": 11801,
+                    "word": "hop",
+                    "meaning": "v. (깡충) 뛰다",
+                    "example": "The frog can hop.",
+                    "exampleMeaning": "개구리가 깡충 뛸 수 있어."
+                },
+                {
+                    "id": 11802,
+                    "word": "round",
+                    "meaning": "adj. 둥근, 원형의",
+                    "example": "This table is round.",
+                    "exampleMeaning": "이 테이블은 둥글어."
+                },
+                {
+                    "id": 11803,
+                    "word": "well",
+                    "meaning": "adv. 잘, 훌륭하게",
+                    "example": "I am doing well.",
+                    "exampleMeaning": "나 잘 지내고 있어."
+                },
+                {
+                    "id": 11804,
+                    "word": "question",
+                    "meaning": "n. 질문",
+                    "example": "I have a question.",
+                    "exampleMeaning": "질문이 있어."
+                },
+                {
+                    "id": 11805,
+                    "word": "pianist",
+                    "meaning": "n. 피아노 연주가",
+                    "example": "She is a great pianist.",
+                    "exampleMeaning": "그녀는 훌륭한 피아니스트야."
+                },
+                {
+                    "id": 11806,
+                    "word": "ruler",
+                    "meaning": "n. 자",
+                    "example": "Use your ruler.",
+                    "exampleMeaning": "자 너의 자를 써봐."
+                },
+                {
+                    "id": 11807,
+                    "word": "slide",
+                    "meaning": "v. 미끄러지다",
+                    "example": "Let’s slide at the park.",
+                    "exampleMeaning": "공원에서 미끄럼틀 타자."
+                },
+                {
+                    "id": 11808,
+                    "word": "test",
+                    "meaning": "n. 시험, 검사",
+                    "example": "I will take the test.",
+                    "exampleMeaning": "시험을 볼 거야."
+                },
+                {
+                    "id": 11809,
+                    "word": "cold",
+                    "meaning": "adj. 추운, 차가운, n. 감기",
+                    "example": "It is cold today.",
+                    "exampleMeaning": "오늘은 추워."
+                },
+                {
+                    "id": 11810,
+                    "word": "bring",
+                    "meaning": "v. 가져오다",
+                    "example": "Can you bring your book?",
+                    "exampleMeaning": "책 가져올 수 있니?"
+                },
+                {
+                    "id": 11811,
+                    "word": "pull",
+                    "meaning": "v. 끌다, 당기다",
+                    "example": "Pull the door.",
+                    "exampleMeaning": "문을 당겨."
+                },
+                {
+                    "id": 11812,
+                    "word": "bean",
+                    "meaning": "n. 콩",
+                    "example": "I see a bean.",
+                    "exampleMeaning": "나는 콩을 봤어."
+                },
+                {
+                    "id": 11813,
+                    "word": "front",
+                    "meaning": "n. 앞, 정면, adj. 앞쪽의",
+                    "example": "Stand at the front.",
+                    "exampleMeaning": "앞에 서 봐."
+                },
+                {
+                    "id": 11814,
+                    "word": "windy",
+                    "meaning": "adj. 바람이 부는",
+                    "example": "It’s a windy day.",
+                    "exampleMeaning": "오늘은 바람이 많이 불어."
+                },
+                {
+                    "id": 11815,
+                    "word": "smart",
+                    "meaning": "adj. 똑똑한, 영리한",
+                    "example": "He is a smart boy.",
+                    "exampleMeaning": "그는 똑똑한 아이야."
+                },
+                {
+                    "id": 11816,
+                    "word": "money",
+                    "meaning": "n. 돈",
+                    "example": "I have some money.",
+                    "exampleMeaning": "나는 돈이 좀 있어."
+                },
+                {
+                    "id": 11817,
+                    "word": "win",
+                    "meaning": "v. 이기다, 우승하다",
+                    "example": "Did you win the game?",
+                    "exampleMeaning": "게임에서 이겼니?"
+                },
+                {
+                    "id": 11818,
+                    "word": "present",
+                    "meaning": "n. 선물",
+                    "example": "This is your present.",
+                    "exampleMeaning": "이건 너의 선물이야."
+                },
+                {
+                    "id": 11819,
+                    "word": "sink",
+                    "meaning": "v. 가라앉다, 빠지다",
+                    "example": "The boat will sink.",
+                    "exampleMeaning": "배가 가라앉을 거야."
+                },
+                {
+                    "id": 11820,
+                    "word": "deer",
+                    "meaning": "n. 사슴",
+                    "example": "A deer is running.",
+                    "exampleMeaning": "사슴이 달리고 있어."
+                }
+            ]
+        },
+        {
+            "id": "unit_1_19",
+            "title": "Unit 19",
+            "words": [
+                {
+                    "id": 11901,
+                    "word": "over",
+                    "meaning": "prep. ~의 위에, ~너머로",
+                    "example": "The game is over.",
+                    "exampleMeaning": "게임이 끝났다."
+                },
+                {
+                    "id": 11902,
+                    "word": "crayon",
+                    "meaning": "n. 크레용",
+                    "example": "I draw with a crayon.",
+                    "exampleMeaning": "나는 크레용으로 그린다."
+                },
+                {
+                    "id": 11903,
+                    "word": "pipe",
+                    "meaning": "n. 관, 파이프",
+                    "example": "The pipe is long.",
+                    "exampleMeaning": "파이프는 길다."
+                },
+                {
+                    "id": 11904,
+                    "word": "meat",
+                    "meaning": "n. 고기",
+                    "example": "The meat is yummy.",
+                    "exampleMeaning": "고기는 맛있다."
+                },
+                {
+                    "id": 11905,
+                    "word": "news",
+                    "meaning": "n. 뉴스, 소식",
+                    "example": "I read the news.",
+                    "exampleMeaning": "나는 뉴스를 읽는다."
+                },
+                {
+                    "id": 11906,
+                    "word": "plant",
+                    "meaning": "n. 식물, v. 심다",
+                    "example": "The plant is green.",
+                    "exampleMeaning": "식물은 초록색이다."
+                },
+                {
+                    "id": 11907,
+                    "word": "dig",
+                    "meaning": "v. 파다",
+                    "example": "I dig in the sand.",
+                    "exampleMeaning": "나는 모래 속을 판다."
+                },
+                {
+                    "id": 11908,
+                    "word": "hip",
+                    "meaning": "n. 엉덩이",
+                    "example": "The hip is strong.",
+                    "exampleMeaning": "엉덩이는 튼튼하다."
+                },
+                {
+                    "id": 11909,
+                    "word": "much",
+                    "meaning": "adj. (양이) 많은, adv. 매우, 많이",
+                    "example": "I have much fun.",
+                    "exampleMeaning": "나는 재미를 많이 느낀다."
+                },
+                {
+                    "id": 11910,
+                    "word": "birthday",
+                    "meaning": "n. 생일",
+                    "example": "Today is my birthday.",
+                    "exampleMeaning": "오늘은 내 생일이다."
+                },
+                {
+                    "id": 11911,
+                    "word": "enter",
+                    "meaning": "v. 들어가다, 들어오다",
+                    "example": "I enter the room.",
+                    "exampleMeaning": "나는 방에 들어간다."
+                },
+                {
+                    "id": 11912,
+                    "word": "town",
+                    "meaning": "n. 마을, 동네",
+                    "example": "The town is small.",
+                    "exampleMeaning": "마을은 작다."
+                },
+                {
+                    "id": 11913,
+                    "word": "feeling",
+                    "meaning": "n. 느낌, 감정",
+                    "example": "I have a good feeling.",
+                    "exampleMeaning": "나는 기분이 좋다."
+                },
+                {
+                    "id": 11914,
+                    "word": "drop",
+                    "meaning": "v. 떨어뜨리다",
+                    "example": "I drop my ball.",
+                    "exampleMeaning": "나는 공을 떨어뜨렸다."
+                },
+                {
+                    "id": 11915,
+                    "word": "homework",
+                    "meaning": "n. 숙제, 과제",
+                    "example": "I do my homework.",
+                    "exampleMeaning": "나는 숙제를 한다."
+                },
+                {
+                    "id": 11916,
+                    "word": "street",
+                    "meaning": "n. 길, 거리",
+                    "example": "The street is wide.",
+                    "exampleMeaning": "거리는 넓다."
+                },
+                {
+                    "id": 11917,
+                    "word": "turtle",
+                    "meaning": "n. 거북이",
+                    "example": "The turtle is slow.",
+                    "exampleMeaning": "거북이는 느리다."
+                },
+                {
+                    "id": 11918,
+                    "word": "answer",
+                    "meaning": "v. 대답하다, n. 대답",
+                    "example": "I answer the question.",
+                    "exampleMeaning": "나는 질문에 대답한다."
+                },
+                {
+                    "id": 11919,
+                    "word": "music",
+                    "meaning": "n. 음악",
+                    "example": "The music is loud.",
+                    "exampleMeaning": "음악은 시끄럽다."
+                },
+                {
+                    "id": 11920,
+                    "word": "colorful",
+                    "meaning": "adj. 알록달록한, 색이 다양한",
+                    "example": "The flower is colorful.",
+                    "exampleMeaning": "꽃은 알록달록하다."
+                }
+            ]
+        },
+        {
+            "id": "unit_1_20",
+            "title": "Unit 20",
+            "words": [
+                {
+                    "id": 12001,
+                    "word": "fat",
+                    "meaning": "adj. 뚱뚱한",
+                    "example": "The cat is fat.",
+                    "exampleMeaning": "고양이는 뚱뚱하다."
+                },
+                {
+                    "id": 12002,
+                    "word": "pour",
+                    "meaning": "v. 붓다, 따르다",
+                    "example": "I pour water.",
+                    "exampleMeaning": "나는 물을 따른다."
+                },
+                {
+                    "id": 12003,
+                    "word": "here",
+                    "meaning": "adv. 여기",
+                    "example": "Come here now.",
+                    "exampleMeaning": "지금 여기 와."
+                },
+                {
+                    "id": 12004,
+                    "word": "paper",
+                    "meaning": "n. 종이",
+                    "example": "I write on paper.",
+                    "exampleMeaning": "나는 종이에 쓴다."
+                },
+                {
+                    "id": 12005,
+                    "word": "singer",
+                    "meaning": "n. 가수",
+                    "example": "The singer sings well.",
+                    "exampleMeaning": "가수는 노래를 잘한다."
+                },
+                {
+                    "id": 12006,
+                    "word": "violin",
+                    "meaning": "n. 바이올린",
+                    "example": "She plays the violin.",
+                    "exampleMeaning": "그녀는 바이올린을 연주한다."
+                },
+                {
+                    "id": 12007,
+                    "word": "lose",
+                    "meaning": "v. 잃다",
+                    "example": "I lose my pen.",
+                    "exampleMeaning": "나는 펜을 잃어버렸다."
+                },
+                {
+                    "id": 12008,
+                    "word": "fool",
+                    "meaning": "n. 바보",
+                    "example": "He is a fool.",
+                    "exampleMeaning": "그는 바보다."
+                },
+                {
+                    "id": 12009,
+                    "word": "sweater",
+                    "meaning": "n. 스웨터",
+                    "example": "My sweater is warm.",
+                    "exampleMeaning": "내 스웨터는 따뜻하다."
+                },
+                {
+                    "id": 12010,
+                    "word": "team",
+                    "meaning": "n. 팀",
+                    "example": "Our team is strong.",
+                    "exampleMeaning": "우리 팀은 강하다."
+                },
+                {
+                    "id": 12011,
+                    "word": "cafe",
+                    "meaning": "n. 카페",
+                    "example": "The cafe is cozy.",
+                    "exampleMeaning": "카페는 아늑하다."
+                },
+                {
+                    "id": 12012,
+                    "word": "heavily",
+                    "meaning": "adv. 무겁게, 심하게",
+                    "example": "It rains heavily.",
+                    "exampleMeaning": "비가 많이 온다."
+                },
+                {
+                    "id": 12013,
+                    "word": "keep",
+                    "meaning": "v. 유지하다",
+                    "example": "I keep my toy.",
+                    "exampleMeaning": "나는 장난감을 간직한다."
+                },
+                {
+                    "id": 12014,
+                    "word": "beach",
+                    "meaning": "n. 해변",
+                    "example": "The beach is fun.",
+                    "exampleMeaning": "해변은 재미있다."
+                },
+                {
+                    "id": 12015,
+                    "word": "bright",
+                    "meaning": "adj. 밝은",
+                    "example": "The sun is bright.",
+                    "exampleMeaning": "태양은 밝다."
+                },
+                {
+                    "id": 12016,
+                    "word": "goose",
+                    "meaning": "n. 거위",
+                    "example": "The goose is white.",
+                    "exampleMeaning": "거위는 하얗다."
+                },
+                {
+                    "id": 12017,
+                    "word": "wing",
+                    "meaning": "n. 날개",
+                    "example": "The bird has wings.",
+                    "exampleMeaning": "새는 날개를 가지고 있다."
+                },
+                {
+                    "id": 12018,
+                    "word": "sunglasses",
+                    "meaning": "n. 선글라스",
+                    "example": "I wear sunglasses.",
+                    "exampleMeaning": "나는 선글라스를 쓴다."
+                },
+                {
+                    "id": 12019,
+                    "word": "hold",
+                    "meaning": "v. 잡다, 들다",
+                    "example": "I hold a ball.",
+                    "exampleMeaning": "나는 공을 잡는다."
+                },
+                {
+                    "id": 12020,
+                    "word": "wink",
+                    "meaning": "v. 윙크하다",
+                    "example": "She winks at me.",
+                    "exampleMeaning": "그녀는 나에게 윙크한다."
+                }
+            ]
+        },
+        {
+            "id": "unit_1_21",
+            "title": "Unit 21",
+            "words": [
+                {
+                    "id": 12101,
+                    "word": "whale",
+                    "meaning": "n. 고래",
+                    "example": "The whale is big.",
+                    "exampleMeaning": "고래는 크다."
+                },
+                {
+                    "id": 12102,
+                    "word": "doctor",
+                    "meaning": "n. 의사",
+                    "example": "The doctor helps me.",
+                    "exampleMeaning": "의사는 나를 돕는다."
+                },
+                {
+                    "id": 12103,
+                    "word": "movie",
+                    "meaning": "n. 영화",
+                    "example": "I watch a movie.",
+                    "exampleMeaning": "나는 영화를 본다."
+                },
+                {
+                    "id": 12104,
+                    "word": "person",
+                    "meaning": "n. 사람, 개인",
+                    "example": "She is a kind person.",
+                    "exampleMeaning": "그녀는 친절한 사람이다."
+                },
+                {
+                    "id": 12105,
+                    "word": "classroom",
+                    "meaning": "n. 교실",
+                    "example": "The classroom is clean.",
+                    "exampleMeaning": "교실은 깨끗하다."
+                },
+                {
+                    "id": 12106,
+                    "word": "hurt",
+                    "meaning": "v. 다치게 하다, 아프다",
+                    "example": "My foot hurts.",
+                    "exampleMeaning": "내 발이 아프다."
+                },
+                {
+                    "id": 12107,
+                    "word": "kind",
+                    "meaning": "adj. 친절한, 착한",
+                    "example": "He data: []is kind to me.",
+                    "exampleMeaning": "그는 나에게 친절하다."
+                },
+                {
+                    "id": 12108,
+                    "word": "garlic",
+                    "meaning": "n. 마늘",
+                    "example": "Garlic smells strong.",
+                    "exampleMeaning": "마늘은 냄새가 강하다."
+                },
+                {
+                    "id": 12109,
+                    "word": "slice",
+                    "meaning": "n. 조각, v. (얇게) 썰다",
+                    "example": "I slice an apple.",
+                    "exampleMeaning": "나는 사과를 자른다."
+                },
+                {
+                    "id": 12110,
+                    "word": "everybody",
+                    "meaning": "pron. 모든 사람",
+                    "example": "Everybody is happy.",
+                    "exampleMeaning": "모두가 행복하다."
+                },
+                {
+                    "id": 12111,
+                    "word": "dance",
+                    "meaning": "v. 춤추다",
+                    "example": "We dance together.",
+                    "exampleMeaning": "우리는 함께 춤춘다."
+                },
+                {
+                    "id": 12112,
+                    "word": "angry",
+                    "meaning": "adj. 화난",
+                    "example": "She is angry now.",
+                    "exampleMeaning": "그녀는 지금 화가 났다."
+                },
+                {
+                    "id": 12113,
+                    "word": "arrive",
+                    "meaning": "v. 도착하다",
+                    "example": "I arrive at school.",
+                    "exampleMeaning": "나는 학교에 도착한다."
+                },
+                {
+                    "id": 12114,
+                    "word": "fresh",
+                    "meaning": "adj. 신선한",
+                    "example": "The fruit is fresh.",
+                    "exampleMeaning": "과일은 신선하다."
+                },
+                {
+                    "id": 12115,
+                    "word": "moon",
+                    "meaning": "n. 달",
+                    "example": "The moon is round.",
+                    "exampleMeaning": "달은 둥글다."
+                },
+                {
+                    "id": 12116,
+                    "word": "bookshelf",
+                    "meaning": "n. 책장, 책꽂이",
+                    "example": "The bookshelf is tall.",
+                    "exampleMeaning": "책장은 높다."
+                },
+                {
+                    "id": 12117,
+                    "word": "difficult",
+                    "meaning": "adj. 어려운, 힘든",
+                    "example": "Math is difficult.",
+                    "exampleMeaning": "수학은 어렵다."
+                },
+                {
+                    "id": 12118,
+                    "word": "place",
+                    "meaning": "n. 장소, 곳, v. 두다, 놓다",
+                    "example": "This place is nice.",
+                    "exampleMeaning": "이 장소는 멋지다."
+                },
+                {
+                    "id": 12119,
+                    "word": "oil",
+                    "meaning": "n. 기름",
+                    "example": "I cook with oil.",
+                    "exampleMeaning": "나는 기름으로 요리한다."
+                },
+                {
+                    "id": 12120,
+                    "word": "change",
+                    "meaning": "v. 변화시키다, 변하다",
+                    "example": "I change my shirt.",
+                    "exampleMeaning": "나는 셔츠를 갈아입는다."
+                }
+            ]
+        },
+        {
+            "id": "unit_1_22",
+            "title": "Unit 22",
+            "words": [
+                {
+                    "id": 12201,
+                    "word": "salty",
+                    "meaning": "adj. (맛이) 짠",
+                    "example": "The soup is salty.",
+                    "exampleMeaning": "수프는 짜다."
+                },
+                {
+                    "id": 12202,
+                    "word": "lake",
+                    "meaning": "n. 호수",
+                    "example": "The lake is blue.",
+                    "exampleMeaning": "호수는 파랗다."
+                },
+                {
+                    "id": 12203,
+                    "word": "busy",
+                    "meaning": "adj. 바쁜",
+                    "example": "Mom is very busy.",
+                    "exampleMeaning": "엄마는 매우 바쁘다."
+                },
+                {
+                    "id": 12204,
+                    "word": "breakfast",
+                    "meaning": "n. 아침 식사",
+                    "example": "I eat breakfast.",
+                    "exampleMeaning": "나는 아침을 먹는다."
+                },
+                {
+                    "id": 12205,
+                    "word": "glove",
+                    "meaning": "n. 장갑 한 쪽",
+                    "example": "I wear a glove.",
+                    "exampleMeaning": "나는 장갑을 낀다."
+                },
+                {
+                    "id": 12206,
+                    "word": "shoulder",
+                    "meaning": "n. 어깨",
+                    "example": "My shoulder is sore.",
+                    "exampleMeaning": "내 어깨가 아프다."
+                },
+                {
+                    "id": 12207,
+                    "word": "board",
+                    "meaning": "n. 판자, 널빤지, v. (배·기차·비행기에) 타다",
+                    "example": "The board is white.",
+                    "exampleMeaning": "칠판은 하얗다."
+                },
+                {
+                    "id": 12208,
+                    "word": "math",
+                    "meaning": "n. 수학",
+                    "example": "Math is fun.",
+                    "exampleMeaning": "수학은 재미있다."
+                },
+                {
+                    "id": 12209,
+                    "word": "nurse",
+                    "meaning": "n. 간호사",
+                    "example": "The nurse is kind.",
+                    "exampleMeaning": "간호사는 친절하다."
+                },
+                {
+                    "id": 12210,
+                    "word": "early",
+                    "meaning": "adv. 일찍, 빨리, adj. 이른, 빠른",
+                    "example": "I wake up early.",
+                    "exampleMeaning": "나는 일찍 일어난다."
+                },
+                {
+                    "id": 12211,
+                    "word": "join",
+                    "meaning": "v. 가입하다, 함께하다",
+                    "example": "I join my friends.",
+                    "exampleMeaning": "나는 친구들과 함께한다."
+                },
+                {
+                    "id": 12212,
+                    "word": "floor",
+                    "meaning": "n. 바닥, 층",
+                    "example": "The floor is clean.",
+                    "exampleMeaning": "바닥은 깨끗하다."
+                },
+                {
+                    "id": 12213,
+                    "word": "vase",
+                    "meaning": "n. 꽃병",
+                    "example": "The vase is pretty.",
+                    "exampleMeaning": "꽃병은 예쁘다."
+                },
+                {
+                    "id": 12214,
+                    "word": "tonight",
+                    "meaning": "n. 오늘 밤",
+                    "example": "We play tonight.",
+                    "exampleMeaning": "우리는 오늘 밤에 논다."
+                },
+                {
+                    "id": 12215,
+                    "word": "sandal",
+                    "meaning": "n. 샌들 한 짝",
+                    "example": "I wear sandals.",
+                    "exampleMeaning": "나는 샌들을 신는다."
+                },
+                {
+                    "id": 12216,
+                    "word": "pick",
+                    "meaning": "v. 고르다, 선택하다, 꺾다, 따다",
+                    "example": "I pick a flower.",
+                    "exampleMeaning": "나는 꽃을 딴다."
+                },
+                {
+                    "id": 12217,
+                    "word": "there",
+                    "meaning": "adv. 저기에(서), 그곳으로",
+                    "example": "The dog is there.",
+                    "exampleMeaning": "강아지는 저기에 있다."
+                },
+                {
+                    "id": 12218,
+                    "word": "move",
+                    "meaning": "v. 움직이다",
+                    "example": "I move the chair.",
+                    "exampleMeaning": "나는 의자를 옮긴다."
+                },
+                {
+                    "id": 12219,
+                    "word": "salad",
+                    "meaning": "n. 샐러드",
+                    "example": "The salad is fresh.",
+                    "exampleMeaning": "샐러드는 신선하다."
+                },
+                {
+                    "id": 12220,
+                    "word": "add",
+                    "meaning": "v. 더하다, 추가하다",
+                    "example": "I add two numbers.",
+                    "exampleMeaning": "나는 두 숫자를 더한다."
+                }
+            ]
+        },
+        {
+            "id": "unit_1_23",
+            "title": "Unit 23",
+            "words": [
+                {
+                    "id": 12301,
+                    "word": "album",
+                    "meaning": "n. 앨범",
+                    "example": "I have a photo album.",
+                    "exampleMeaning": "나는 사진 앨범을 가지고 있다."
+                },
+                {
+                    "id": 12302,
+                    "word": "seed",
+                    "meaning": "n. 씨앗",
+                    "example": "I plant a seed in the garden.",
+                    "exampleMeaning": "나는 정원에 씨앗을 심는다."
+                },
+                {
+                    "id": 12303,
+                    "word": "sweet",
+                    "meaning": "adj. 달콤한",
+                    "example": "The cake is very sweet.",
+                    "exampleMeaning": "케이크는 매우 달콤하다."
+                },
+                {
+                    "id": 12304,
+                    "word": "blanket",
+                    "meaning": "n. 이불, 담요",
+                    "example": "I sleep with a warm blanket.",
+                    "exampleMeaning": "나는 따뜻한 담요를 덮고 잔다."
+                },
+                {
+                    "id": 12305,
+                    "word": "woman",
+                    "meaning": "n. 여성",
+                    "example": "The woman reads a book.",
+                    "exampleMeaning": "그 여자는 책을 읽는다."
+                },
+                {
+                    "id": 12306,
+                    "word": "penguin",
+                    "meaning": "n. 펭귄",
+                    "example": "The penguin waddles on the ice.",
+                    "exampleMeaning": "펭귄은 얼음 위에서 뒤뚱거린다."
+                },
+                {
+                    "id": 12307,
+                    "word": "fruit",
+                    "meaning": "n. 과일",
+                    "example": "I eat fruit every day.",
+                    "exampleMeaning": "나는 매일 과일을 먹는다."
+                },
+                {
+                    "id": 12308,
+                    "word": "hate",
+                    "meaning": "v. 싫어하다",
+                    "example": "I hate cold weather.",
+                    "exampleMeaning": "나는 추운 날씨를 싫어한다."
+                },
+                {
+                    "id": 12309,
+                    "word": "choose",
+                    "meaning": "v. 고르다, 선택하다",
+                    "example": "I choose a red pencil.",
+                    "exampleMeaning": "나는 빨간 연필을 선택한다."
+                },
+                {
+                    "id": 12310,
+                    "word": "trash",
+                    "meaning": "n. 쓰레기",
+                    "example": "I throw trash in the bin.",
+                    "exampleMeaning": "나는 쓰레기를 쓰레기통에 버린다."
+                },
+                {
+                    "id": 12311,
+                    "word": "leave",
+                    "meaning": "v. 떠나다, 출발하다, 남기다, 놓고 가다",
+                    "example": "I leave my house early.",
+                    "exampleMeaning": "나는 일찍 집을 나선다."
+                },
+                {
+                    "id": 12312,
+                    "word": "plate",
+                    "meaning": "n. 접시",
+                    "example": "My plate is full of food.",
+                    "exampleMeaning": "내 접시는 음식으로 가득하다."
+                },
+                {
+                    "id": 12313,
+                    "word": "museum",
+                    "meaning": "n. 박물관",
+                    "example": "We visit the museum today.",
+                    "exampleMeaning": "우리는 오늘 박물관을 방문한다."
+                },
+                {
+                    "id": 12314,
+                    "word": "word",
+                    "meaning": "n. 단어, 말",
+                    "example": "I learn a new word.",
+                    "exampleMeaning": "나는 새로운 단어를 배운다."
+                },
+                {
+                    "id": 12315,
+                    "word": "share",
+                    "meaning": "v. 함께 쓰다, 공유하다",
+                    "example": "I share my snacks with friends.",
+                    "exampleMeaning": "나는 친구들과 간식을 나눈다."
+                },
+                {
+                    "id": 12316,
+                    "word": "land",
+                    "meaning": "n. 땅, 육지, v. 착륙하다",
+                    "example": "The plane lands safely.",
+                    "exampleMeaning": "비행기는 안전하게 착륙한다."
+                },
+                {
+                    "id": 12317,
+                    "word": "star",
+                    "meaning": "n. 별",
+                    "example": "The star shines in the sky.",
+                    "exampleMeaning": "별은 하늘에서 빛난다."
+                },
+                {
+                    "id": 12318,
+                    "word": "library",
+                    "meaning": "n. 도서관",
+                    "example": "I borrow books from the library.",
+                    "exampleMeaning": "나는 도서관에서 책을 빌린다."
+                },
+                {
+                    "id": 12319,
+                    "word": "behind",
+                    "meaning": "prep. ~뒤에",
+                    "example": "The cat hides behind the sofa.",
+                    "exampleMeaning": "고양이는 소파 뒤에 숨는다."
+                },
+                {
+                    "id": 12320,
+                    "word": "boil",
+                    "meaning": "v. 끓다, 끓이다",
+                    "example": "I boil water for tea.",
+                    "exampleMeaning": "나는 차를 만들기 위해 물을 끓인다."
+                }
+            ]
+        },
+        {
+            "id": "unit_1_24",
+            "title": "Unit 24",
+            "words": [
+                {
+                    "id": 12401,
+                    "word": "habit",
+                    "meaning": "n. 습관, 버릇",
+                    "example": "Brushing my teeth is a good habit.",
+                    "exampleMeaning": "이를 닦는 것은 좋은 습관이다."
+                },
+                {
+                    "id": 12402,
+                    "word": "scissors",
+                    "meaning": "n. 가위",
+                    "example": "I cut paper with scissors.",
+                    "exampleMeaning": "나는 가위로 종이를 자른다."
+                },
+                {
+                    "id": 12403,
+                    "word": "mug",
+                    "meaning": "n. 머그컵",
+                    "example": "I drink milk from a mug.",
+                    "exampleMeaning": "나는 머그컵으로 우유를 마신다."
+                },
+                {
+                    "id": 12404,
+                    "word": "pay",
+                    "meaning": "v. 지불하다",
+                    "example": "I pay for my candy.",
+                    "exampleMeaning": "나는 사탕 값을 지불한다."
+                },
+                {
+                    "id": 12405,
+                    "word": "space",
+                    "meaning": "n. 공간, 우주",
+                    "example": "The rocket flies into space.",
+                    "exampleMeaning": "로켓은 우주로 날아간다."
+                },
+                {
+                    "id": 12406,
+                    "word": "fishbowl",
+                    "meaning": "n. 어항",
+                    "example": "The goldfish swims in the fishbowl.",
+                    "exampleMeaning": "금붕어는 어항에서 헤엄친다."
+                },
+                {
+                    "id": 12407,
+                    "word": "lizard",
+                    "meaning": "n. 도마뱀",
+                    "example": "The lizard runs on the rock.",
+                    "exampleMeaning": "도마뱀은 바위 위를 달린다."
+                },
+                {
+                    "id": 12408,
+                    "word": "wall",
+                    "meaning": "n. 벽, 담",
+                    "example": "The picture hangs on the wall.",
+                    "exampleMeaning": "그림은 벽에 걸려 있다."
+                },
+                {
+                    "id": 12409,
+                    "word": "last",
+                    "meaning": "adj. 마지막의, 지난",
+                    "example": "I was the last one to finish.",
+                    "exampleMeaning": "나는 마지막으로 끝낸 사람이었다."
+                },
+                {
+                    "id": 12410,
+                    "word": "messy",
+                    "meaning": "adj. 지저분한, 엉망인",
+                    "example": "My room is very messy.",
+                    "exampleMeaning": "내 방은 매우 어지럽다."
+                },
+                {
+                    "id": 12411,
+                    "word": "laugh",
+                    "meaning": "v. (소리 내어) 웃다",
+                    "example": "We laugh at the funny joke.",
+                    "exampleMeaning": "우리는 재미있는 농담에 웃는다."
+                },
+                {
+                    "id": 12412,
+                    "word": "clay",
+                    "meaning": "n. 점토, 찰흙",
+                    "example": "I make a pot with clay.",
+                    "exampleMeaning": "나는 점토로 항아리를 만든다."
+                },
+                {
+                    "id": 12413,
+                    "word": "job",
+                    "meaning": "n. 일, 직업",
+                    "example": "My dad has a new job.",
+                    "exampleMeaning": "아빠는 새 직업을 얻으셨다."
+                },
+                {
+                    "id": 12414,
+                    "word": "favorite",
+                    "meaning": "adj. 가장 좋아하는",
+                    "example": "Blue is my favorite color.",
+                    "exampleMeaning": "파란색은 내가 가장 좋아하는 색이다."
+                },
+                {
+                    "id": 12415,
+                    "word": "jump",
+                    "meaning": "v. 뛰다, 뛰어오르다",
+                    "example": "I jump over the rope.",
+                    "exampleMeaning": "나는 밧줄을 뛰어넘는다."
+                },
+                {
+                    "id": 12416,
+                    "word": "everyone",
+                    "meaning": "pron. 모든 사람, 모두",
+                    "example": "Everyone claps for the winner.",
+                    "exampleMeaning": "모두가 승자를 위해 박수친다."
+                },
+                {
+                    "id": 12417,
+                    "word": "tongue",
+                    "meaning": "n. 혀",
+                    "example": "The dog sticks out its tongue.",
+                    "exampleMeaning": "강아지는 혀를 내민다."
+                },
+                {
+                    "id": 12418,
+                    "word": "line",
+                    "meaning": "n. 선, 줄",
+                    "example": "We stand in a straight line.",
+                    "exampleMeaning": "우리는 곧은 줄에 선다."
+                },
+                {
+                    "id": 12419,
+                    "word": "fight",
+                    "meaning": "v. 싸우다, 다투다, n. 싸움, 다툼",
+                    "example": "The boys fight over a toy.",
+                    "exampleMeaning": "남자아이들은 장난감 때문에 싸운다."
+                },
+                {
+                    "id": 12420,
+                    "word": "worry",
+                    "meaning": "v. 걱정하다",
+                    "example": "I worry about my test tomorrow.",
+                    "exampleMeaning": "나는 내일 시험 때문에 걱정한다."
+                }
+            ]
+        },
+        {
+            "id": "unit_1_25",
+            "title": "Unit 25",
+            "words": [
+                {
+                    "id": 12501,
+                    "word": "glass",
+                    "meaning": "n. 유리, 유리잔",
+                    "example": "I drink water from a glass.",
+                    "exampleMeaning": "나는 유리컵으로 물을 마신다."
+                },
+                {
+                    "id": 12502,
+                    "word": "telephone",
+                    "meaning": "n. 전화, 전화기",
+                    "example": "I call my friend on the telephone.",
+                    "exampleMeaning": "나는 전화로 친구에게 전화한다."
+                },
+                {
+                    "id": 12503,
+                    "word": "coin",
+                    "meaning": "n. 동전",
+                    "example": "I find a shiny coin.",
+                    "exampleMeaning": "나는 반짝이는 동전을 찾는다."
+                },
+                {
+                    "id": 12504,
+                    "word": "winner",
+                    "meaning": "n. 우승자",
+                    "example": "She is the winner of the race.",
+                    "exampleMeaning": "그녀는 경주에서 우승자다."
+                },
+                {
+                    "id": 12505,
+                    "word": "pretty",
+                    "meaning": "adj. 예쁜",
+                    "example": "The flower is very pretty.",
+                    "exampleMeaning": "꽃은 매우 예쁘다."
+                },
+                {
+                    "id": 12506,
+                    "word": "skin",
+                    "meaning": "n. 피부",
+                    "example": "My skin feels soft.",
+                    "exampleMeaning": "내 피부는 부드럽게 느껴진다."
+                },
+                {
+                    "id": 12507,
+                    "word": "bite",
+                    "meaning": "v. (이로) 물다, 물어뜯다",
+                    "example": "The dog bites the bone.",
+                    "exampleMeaning": "강아지는 뼈를 문다."
+                },
+                {
+                    "id": 12508,
+                    "word": "key",
+                    "meaning": "n. 열쇠",
+                    "example": "I unlock the door with a key.",
+                    "exampleMeaning": "나는 열쇠로 문을 연다."
+                },
+                {
+                    "id": 12509,
+                    "word": "classmate",
+                    "meaning": "n. 반 친구",
+                    "example": "My classmate helps me study.",
+                    "exampleMeaning": "내 급우는 내가 공부하는 것을 돕는다."
+                },
+                {
+                    "id": 12510,
+                    "word": "invite",
+                    "meaning": "v. 초대하다",
+                    "example": "I invite my friends to my party.",
+                    "exampleMeaning": "나는 친구들을 내 파티에 초대한다."
+                },
+                {
+                    "id": 12511,
+                    "word": "really",
+                    "meaning": "adv. 실제로, 진짜로, 아주, 정말",
+                    "example": "This game is really fun.",
+                    "exampleMeaning": "이 게임은 정말 재미있다."
+                },
+                {
+                    "id": 12512,
+                    "word": "honey",
+                    "meaning": "n. 꿀",
+                    "example": "The honey tastes sweet.",
+                    "exampleMeaning": "꿀은 달콤한 맛이 난다."
+                },
+                {
+                    "id": 12513,
+                    "word": "cheer",
+                    "meaning": "v. 응원하다, 환호하다",
+                    "example": "We cheer for our team.",
+                    "exampleMeaning": "우리는 우리 팀을 응원한다."
+                },
+                {
+                    "id": 12514,
+                    "word": "sour",
+                    "meaning": "adj. 신맛이 나는",
+                    "example": "The lemon is sour.",
+                    "exampleMeaning": "레몬은 시다."
+                },
+                {
+                    "id": 12515,
+                    "word": "quiz",
+                    "meaning": "n. 퀴즈, 시험",
+                    "example": "We have a quiz in class.",
+                    "exampleMeaning": "우리는 교실에서 퀴즈를 본다."
+                },
+                {
+                    "id": 12516,
+                    "word": "roof",
+                    "meaning": "n. 지붕",
+                    "example": "The roof is red.",
+                    "exampleMeaning": "지붕은 빨갛다."
+                },
+                {
+                    "id": 12517,
+                    "word": "bookstore",
+                    "meaning": "n. 서점",
+                    "example": "I buy a book at the bookstore.",
+                    "exampleMeaning": "나는 서점에서 책을 산다."
+                },
+                {
+                    "id": 12518,
+                    "word": "throw",
+                    "meaning": "v. 던지다",
+                    "example": "I throw the ball to my friend.",
+                    "exampleMeaning": "나는 친구에게 공을 던진다."
+                },
+                {
+                    "id": 12519,
+                    "word": "order",
+                    "meaning": "n. 순서, v. 주문하다",
+                    "example": "I order pizza for dinner.",
+                    "exampleMeaning": "나는 저녁으로 피자를 주문한다."
+                },
+                {
+                    "id": 12520,
+                    "word": "storm",
+                    "meaning": "n. 폭풍",
+                    "example": "The storm makes loud noises.",
+                    "exampleMeaning": "폭풍은 큰 소리를 낸다."
+                }
+            ]
+        },
+        {
+            "id": "unit_1_26",
+            "title": "Unit 26",
+            "words": [
+                {
+                    "id": 12601,
+                    "word": "candle",
+                    "meaning": "n. 초, 양초",
+                    "example": "I light a candle at night.",
+                    "exampleMeaning": "나는 밤에 촛불을 켠다."
+                },
+                {
+                    "id": 12602,
+                    "word": "dragon",
+                    "meaning": "n. (전설에 나오는 동물) 용",
+                    "example": "The dragon flies in the story.",
+                    "exampleMeaning": "용은 이야기 속에서 날아다닌다."
+                },
+                {
+                    "id": 12603,
+                    "word": "side",
+                    "meaning": "n. 측면, 면",
+                    "example": "I sit on the side of the table.",
+                    "exampleMeaning": "나는 테이블 옆에 앉는다."
+                },
+                {
+                    "id": 12604,
+                    "word": "sound",
+                    "meaning": "n. 소리",
+                    "example": "The bell makes a loud sound.",
+                    "exampleMeaning": "종은 큰 소리를 낸다."
+                },
+                {
+                    "id": 12605,
+                    "word": "free",
+                    "meaning": "adj. 자유로운, 무료의, 공짜의",
+                    "example": "The bird is free in the sky.",
+                    "exampleMeaning": "새는 하늘에서 자유롭다."
+                },
+                {
+                    "id": 12606,
+                    "word": "snail",
+                    "meaning": "n. 달팽이",
+                    "example": "The snail moves slowly.",
+                    "exampleMeaning": "달팽이는 천천히 움직인다."
+                },
+                {
+                    "id": 12607,
+                    "word": "across",
+                    "meaning": "prep. 가로질러, 건너편에",
+                    "example": "I walk across the street.",
+                    "exampleMeaning": "나는 길을 건넌다."
+                },
+                {
+                    "id": 12608,
+                    "word": "happily",
+                    "meaning": "adv. 행복하게",
+                    "example": "We sing happily together.",
+                    "exampleMeaning": "우리는 함께 즐겁게 노래한다."
+                },
+                {
+                    "id": 12609,
+                    "word": "restroom",
+                    "meaning": "n. 화장실",
+                    "example": "I go to the restroom.",
+                    "exampleMeaning": "나는 화장실에 간다."
+                },
+                {
+                    "id": 12610,
+                    "word": "gray",
+                    "meaning": "adj. 회색의",
+                    "example": "The sky is gray today.",
+                    "exampleMeaning": "오늘 하늘은 회색이다."
+                },
+                {
+                    "id": 12611,
+                    "word": "thin",
+                    "meaning": "adj. 얇은, 가는, 마른, 홀쭉한",
+                    "example": "The paper is very thin.",
+                    "exampleMeaning": "종이는 매우 얇다."
+                },
+                {
+                    "id": 12612,
+                    "word": "rich",
+                    "meaning": "adj. 부유한, 부자인",
+                    "example": "The king is very rich.",
+                    "exampleMeaning": "왕은 매우 부자다."
+                },
+                {
+                    "id": 12613,
+                    "word": "mask",
+                    "meaning": "n. 가면",
+                    "example": "I wear a mask at the party.",
+                    "exampleMeaning": "나는 파티에서 마스크를 쓴다."
+                },
+                {
+                    "id": 12614,
+                    "word": "begin",
+                    "meaning": "v. 시작하다",
+                    "example": "We begin our class now.",
+                    "exampleMeaning": "우리는 이제 수업을 시작한다."
+                },
+                {
+                    "id": 12615,
+                    "word": "bead",
+                    "meaning": "n. 구슬",
+                    "example": "I make a necklace with beads.",
+                    "exampleMeaning": "나는 구슬로 목걸이를 만든다."
+                },
+                {
+                    "id": 12616,
+                    "word": "scream",
+                    "meaning": "v. 비명을 지르다",
+                    "example": "I scream when I see a spider.",
+                    "exampleMeaning": "나는 거미를 보고 소리를 지른다."
+                },
+                {
+                    "id": 12617,
+                    "word": "carry",
+                    "meaning": "v. 나르다, 싣다",
+                    "example": "I carry my bag to school.",
+                    "exampleMeaning": "나는 가방을 학교로 들고 간다."
+                },
+                {
+                    "id": 12618,
+                    "word": "interested",
+                    "meaning": "adj. 관심 있는, 흥미 있는",
+                    "example": "I am interested in animals.",
+                    "exampleMeaning": "나는 동물에 관심이 많다."
+                },
+                {
+                    "id": 12619,
+                    "word": "lie",
+                    "meaning": "v. 거짓말하다, 눕다",
+                    "example": "I lie on the soft bed.",
+                    "exampleMeaning": "나는 부드러운 침대에 눕는다."
+                },
+                {
+                    "id": 12620,
+                    "word": "hug",
+                    "meaning": "v. 포옹하다",
+                    "example": "I hug my mom tightly.",
+                    "exampleMeaning": "나는 엄마를 꼭 안는다."
+                }
+            ]
+        },
+        {
+            "id": "unit_1_27",
+            "title": "Unit 27",
+            "words": [
+                {
+                    "id": 12701,
+                    "word": "cave",
+                    "meaning": "n. 동굴",
+                    "example": "We explore a dark cave.",
+                    "exampleMeaning": "우리는 어두운 동굴을 탐험한다."
+                },
+                {
+                    "id": 12702,
+                    "word": "hunt",
+                    "meaning": "v. 사냥하다",
+                    "example": "The cat hunts a mouse.",
+                    "exampleMeaning": "고양이는 쥐를 사냥한다."
+                },
+                {
+                    "id": 12703,
+                    "word": "hundred",
+                    "meaning": "n. 100, 백",
+                    "example": "I count to one hundred.",
+                    "exampleMeaning": "나는 백까지 센다."
+                },
+                {
+                    "id": 12704,
+                    "word": "painting",
+                    "meaning": "n. 그림",
+                    "example": "The painting is colorful.",
+                    "exampleMeaning": "그림은 알록달록하다."
+                },
+                {
+                    "id": 12705,
+                    "word": "right",
+                    "meaning": "adj. 맞는, 올바른, 오른쪽의",
+                    "example": "This is the right answer.",
+                    "exampleMeaning": "이것이 정답이다."
+                },
+                {
+                    "id": 12706,
+                    "word": "tired",
+                    "meaning": "adj. 피곤한, 지친",
+                    "example": "I feel tired after running.",
+                    "exampleMeaning": "달리기 후에 나는 피곤하다."
+                },
+                {
+                    "id": 12707,
+                    "word": "stay",
+                    "meaning": "v. 지내다, 머무르다",
+                    "example": "I stay at home today.",
+                    "exampleMeaning": "나는 오늘 집에 머문다."
+                },
+                {
+                    "id": 12708,
+                    "word": "corner",
+                    "meaning": "n. 모퉁이",
+                    "example": "The dog sleeps in the corner.",
+                    "exampleMeaning": "강아지는 구석에서 잔다."
+                },
+                {
+                    "id": 12709,
+                    "word": "head",
+                    "meaning": "n. 머리, v. 가다, 향하다",
+                    "example": "I touch my head.",
+                    "exampleMeaning": "나는 내 머리를 만진다."
+                },
+                {
+                    "id": 12710,
+                    "word": "noisy",
+                    "meaning": "adj. 시끄러운, 떠들썩한",
+                    "example": "The room is very noisy.",
+                    "exampleMeaning": "방은 매우 시끄럽다."
+                },
+                {
+                    "id": 12711,
+                    "word": "player",
+                    "meaning": "n. 선수",
+                    "example": "The player scores a goal.",
+                    "exampleMeaning": "선수는 골을 넣는다."
+                },
+                {
+                    "id": 12712,
+                    "word": "cross",
+                    "meaning": "v. 건너다, 가로지르다",
+                    "example": "I cross the bridge carefully.",
+                    "exampleMeaning": "나는 다리를 조심히 건넌다."
+                },
+                {
+                    "id": 12713,
+                    "word": "wonderful",
+                    "meaning": "adj. 멋진, 훌륭한",
+                    "example": "The view is wonderful.",
+                    "exampleMeaning": "경치는 멋지다."
+                },
+                {
+                    "id": 12714,
+                    "word": "postcard",
+                    "meaning": "n. 엽서",
+                    "example": "I send a postcard to my friend.",
+                    "exampleMeaning": "나는 친구에게 엽서를 보낸다."
+                },
+                {
+                    "id": 12715,
+                    "word": "club",
+                    "meaning": "n. (특정 활동·스포츠를 위한) 클럽, 동아리",
+                    "example": "I join the art club.",
+                    "exampleMeaning": "나는 미술 동아리에 가입한다."
+                },
+                {
+                    "id": 12716,
+                    "word": "kick",
+                    "meaning": "v. (발로) 차다",
+                    "example": "I kick the soccer ball.",
+                    "exampleMeaning": "나는 축구공을 찬다."
+                },
+                {
+                    "id": 12717,
+                    "word": "wolf",
+                    "meaning": "n. 늑대",
+                    "example": "The wolf howls at night.",
+                    "exampleMeaning": "늑대는 밤에 짖는다."
+                },
+                {
+                    "id": 12718,
+                    "word": "television",
+                    "meaning": "n. 텔레비전",
+                    "example": "I watch a show on television.",
+                    "exampleMeaning": "나는 텔레비전에서 쇼를 본다."
+                },
+                {
+                    "id": 12719,
+                    "word": "seat",
+                    "meaning": "n. 자리, 좌석",
+                    "example": "I choose a seat by the window.",
+                    "exampleMeaning": "나는 창가 자리를 선택한다."
+                },
+                {
+                    "id": 12720,
+                    "word": "block",
+                    "meaning": "n. (도로로 나뉘는) 구역, v. 막다, 방해하다",
+                    "example": "The block tower is tall.",
+                    "exampleMeaning": "블록 탑은 높다."
+                }
+            ]
+        },
+        {
+            "id": "unit_1_28",
+            "title": "Unit 28",
+            "words": [
+                {
+                    "id": 12801,
+                    "word": "puzzle",
+                    "meaning": "n. 퍼즐, 수수께끼",
+                    "example": "I solve a puzzle with friends.",
+                    "exampleMeaning": "나는 친구들과 퍼즐을 푼다."
+                },
+                {
+                    "id": 12802,
+                    "word": "thing",
+                    "meaning": "n. 물건, 것",
+                    "example": "I find a shiny thing.",
+                    "exampleMeaning": "나는 반짝이는 물건을 찾는다."
+                },
+                {
+                    "id": 12803,
+                    "word": "scared",
+                    "meaning": "adj. 겁먹은, 무서워하는",
+                    "example": "I am scared of the dark.",
+                    "exampleMeaning": "나는 어두운 곳을 무서워한다."
+                },
+                {
+                    "id": 12804,
+                    "word": "sharp",
+                    "meaning": "adj. 날카로운, 뾰족한",
+                    "example": "The knife is very sharp.",
+                    "exampleMeaning": "칼은 매우 날카롭다."
+                },
+                {
+                    "id": 12805,
+                    "word": "step",
+                    "meaning": "n. 단계, 걸음",
+                    "example": "I take a step forward.",
+                    "exampleMeaning": "나는 한 발짝 앞으로 나아간다."
+                },
+                {
+                    "id": 12806,
+                    "word": "hurry",
+                    "meaning": "v. 서두르다",
+                    "example": "I hurry to catch the bus.",
+                    "exampleMeaning": "나는 버스를 타려고 서두른다."
+                },
+                {
+                    "id": 12807,
+                    "word": "tear",
+                    "meaning": "n. 눈물",
+                    "example": "I tear the paper by mistake.",
+                    "exampleMeaning": "나는 실수로 종이를 찢었다."
+                },
+                {
+                    "id": 12808,
+                    "word": "easily",
+                    "meaning": "adv. 쉽게",
+                    "example": "She climbs the tree easily.",
+                    "exampleMeaning": "그녀는 나무를 쉽게 오른다."
+                },
+                {
+                    "id": 12809,
+                    "word": "try",
+                    "meaning": "v. 노력하다, 시도하다",
+                    "example": "I try to draw a star.",
+                    "exampleMeaning": "나는 별을 그리려고 노력한다."
+                },
+                {
+                    "id": 12810,
+                    "word": "jacket",
+                    "meaning": "n. 외투, 재킷",
+                    "example": "I wear a warm jacket.",
+                    "exampleMeaning": "나는 따뜻한 재킷을 입는다."
+                },
+                {
+                    "id": 12811,
+                    "word": "hill",
+                    "meaning": "n. 언덕",
+                    "example": "We climb the big hill.",
+                    "exampleMeaning": "우리는 큰 언덕을 오른다."
+                },
+                {
+                    "id": 12812,
+                    "word": "mirror",
+                    "meaning": "n. 거울",
+                    "example": "I look in the mirror.",
+                    "exampleMeaning": "나는 거울을 본다."
+                },
+                {
+                    "id": 12813,
+                    "word": "firefighter",
+                    "meaning": "n. 소방관",
+                    "example": "The firefighter saves the cat.",
+                    "exampleMeaning": "소방관은 고양이를 구한다."
+                },
+                {
+                    "id": 12814,
+                    "word": "hive",
+                    "meaning": "n. 벌집",
+                    "example": "Bees live in the hive.",
+                    "exampleMeaning": "벌들은 벌집에 산다."
+                },
+                {
+                    "id": 12815,
+                    "word": "please",
+                    "meaning": "adv. 제발, 부디, v. 기쁘게 하다",
+                    "example": "Please open the door.",
+                    "exampleMeaning": "문 좀 열어주세요."
+                },
+                {
+                    "id": 12816,
+                    "word": "ring",
+                    "meaning": "v. (소리가) 울리다",
+                    "example": "The bell rings loudly.",
+                    "exampleMeaning": "종이 크게 울린다."
+                },
+                {
+                    "id": 12817,
+                    "word": "ankle",
+                    "meaning": "n. 발목",
+                    "example": "I twist my ankle.",
+                    "exampleMeaning": "나는 발목을 삐었다."
+                },
+                {
+                    "id": 12818,
+                    "word": "eagle",
+                    "meaning": "n. 독수리",
+                    "example": "The eagle flies high.",
+                    "exampleMeaning": "독수리는 높이 난다."
+                },
+                {
+                    "id": 12819,
+                    "word": "brush",
+                    "meaning": "n. 붓, 빗, v. 빗질하다, 닦다",
+                    "example": "I brush my hair.",
+                    "exampleMeaning": "나는 머리를 빗는다."
+                },
+                {
+                    "id": 12820,
+                    "word": "bark",
+                    "meaning": "v. (개가) 짖다",
+                    "example": "The dog barks at strangers.",
+                    "exampleMeaning": "강아지는 낯선 사람에게 짖는다."
+                }
+            ]
+        },
+        {
+            "id": "unit_1_29",
+            "title": "Unit 29",
+            "words": [
+                {
+                    "id": 12901,
+                    "word": "save",
+                    "meaning": "v. 구하다, 모으다, 아끼다",
+                    "example": "I save my money in a piggy bank.",
+                    "exampleMeaning": "나는 저금통에 돈을 모은다."
+                },
+                {
+                    "id": 12902,
+                    "word": "ladybug",
+                    "meaning": "n. 무당벌레",
+                    "example": "The ladybug lands on a leaf.",
+                    "exampleMeaning": "무당벌레가 잎사귀에 앉는다."
+                },
+                {
+                    "id": 12903,
+                    "word": "tail",
+                    "meaning": "n. 꼬리",
+                    "example": "The cat’s tail is long.",
+                    "exampleMeaning": "고양이 꼬리는 길다."
+                },
+                {
+                    "id": 12904,
+                    "word": "lucky",
+                    "meaning": "adj. 운이 좋은, 행운의",
+                    "example": "I feel lucky today.",
+                    "exampleMeaning": "나는 오늘 운이 좋다고 느낀다."
+                },
+                {
+                    "id": 12905,
+                    "word": "mud",
+                    "meaning": "n. 진흙",
+                    "example": "My shoes get dirty in the mud.",
+                    "exampleMeaning": "내 신발은 진흙에 더러워졌다."
+                },
+                {
+                    "id": 12906,
+                    "word": "bored",
+                    "meaning": "adj. 지루한, 싫증난",
+                    "example": "I am bored without my friends.",
+                    "exampleMeaning": "친구들이 없어서 심심하다."
+                },
+                {
+                    "id": 12907,
+                    "word": "count",
+                    "meaning": "v. 세다, 계산하다",
+                    "example": "I count the stars at night.",
+                    "exampleMeaning": "나는 밤에 별을 센다."
+                },
+                {
+                    "id": 12908,
+                    "word": "robot",
+                    "meaning": "n. 로봇",
+                    "example": "The robot moves by itself.",
+                    "exampleMeaning": "로봇은 스스로 움직인다."
+                },
+                {
+                    "id": 12909,
+                    "word": "driver",
+                    "meaning": "n. 운전자",
+                    "example": "The driver stops the bus.",
+                    "exampleMeaning": "운전사는 버스를 멈춘다."
+                },
+                {
+                    "id": 12910,
+                    "word": "narrow",
+                    "meaning": "adj. 좁은",
+                    "example": "The path is very narrow.",
+                    "exampleMeaning": "길은 매우 좁다."
+                },
+                {
+                    "id": 12911,
+                    "word": "die",
+                    "meaning": "v. 죽다",
+                    "example": "The flower will die without water.",
+                    "exampleMeaning": "꽃은 물이 없으면 죽는다."
+                },
+                {
+                    "id": 12912,
+                    "word": "poor",
+                    "meaning": "adj. 가난한, 불쌍한",
+                    "example": "The poor puppy is hungry.",
+                    "exampleMeaning": "가엾은 강아지는 배고프다."
+                },
+                {
+                    "id": 12913,
+                    "word": "wild",
+                    "meaning": "adj. 야생의",
+                    "example": "The wild tiger runs fast.",
+                    "exampleMeaning": "야생 호랑이는 빨리 달린다."
+                },
+                {
+                    "id": 12914,
+                    "word": "left",
+                    "meaning": "adj. 왼쪽의",
+                    "example": "I turn left at the corner.",
+                    "exampleMeaning": "나는 모퉁이에서 왼쪽으로 돈다."
+                },
+                {
+                    "id": 12915,
+                    "word": "cheek",
+                    "meaning": "n. 뺨, 볼",
+                    "example": "She kisses my cheek.",
+                    "exampleMeaning": "그녀는 내 뺨에 뽀뽀한다."
+                },
+                {
+                    "id": 12916,
+                    "word": "all",
+                    "meaning": "adj. 모든, 전체의, pron. 모두",
+                    "example": "I eat all my lunch.",
+                    "exampleMeaning": "나는 점심을 다 먹는다."
+                },
+                {
+                    "id": 12917,
+                    "word": "grass",
+                    "meaning": "n. 풀, 잔디",
+                    "example": "The grass is soft and green.",
+                    "exampleMeaning": "풀은 부드럽고 초록색이다."
+                },
+                {
+                    "id": 12918,
+                    "word": "rice",
+                    "meaning": "n. 쌀, 밥",
+                    "example": "I eat rice for dinner.",
+                    "exampleMeaning": "나는 저녁으로 밥을 먹는다."
+                },
+                {
+                    "id": 12919,
+                    "word": "computer",
+                    "meaning": "n. 컴퓨터",
+                    "example": "I play a game on the computer.",
+                    "exampleMeaning": "나는 컴퓨터로 게임을 한다."
+                },
+                {
+                    "id": 12920,
+                    "word": "turn",
+                    "meaning": "v. 돌다, 돌리다, n. 차례, 순서",
+                    "example": "I turn the page in my book.",
+                    "exampleMeaning": "나는 책의 페이지를 넘긴다."
+                }
+            ]
+        },
+        {
+            "id": "unit_1_30",
+            "title": "Unit 30",
+            "words": [
+                {
+                    "id": 13001,
+                    "word": "cane",
+                    "meaning": "n. 지팡이",
+                    "example": "Grandpa walks with a cane.",
+                    "exampleMeaning": "할아버지는 지팡이를 짚고 걷는다."
+                },
+                {
+                    "id": 13002,
+                    "word": "watermelon",
+                    "meaning": "n. 수박",
+                    "example": "I eat a juicy watermelon.",
+                    "exampleMeaning": "나는 즙이 많은 수박을 먹는다."
+                },
+                {
+                    "id": 13003,
+                    "word": "tin",
+                    "meaning": "adj. 양철의, 양철로 만든",
+                    "example": "The tin is full of cookies.",
+                    "exampleMeaning": "깡통은 쿠키로 가득하다."
+                },
+                {
+                    "id": 13004,
+                    "word": "plan",
+                    "meaning": "n. 계획, v. 계획하다",
+                    "example": "We plan a fun trip.",
+                    "exampleMeaning": "우리는 재미있는 여행을 계획한다."
+                },
+                {
+                    "id": 13005,
+                    "word": "flag",
+                    "meaning": "n. 국기, 깃발",
+                    "example": "The flag waves in the wind.",
+                    "exampleMeaning": "깃발은 바람에 펄럭인다."
+                },
+                {
+                    "id": 13006,
+                    "word": "magic",
+                    "meaning": "n. 마술, 마법",
+                    "example": "The magic show is exciting.",
+                    "exampleMeaning": "마술 쇼는 흥미롭다."
+                },
+                {
+                    "id": 13007,
+                    "word": "quickly",
+                    "meaning": "adv. 빨리, 빠르게",
+                    "example": "I run quickly to school.",
+                    "exampleMeaning": "나는 학교로 빨리 달린다."
+                },
+                {
+                    "id": 13008,
+                    "word": "purple",
+                    "meaning": "adj. 자줏빛의",
+                    "example": "My bag is purple.",
+                    "exampleMeaning": "내 가방은 보라색이다."
+                },
+                {
+                    "id": 13009,
+                    "word": "climber",
+                    "meaning": "n. 등반가",
+                    "example": "The climber reaches the top.",
+                    "exampleMeaning": "등산가는 정상에 오른다."
+                },
+                {
+                    "id": 13010,
+                    "word": "sleepy",
+                    "meaning": "adj. 졸리는",
+                    "example": "I feel sleepy after lunch.",
+                    "exampleMeaning": "점심 후에 나는 졸린다."
+                },
+                {
+                    "id": 13011,
+                    "word": "ink",
+                    "meaning": "n. 잉크",
+                    "example": "I write with black ink.",
+                    "exampleMeaning": "나는 검은 잉크로 글을 쓴다."
+                },
+                {
+                    "id": 13012,
+                    "word": "dirt",
+                    "meaning": "n. 흙, 토양",
+                    "example": "My hands are dirty with dirt.",
+                    "exampleMeaning": "내 손은 흙으로 더러워졌다."
+                },
+                {
+                    "id": 13013,
+                    "word": "tasty",
+                    "meaning": "adj. 맛있는",
+                    "example": "The soup is very tasty.",
+                    "exampleMeaning": "수프는 매우 맛있다."
+                },
+                {
+                    "id": 13014,
+                    "word": "need",
+                    "meaning": "v. ~를 필요로 하다",
+                    "example": "I need a new pencil.",
+                    "exampleMeaning": "나는 새 연필이 필요하다."
+                },
+                {
+                    "id": 13015,
+                    "word": "shiny",
+                    "meaning": "adj. 빛나는",
+                    "example": "The shiny star sparkles.",
+                    "exampleMeaning": "반짝이는 별이 빛난다."
+                },
+                {
+                    "id": 13016,
+                    "word": "crocodile",
+                    "meaning": "n. 악어",
+                    "example": "The crocodile swims in the river.",
+                    "exampleMeaning": "악어는 강에서 헤엄친다."
+                },
+                {
+                    "id": 13017,
+                    "word": "miss",
+                    "meaning": "v. 그리워하다, 놓치다",
+                    "example": "I miss my best friend.",
+                    "exampleMeaning": "나는 절친을 그리워한다."
+                },
+                {
+                    "id": 13018,
+                    "word": "pack",
+                    "meaning": "v. (짐을) 싸다, 포장하다",
+                    "example": "I pack my bag for school.",
+                    "exampleMeaning": "나는 학교 갈 가방을 싼다."
+                },
+                {
+                    "id": 13019,
+                    "word": "follow",
+                    "meaning": "v. 따라가다, 따라오다, (규칙·지시를) 따르다",
+                    "example": "I follow the teacher’s rules.",
+                    "exampleMeaning": "나는 선생님의 규칙을 따른다."
+                },
+                {
+                    "id": 13020,
+                    "word": "erase",
+                    "meaning": "v. 지우다",
+                    "example": "I erase my mistake.",
+                    "exampleMeaning": "나는 실수를 지운다."
                 }
             ]
         }
