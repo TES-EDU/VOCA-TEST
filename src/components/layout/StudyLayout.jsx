@@ -36,7 +36,7 @@ const StudyLayout = () => {
             </div>
 
             {/* Bottom Navigation */}
-            <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 px-6 py-2 flex justify-between items-center z-50 max-w-md mx-auto w-full">
+            <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 px-6 py-2 flex justify-between items-center z-50 max-w-2xl mx-auto w-full">
                 {tabs.map((tab) => {
                     const isActive = location.pathname === tab.path;
                     return (

@@ -56,7 +56,7 @@ export const ProgressRoadmap = ({ currentLevel, currentUnit, isOpen, onToggle })
             {/* Collapsible Content */}
             {isOpen && (
                 <div className="p-4 bg-white overflow-x-auto">
-                    <div className="space-y-5 min-w-[320px]">
+                    <div className="space-y-5">
                         {tiers.map((tier) => {
                             const colorStyles = {
                                 emerald: { filled: 'bg-emerald-500', ring: 'ring-emerald-400' },
@@ -67,11 +67,11 @@ export const ProgressRoadmap = ({ currentLevel, currentUnit, isOpen, onToggle })
                             const isCurrentTier = tier.name === currentTier.name;
                             const levelLabels = levelLabelsMap[tier.name];
 
-                            // Determine opacity for non-current tiers
-                            const tierOpacity = isCurrentTier ? 'opacity-100' : 'opacity-40 grayscale';
+                            // All tiers fully visible
+                            // const tierOpacity = isCurrentTier ? 'opacity-100' : 'opacity-40 grayscale';
 
                             return (
-                                <div key={tier.name} className={`transition-all duration-300 ${tierOpacity}`}>
+                                <div key={tier.name} className="transition-all duration-300">
                                     {/* Tier Label */}
                                     <div className="flex items-center gap-2 mb-2">
                                         <span className="text-xs font-bold text-slate-600">{tier.name}</span>

@@ -1,0 +1,47 @@
+{
+    "id": "book_sample",
+    "title": "Sample Test Book",
+    "units": [
+        {
+            "id": "unit_sample_1",
+            "title": "Sample Unit",
+            "words": [
+                {
+                    "id": 1,
+                    "word": "apple",
+                    "meaning": "n. 사과",
+                    "example": "I eat an apple every morning.",
+                    "exampleMeaning": "나는 매일 아침 사과를 먹어요."
+                },
+                {
+                    "id": 2,
+                    "word": "banana",
+                    "meaning": "n. 바나나",
+                    "example": "Monkeys love bananas.",
+                    "exampleMeaning": "원숭이는 바나나를 좋아해요."
+                },
+                {
+                    "id": 3,
+                    "word": "cat",
+                    "meaning": "n. 고양이",
+                    "example": "The cat is sleeping on the sofa.",
+                    "exampleMeaning": "고양이가 소파 위에서 자고 있어요."
+                },
+                {
+                    "id": 4,
+                    "word": "dog",
+                    "meaning": "n. 개",
+                    "example": "My dog loves to play with a ball.",
+                    "exampleMeaning": "내 개는 공놀이를 좋아해요."
+                },
+                {
+                    "id": 5,
+                    "word": "elephant",
+                    "meaning": "n. 코끼리",
+                    "example": "An elephant has a long trunk.",
+                    "exampleMeaning": "코끼리는 긴 코를 가지고 있어요."
+                }
+            ]
+        }
+    ]
+}
