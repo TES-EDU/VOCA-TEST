@@ -16,13 +16,10 @@ export const ProgressRoadmap = ({ currentLevel, currentUnit, isOpen, onToggle })
     ];
 
     const getTierForLevel = (level) => {
-        // Find specific tier where this level is a starting or intermediate point
-        // (Avoid picking a tier where this level is only the end point, unless it's the very last tier)
         for (const tier of tiers) {
             const isLast = tier.levels.indexOf(level) === tier.levels.length - 1;
             if (tier.levels.includes(level) && !isLast) return tier;
         }
-        // Fallback for edge cases (like max level)
         for (const tier of tiers) {
             if (tier.levels.includes(level)) return tier;
         }
@@ -55,20 +52,26 @@ export const ProgressRoadmap = ({ currentLevel, currentUnit, isOpen, onToggle })
 
             {/* Collapsible Content */}
             {isOpen && (
-                <div className="p-4 bg-white overflow-x-auto">
-                    <div className="space-y-5">
+                <div className="p-4 bg-white">
+                    <div className="space-y-6">
                         {tiers.map((tier) => {
                             const colorStyles = {
-                                emerald: { filled: 'bg-emerald-500', ring: 'ring-emerald-400' },
-                                sky: { filled: 'bg-sky-500', ring: 'ring-sky-400' },
-                                violet: { filled: 'bg-violet-500', ring: 'ring-violet-400' }
+                                emerald: { text: 'text-emerald-500', fill: 'fill-emerald-500', stroke: 'stroke-emerald-500', border: 'border-emerald-500' },
+                                sky: { text: 'text-sky-500', fill: 'fill-sky-500', stroke: 'stroke-sky-500', border: 'border-sky-500' },
+                                violet: { text: 'text-violet-500', fill: 'fill-violet-500', stroke: 'stroke-violet-500', border: 'border-violet-500' }
                             };
                             const colors = colorStyles[tier.color];
                             const isCurrentTier = tier.name === currentTier.name;
                             const levelLabels = levelLabelsMap[tier.name];
 
-                            // All tiers fully visible
-                            // const tierOpacity = isCurrentTier ? 'opacity-100' : 'opacity-40 grayscale';
+                            // SVG Configuration
+                            const width = 1000;
+                            const height = 80;
+                            const paddingX = 40;
+                            const availableWidth = width - (paddingX * 2);
+                            const segmentCount = tier.levels.length - 1;
+                            const segmentWidth = availableWidth / segmentCount;
+                            const centerY = height / 2 + 10;
 
                             return (
                                 <div key={tier.name} className="transition-all duration-300">
@@ -78,72 +81,99 @@ export const ProgressRoadmap = ({ currentLevel, currentUnit, isOpen, onToggle })
                                         <span className="text-xs text-slate-400">{levelLabels}</span>
                                     </div>
 
-                                    {/* Progress Track */}
-                                    <div className="relative px-2">
-                                        {/* Background Line */}
-                                        <div className="absolute top-3 left-2 right-2 h-px bg-slate-300"></div>
+                                    {/* SVG Progress Track */}
+                                    <div className="w-full">
+                                        <svg viewBox={`0 0 ${width} ${height}`} className="w-full h-auto block select-none">
+                                            {/* Background Line */}
+                                            <line
+                                                x1={paddingX}
+                                                y1={centerY}
+                                                x2={width - paddingX}
+                                                y2={centerY}
+                                                stroke="#cbd5e1" // slate-300
+                                                strokeWidth="2"
+                                                strokeLinecap="round"
+                                            />
 
-                                        {/* Level segments */}
-                                        <div className="flex items-start justify-between relative">
-                                            {tier.levels.map((level, levelIndex) => {
+                                            {/* Segments and Ticks */}
+                                            {tier.levels.map((level, i) => {
+                                                const x = paddingX + (i * segmentWidth);
+                                                const isLast = i === tier.levels.length - 1;
                                                 const isCurrentLevel = level === currentLevel;
-                                                const isLastInTier = levelIndex === tier.levels.length - 1;
-                                                const isPast = level < currentLevel;
 
-                                                // Check if this specific node should be highlighted
-                                                const isHighlighted = isCurrentLevel || (isPast && isCurrentTier);
+                                                // Determine styles based on state
+                                                const isActiveNode = level <= currentLevel && isCurrentTier;
+                                                const isCurrentNode = level === currentLevel && isCurrentTier;
+
+                                                const dotColor = isActiveNode ? colors.fill : 'fill-white';
+                                                const dotStroke = isActiveNode ? colors.stroke : 'stroke-slate-300';
 
                                                 return (
-                                                    <React.Fragment key={level}>
-                                                        {/* Level Dot */}
-                                                        <div className="flex flex-col items-center z-10 relative">
-                                                            <div
-                                                                className={`w-6 h-6 rounded-full border-2 flex items-center justify-center transition-all ${level <= currentLevel && isCurrentTier
-                                                                    ? `${colors.filled} border-white ring-2 ring-offset-1 ${colors.ring}`
-                                                                    : 'bg-white border-slate-300'
-                                                                    }`}
-                                                            >
-                                                                {level === currentLevel && isCurrentTier && (
-                                                                    <div className="w-2 h-2 rounded-full bg-white animate-pulse" />
-                                                                )}
-                                                            </div>
-                                                            <span className={`text-[10px] mt-1 font-medium ${level <= currentLevel && isCurrentTier ? 'text-slate-800' : 'text-slate-400'}`}>
-                                                                Lv.{level}
-                                                            </span>
-                                                        </div>
+                                                    <g key={level}>
+                                                        {/* 30 Ticks following this node (if not last) */}
+                                                        {!isLast && (
+                                                            <g>
+                                                                {[...Array(30)].map((_, t) => {
+                                                                    const tickDist = segmentWidth / 31;
+                                                                    const tx = x + (tickDist * (t + 1));
+                                                                    const unitNum = t + 1;
 
-                                                        {/* 30 tiny tick marks between levels */}
-                                                        {!isLastInTier && (
-                                                            <div className="flex-1 flex items-center justify-between pt-2.5 mx-1">
-                                                                {[...Array(30)].map((_, tickIndex) => {
-                                                                    const unitNum = tickIndex + 1;
+                                                                    // Check if this is the current active tick marker
                                                                     const isCurrentTick = isCurrentLevel && unitNum === currentUnit && isCurrentTier;
-                                                                    const isPastTick = (level < currentLevel) || (isCurrentLevel && unitNum < currentUnit);
+
+                                                                    // Tick styling
+                                                                    const tickRadius = isCurrentTick ? 5 : 1.5;
+                                                                    const tickY = centerY;
+                                                                    const tickColor = isCurrentTick ? colors.fill : 'fill-slate-300';
 
                                                                     return (
-                                                                        <div key={tickIndex} className="relative flex flex-col items-center flex-1">
-                                                                            {/* Current position marker */}
+                                                                        <g key={t}>
+                                                                            {/* Standard Tick */}
+                                                                            <circle cx={tx} cy={tickY} r={tickRadius} className={tickColor} />
+
+                                                                            {/* Active Unit Red Triangle Marker (Above Tick) */}
                                                                             {isCurrentTick && (
-                                                                                <div className="absolute -top-3 z-20">
-                                                                                    <div className="w-0 h-0 border-l-[4px] border-r-[4px] border-t-[6px] border-l-transparent border-r-transparent border-t-red-500 animate-bounce"></div>
-                                                                                </div>
+                                                                                <path
+                                                                                    d={`M ${tx} ${tickY - 12} L ${tx - 6} ${tickY - 22} L ${tx + 6} ${tickY - 22} Z`}
+                                                                                    fill="#ef4444"
+                                                                                    className="animate-bounce origin-bottom"
+                                                                                />
                                                                             )}
-                                                                            {/* Tiny tick mark - Responsive sizing */}
-                                                                            <div
-                                                                                className={`rounded-full transition-all ${isCurrentTick
-                                                                                    ? `w-1.5 h-1.5 ${colors.filled}`
-                                                                                    : 'w-[2px] h-[2px] bg-slate-300'
-                                                                                    }`}
-                                                                            />
-                                                                        </div>
+                                                                        </g>
                                                                     );
                                                                 })}
-                                                            </div>
+                                                            </g>
                                                         )}
-                                                    </React.Fragment>
+
+                                                        {/* Level Node (Large Circle) */}
+                                                        <circle
+                                                            cx={x}
+                                                            cy={centerY}
+                                                            r="12"
+                                                            className={`${dotColor} ${dotStroke} transition-all duration-300`}
+                                                            strokeWidth="3"
+                                                        />
+
+                                                        {/* Inner White Pulse for Current Node */}
+                                                        {isCurrentNode && (
+                                                            <circle cx={x} cy={centerY} r="4" className="fill-white animate-pulse" />
+                                                        )}
+
+                                                        {/* Level Text */}
+                                                        <text
+                                                            x={x}
+                                                            y={centerY + 25}
+                                                            textAnchor="middle"
+                                                            className={`text-[20px] font-medium ${isActiveNode ? 'fill-slate-800 font-bold' : 'fill-slate-400'}`}
+                                                            style={{ fontSize: '12px' }}
+                                                        >
+                                                            Lv.{level}
+                                                        </text>
+
+                                                    </g>
                                                 );
                                             })}
-                                        </div>
+                                        </svg>
                                     </div>
                                 </div>
                             );
