@@ -16,7 +16,7 @@ const Layout = () => {
         <div className="min-h-screen bg-slate-50 flex flex-col">
             {/* Header */}
             <header className="bg-white shadow-sm sticky top-0 z-10">
-                <div className="max-w-2xl mx-auto px-4 h-14 flex items-center justify-between">
+                <div className="max-w-4xl mx-auto px-4 h-14 flex items-center justify-between">
                     <div className="flex items-center gap-2 font-bold text-indigo-600 text-lg cursor-pointer" onClick={() => navigate('/dashboard')}>
                         <BookOpen size={24} />
                         <span>VOCA Master</span>
@@ -44,7 +44,7 @@ const Layout = () => {
             </header>
 
             {/* Main Content Area */}
-            <main className="flex-1 max-w-2xl mx-auto w-full p-4">
+            <main className="flex-1 max-w-4xl mx-auto w-full p-4">
                 <Outlet />
             </main>
         </div>
