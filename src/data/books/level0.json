@@ -1,0 +1,1866 @@
+{
+    "id": "book_0",
+    "title": "TES Step Up! VOCA Lv.0",
+    "units": [
+        {
+            "id": "unit_0_1",
+            "title": "Unit 01",
+            "words": [
+                {
+                    "id": 101,
+                    "word": "bear",
+                    "meaning": "곰",
+                    "example": "I see a bear.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 102,
+                    "word": "have",
+                    "meaning": "가지다",
+                    "example": "I have a pen.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 103,
+                    "word": "cap",
+                    "meaning": "모자",
+                    "example": "I have a cap.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 104,
+                    "word": "frog",
+                    "meaning": "개구리",
+                    "example": "I see a frog.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 105,
+                    "word": "doll",
+                    "meaning": "인형",
+                    "example": "This is my doll.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 106,
+                    "word": "home",
+                    "meaning": "집, 집으로",
+                    "example": "I go home.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 107,
+                    "word": "boy",
+                    "meaning": "소년, 남자 아이",
+                    "example": "The boy runs.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 108,
+                    "word": "good",
+                    "meaning": "좋은",
+                    "example": "It is good.",
+                    "exampleMeaning": ""
+                }
+            ]
+        },
+        {
+            "id": "unit_0_2",
+            "title": "Unit 02",
+            "words": [
+                {
+                    "id": 201,
+                    "word": "milk",
+                    "meaning": "우유",
+                    "example": "I drink milk.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 202,
+                    "word": "little",
+                    "meaning": "작은, 적은",
+                    "example": "It is little.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 203,
+                    "word": "ear",
+                    "meaning": "귀",
+                    "example": "This is my ear.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 204,
+                    "word": "fish",
+                    "meaning": "물고기, 생선",
+                    "example": "I see a fish.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 205,
+                    "word": "arm",
+                    "meaning": "팔",
+                    "example": "This is my arm.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 206,
+                    "word": "baby",
+                    "meaning": "아기",
+                    "example": "The baby sleeps.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 207,
+                    "word": "see",
+                    "meaning": "~을 보다",
+                    "example": "I see you.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 208,
+                    "word": "play",
+                    "meaning": "놀다",
+                    "example": "I play now.",
+                    "exampleMeaning": ""
+                }
+            ]
+        },
+        {
+            "id": "unit_0_3",
+            "title": "Unit 03",
+            "words": [
+                {
+                    "id": 301,
+                    "word": "happy",
+                    "meaning": "행복한",
+                    "example": "I am happy.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 302,
+                    "word": "egg",
+                    "meaning": "달걀, 알",
+                    "example": "I eat an egg.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 303,
+                    "word": "leg",
+                    "meaning": "(신체) 다리",
+                    "example": "This is my leg.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 304,
+                    "word": "cake",
+                    "meaning": "케이크",
+                    "example": "I like cake.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 305,
+                    "word": "ball",
+                    "meaning": "공",
+                    "example": "I have a ball.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 306,
+                    "word": "go",
+                    "meaning": "(다른 곳으로) 가다",
+                    "example": "I go to school.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 307,
+                    "word": "nose",
+                    "meaning": "코",
+                    "example": "This is my nose.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 308,
+                    "word": "flower",
+                    "meaning": "꽃",
+                    "example": "I see a flower.",
+                    "exampleMeaning": ""
+                }
+            ]
+        },
+        {
+            "id": "unit_0_4",
+            "title": "Unit 04",
+            "words": [
+                {
+                    "id": 401,
+                    "word": "chair",
+                    "meaning": "의자",
+                    "example": "I sit on a chair.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 402,
+                    "word": "say",
+                    "meaning": "말하다",
+                    "example": "I say hello.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 403,
+                    "word": "name",
+                    "meaning": "이름",
+                    "example": "My name is Tom.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 404,
+                    "word": "book",
+                    "meaning": "책",
+                    "example": "I read a book.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 405,
+                    "word": "eye",
+                    "meaning": "눈",
+                    "example": "This is my eye.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 406,
+                    "word": "bad",
+                    "meaning": "나쁜, 안 좋은",
+                    "example": "It is bad.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 407,
+                    "word": "dish",
+                    "meaning": "접시",
+                    "example": "I wash the dish.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 408,
+                    "word": "girl",
+                    "meaning": "소녀, 여자 아이",
+                    "example": "The girl smiles.",
+                    "exampleMeaning": ""
+                }
+            ]
+        },
+        {
+            "id": "unit_0_5",
+            "title": "Unit 05",
+            "words": [
+                {
+                    "id": 501,
+                    "word": "kite",
+                    "meaning": "연",
+                    "example": "I fly a kite.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 502,
+                    "word": "boat",
+                    "meaning": "(작은) 배",
+                    "example": "I see a boat.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 503,
+                    "word": "cup",
+                    "meaning": "컵, 잔",
+                    "example": "I have a cup.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 504,
+                    "word": "ant",
+                    "meaning": "개미",
+                    "example": "I see an ant.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 505,
+                    "word": "hair",
+                    "meaning": "머리카락",
+                    "example": "My hair is long.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 506,
+                    "word": "smell",
+                    "meaning": "냄새가 나다",
+                    "example": "I smell food.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 507,
+                    "word": "dress",
+                    "meaning": "드레스, 옷을 입다",
+                    "example": "I wear a dress.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 508,
+                    "word": "read",
+                    "meaning": "읽다",
+                    "example": "I read a book.",
+                    "exampleMeaning": ""
+                }
+            ]
+        },
+        {
+            "id": "unit_0_6",
+            "title": "Unit 06",
+            "words": [
+                {
+                    "id": 601,
+                    "word": "water",
+                    "meaning": "물, 물을 주다",
+                    "example": "I drink water.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 602,
+                    "word": "bread",
+                    "meaning": "빵",
+                    "example": "I eat bread.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 603,
+                    "word": "apple",
+                    "meaning": "사과",
+                    "example": "I eat an apple.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 604,
+                    "word": "car",
+                    "meaning": "승용차",
+                    "example": "I see a car.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 605,
+                    "word": "make",
+                    "meaning": "만들다",
+                    "example": "I make a cake.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 606,
+                    "word": "hot",
+                    "meaning": "뜨거운, 더운",
+                    "example": "It is hot.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 607,
+                    "word": "desk",
+                    "meaning": "책상",
+                    "example": "The desk is big.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 608,
+                    "word": "bird",
+                    "meaning": "새",
+                    "example": "I see a bird.",
+                    "exampleMeaning": ""
+                }
+            ]
+        },
+        {
+            "id": "unit_0_7",
+            "title": "Unit 07",
+            "words": [
+                {
+                    "id": 701,
+                    "word": "bag",
+                    "meaning": "가방",
+                    "example": "I have a bag.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 702,
+                    "word": "bee",
+                    "meaning": "(곤충) 벌",
+                    "example": "I see a bee.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 703,
+                    "word": "look",
+                    "meaning": "보다",
+                    "example": "I look at you.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 704,
+                    "word": "face",
+                    "meaning": "얼굴",
+                    "example": "This is my face.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 705,
+                    "word": "small",
+                    "meaning": "작은, 적은",
+                    "example": "It is small.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 706,
+                    "word": "father",
+                    "meaning": "아버지",
+                    "example": "My father works.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 707,
+                    "word": "sock",
+                    "meaning": "양말 한 짝",
+                    "example": "I have a sock.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 708,
+                    "word": "hand",
+                    "meaning": "손",
+                    "example": "This is my hand.",
+                    "exampleMeaning": ""
+                }
+            ]
+        },
+        {
+            "id": "unit_0_8",
+            "title": "Unit 08",
+            "words": [
+                {
+                    "id": 801,
+                    "word": "meet",
+                    "meaning": "만나다",
+                    "example": "I meet my friend.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 802,
+                    "word": "fly",
+                    "meaning": "날다",
+                    "example": "The bird flies.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 803,
+                    "word": "leaf",
+                    "meaning": "나뭇잎",
+                    "example": "I see a leaf.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 804,
+                    "word": "bed",
+                    "meaning": "침대",
+                    "example": "I sleep in bed.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 805,
+                    "word": "mother",
+                    "meaning": "어머니",
+                    "example": "My mother cooks.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 806,
+                    "word": "time",
+                    "meaning": "시간",
+                    "example": "It is time.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 807,
+                    "word": "glove",
+                    "meaning": "장갑 한 짝",
+                    "example": "I have a glove.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 808,
+                    "word": "tall",
+                    "meaning": "키가 큰, 높은",
+                    "example": "The boy is tall.",
+                    "exampleMeaning": ""
+                }
+            ]
+        },
+        {
+            "id": "unit_0_9",
+            "title": "Unit 09",
+            "words": [
+                {
+                    "id": 901,
+                    "word": "eat",
+                    "meaning": "먹다",
+                    "example": "I eat rice.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 902,
+                    "word": "hungry",
+                    "meaning": "배고픈",
+                    "example": "I am hungry.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 903,
+                    "word": "fork",
+                    "meaning": "포크",
+                    "example": "I use a fork.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 904,
+                    "word": "wait",
+                    "meaning": "기다리다",
+                    "example": "I wait here.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 905,
+                    "word": "give",
+                    "meaning": "주다",
+                    "example": "I give you a pen.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 906,
+                    "word": "door",
+                    "meaning": "문",
+                    "example": "The door is open.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 907,
+                    "word": "knee",
+                    "meaning": "무릎",
+                    "example": "This is my knee.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 908,
+                    "word": "brother",
+                    "meaning": "형, 오빠, 남동생",
+                    "example": "My brother runs.",
+                    "exampleMeaning": ""
+                }
+            ]
+        },
+        {
+            "id": "unit_0_10",
+            "title": "Unit 10",
+            "words": [
+                {
+                    "id": 1001,
+                    "word": "cute",
+                    "meaning": "귀여운",
+                    "example": "It is cute.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1002,
+                    "word": "work",
+                    "meaning": "일하다",
+                    "example": "I work now.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1003,
+                    "word": "neck",
+                    "meaning": "목",
+                    "example": "This is my neck.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1004,
+                    "word": "help",
+                    "meaning": "돕다",
+                    "example": "I help you.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1005,
+                    "word": "song",
+                    "meaning": "노래",
+                    "example": "I sing a song.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1006,
+                    "word": "tree",
+                    "meaning": "나무",
+                    "example": "I see a tree.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1007,
+                    "word": "sad",
+                    "meaning": "슬픈",
+                    "example": "I am sad.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1008,
+                    "word": "friend",
+                    "meaning": "친구",
+                    "example": "My friend plays.",
+                    "exampleMeaning": ""
+                }
+            ]
+        },
+        {
+            "id": "unit_0_11",
+            "title": "Unit 11",
+            "words": [
+                {
+                    "id": 1101,
+                    "word": "snowy",
+                    "meaning": "눈이 내리는",
+                    "example": "It is snowy.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1102,
+                    "word": "hive",
+                    "meaning": "벌집",
+                    "example": "I see a hive.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1103,
+                    "word": "bus",
+                    "meaning": "버스",
+                    "example": "I ride a bus.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1104,
+                    "word": "bowl",
+                    "meaning": "(우묵한) 그릇",
+                    "example": "I have a bowl.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1105,
+                    "word": "find",
+                    "meaning": "~을 찾다",
+                    "example": "I find my hat.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1106,
+                    "word": "sing",
+                    "meaning": "노래하다",
+                    "example": "I sing a song.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1107,
+                    "word": "house",
+                    "meaning": "집",
+                    "example": "This is my house.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1108,
+                    "word": "white",
+                    "meaning": "흰색의, 흰색",
+                    "example": "It is white.",
+                    "exampleMeaning": ""
+                }
+            ]
+        },
+        {
+            "id": "unit_0_12",
+            "title": "Unit 12",
+            "words": [
+                {
+                    "id": 1201,
+                    "word": "cry",
+                    "meaning": "울다",
+                    "example": "I cry.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1202,
+                    "word": "funny",
+                    "meaning": "웃기는",
+                    "example": "It is funny.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1203,
+                    "word": "green",
+                    "meaning": "녹색의, 녹색",
+                    "example": "It is green.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1204,
+                    "word": "hat",
+                    "meaning": "모자",
+                    "example": "I wear a hat.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1205,
+                    "word": "teeth",
+                    "meaning": "이, 치아",
+                    "example": "I brush my teeth.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1206,
+                    "word": "watch",
+                    "meaning": "시계, 보다",
+                    "example": "I watch TV.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1207,
+                    "word": "sister",
+                    "meaning": "언니, 누나, 여동생",
+                    "example": "My sister runs.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1208,
+                    "word": "ride",
+                    "meaning": "~을 타다",
+                    "example": "I ride a bike.",
+                    "exampleMeaning": ""
+                }
+            ]
+        },
+        {
+            "id": "unit_0_13",
+            "title": "Unit 13",
+            "words": [
+                {
+                    "id": 1301,
+                    "word": "big",
+                    "meaning": "큰",
+                    "example": "It is big.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1302,
+                    "word": "zoo",
+                    "meaning": "동물원",
+                    "example": "I go to the zoo.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1303,
+                    "word": "mouth",
+                    "meaning": "입",
+                    "example": "This is my mouth.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1304,
+                    "word": "run",
+                    "meaning": "달리다",
+                    "example": "I run fast.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1305,
+                    "word": "rainy",
+                    "meaning": "비가 오는",
+                    "example": "It is rainy.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1306,
+                    "word": "card",
+                    "meaning": "카드",
+                    "example": "I have a card.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1307,
+                    "word": "tiger",
+                    "meaning": "호랑이",
+                    "example": "I see a tiger.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1308,
+                    "word": "write",
+                    "meaning": "(글자, 숫자를) 쓰다",
+                    "example": "I write my name.",
+                    "exampleMeaning": ""
+                }
+            ]
+        },
+        {
+            "id": "unit_0_14",
+            "title": "Unit 14",
+            "words": [
+                {
+                    "id": 1401,
+                    "word": "ship",
+                    "meaning": "(큰) 배",
+                    "example": "I see a ship.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1402,
+                    "word": "sit",
+                    "meaning": "앉다",
+                    "example": "I sit down.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1403,
+                    "word": "letter",
+                    "meaning": "편지",
+                    "example": "I write a letter.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1404,
+                    "word": "love",
+                    "meaning": "사랑, 사랑하다",
+                    "example": "I love you.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1405,
+                    "word": "short",
+                    "meaning": "짧은, 키가 작은",
+                    "example": "It is short.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1406,
+                    "word": "cold",
+                    "meaning": "추운, 차가운",
+                    "example": "It is cold.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1407,
+                    "word": "towel",
+                    "meaning": "수건",
+                    "example": "I use a towel.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1408,
+                    "word": "hug",
+                    "meaning": "껴안다",
+                    "example": "I hug you.",
+                    "exampleMeaning": ""
+                }
+            ]
+        },
+        {
+            "id": "unit_0_15",
+            "title": "Unit 15",
+            "words": [
+                {
+                    "id": 1501,
+                    "word": "foot",
+                    "meaning": "발",
+                    "example": "This is my foot.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1502,
+                    "word": "sun",
+                    "meaning": "해, 태양",
+                    "example": "The sun is hot.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1503,
+                    "word": "duck",
+                    "meaning": "오리",
+                    "example": "I see a duck.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1504,
+                    "word": "table",
+                    "meaning": "식탁",
+                    "example": "The table is big.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1505,
+                    "word": "garden",
+                    "meaning": "정원",
+                    "example": "I play in the garden.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1506,
+                    "word": "walk",
+                    "meaning": "걷다",
+                    "example": "I walk home.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1507,
+                    "word": "elephant",
+                    "meaning": "코끼리",
+                    "example": "I see an elephant.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1508,
+                    "word": "like",
+                    "meaning": "좋아하다",
+                    "example": "I like apples.",
+                    "exampleMeaning": ""
+                }
+            ]
+        },
+        {
+            "id": "unit_0_16",
+            "title": "Unit 16",
+            "words": [
+                {
+                    "id": 1601,
+                    "word": "come",
+                    "meaning": "오다",
+                    "example": "Come here.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1602,
+                    "word": "shoe",
+                    "meaning": "신발 한 짝",
+                    "example": "I wear a shoe.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1603,
+                    "word": "full",
+                    "meaning": "가득한",
+                    "example": "The box is full.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1604,
+                    "word": "map",
+                    "meaning": "지도",
+                    "example": "I see a map.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1605,
+                    "word": "bean",
+                    "meaning": "콩",
+                    "example": "I eat beans.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1606,
+                    "word": "pencil",
+                    "meaning": "연필",
+                    "example": "I have a pencil.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1607,
+                    "word": "park",
+                    "meaning": "공원",
+                    "example": "I go to the park.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1608,
+                    "word": "train",
+                    "meaning": "기차",
+                    "example": "I see a train.",
+                    "exampleMeaning": ""
+                }
+            ]
+        },
+        {
+            "id": "unit_0_17",
+            "title": "Unit 17",
+            "words": [
+                {
+                    "id": 1701,
+                    "word": "feed",
+                    "meaning": "먹이다, 먹이를 주다",
+                    "example": "I feed the dog.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1702,
+                    "word": "fast",
+                    "meaning": "빠른, 빨리",
+                    "example": "It is fast.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1703,
+                    "word": "spoon",
+                    "meaning": "숟가락",
+                    "example": "I use a spoon.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1704,
+                    "word": "bicycle",
+                    "meaning": "자전거",
+                    "example": "I ride a bike.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1705,
+                    "word": "lip",
+                    "meaning": "입술",
+                    "example": "This is my lip.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1706,
+                    "word": "tail",
+                    "meaning": "꼬리",
+                    "example": "The dog has a tail.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1707,
+                    "word": "shop",
+                    "meaning": "가게, 물건을 사다",
+                    "example": "I go to a shop.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1708,
+                    "word": "wear",
+                    "meaning": "(옷 등을) 입다",
+                    "example": "I wear a hat.",
+                    "exampleMeaning": ""
+                }
+            ]
+        },
+        {
+            "id": "unit_0_18",
+            "title": "Unit 18",
+            "words": [
+                {
+                    "id": 1801,
+                    "word": "umbrella",
+                    "meaning": "우산",
+                    "example": "I use an umbrella.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1802,
+                    "word": "nice",
+                    "meaning": "좋은, 멋진",
+                    "example": "It is nice.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1803,
+                    "word": "wash",
+                    "meaning": "씻다",
+                    "example": "I wash my hands.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1804,
+                    "word": "man",
+                    "meaning": "남자",
+                    "example": "The man walks.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1805,
+                    "word": "banana",
+                    "meaning": "바나나",
+                    "example": "I eat a banana.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1806,
+                    "word": "slow",
+                    "meaning": "느린",
+                    "example": "It is slow.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1807,
+                    "word": "school",
+                    "meaning": "학교",
+                    "example": "I go to school.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1808,
+                    "word": "mouse",
+                    "meaning": "쥐",
+                    "example": "I see a mouse.",
+                    "exampleMeaning": ""
+                }
+            ]
+        },
+        {
+            "id": "unit_0_19",
+            "title": "Unit 19",
+            "words": [
+                {
+                    "id": 1901,
+                    "word": "wake",
+                    "meaning": "잠에서 깨다",
+                    "example": "I wake up.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1902,
+                    "word": "horse",
+                    "meaning": "(동물) 말",
+                    "example": "I see a horse.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1903,
+                    "word": "night",
+                    "meaning": "밤, 야간",
+                    "example": "It is night.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1904,
+                    "word": "star",
+                    "meaning": "별",
+                    "example": "I see a star.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1905,
+                    "word": "sea",
+                    "meaning": "바다",
+                    "example": "I see the sea.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1906,
+                    "word": "cook",
+                    "meaning": "요리하다, 요리사",
+                    "example": "I cook rice.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1907,
+                    "word": "long",
+                    "meaning": "(길이, 거리) 긴",
+                    "example": "It is long.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 1908,
+                    "word": "truck",
+                    "meaning": "트럭",
+                    "example": "I see a truck.",
+                    "exampleMeaning": ""
+                }
+            ]
+        },
+        {
+            "id": "unit_0_20",
+            "title": "Unit 20",
+            "words": [
+                {
+                    "id": 2001,
+                    "word": "buy",
+                    "meaning": "사다",
+                    "example": "I buy milk.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2002,
+                    "word": "moon",
+                    "meaning": "달",
+                    "example": "I see the moon.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2003,
+                    "word": "new",
+                    "meaning": "새로운",
+                    "example": "It is new.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2004,
+                    "word": "farm",
+                    "meaning": "농장",
+                    "example": "I go to a farm.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2005,
+                    "word": "live",
+                    "meaning": "살다",
+                    "example": "I live here.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2006,
+                    "word": "toy",
+                    "meaning": "장난감",
+                    "example": "I have a toy.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2007,
+                    "word": "glasses",
+                    "meaning": "안경",
+                    "example": "I wear glasses.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2008,
+                    "word": "people",
+                    "meaning": "사람들",
+                    "example": "I see people.",
+                    "exampleMeaning": ""
+                }
+            ]
+        },
+        {
+            "id": "unit_0_21",
+            "title": "Unit 21",
+            "words": [
+                {
+                    "id": 2101,
+                    "word": "soap",
+                    "meaning": "비누",
+                    "example": "I use soap.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2102,
+                    "word": "airplane",
+                    "meaning": "비행기",
+                    "example": "I see an airplane.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2103,
+                    "word": "large",
+                    "meaning": "큰",
+                    "example": "It is large.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2104,
+                    "word": "gift",
+                    "meaning": "선물",
+                    "example": "I get a gift.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2105,
+                    "word": "use",
+                    "meaning": "사용하다",
+                    "example": "I use a pencil.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2106,
+                    "word": "finger",
+                    "meaning": "손가락",
+                    "example": "This is my finger.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2107,
+                    "word": "cloud",
+                    "meaning": "구름",
+                    "example": "I see a cloud.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2108,
+                    "word": "cut",
+                    "meaning": "자르다",
+                    "example": "I cut paper.",
+                    "exampleMeaning": ""
+                }
+            ]
+        },
+        {
+            "id": "unit_0_22",
+            "title": "Unit 22",
+            "words": [
+                {
+                    "id": 2201,
+                    "word": "lion",
+                    "meaning": "사자",
+                    "example": "I see a lion.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2202,
+                    "word": "pillow",
+                    "meaning": "베개",
+                    "example": "I sleep on a pillow.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2203,
+                    "word": "pen",
+                    "meaning": "펜",
+                    "example": "I have a pen.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2204,
+                    "word": "can",
+                    "meaning": "캔, 통조림",
+                    "example": "I open a can.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2205,
+                    "word": "sleep",
+                    "meaning": "(잠을) 자다",
+                    "example": "I sleep well.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2206,
+                    "word": "old",
+                    "meaning": "나이 많은",
+                    "example": "The man is old.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2207,
+                    "word": "bedroom",
+                    "meaning": "침실",
+                    "example": "This is my bedroom.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2208,
+                    "word": "tomato",
+                    "meaning": "토마토",
+                    "example": "I eat a tomato.",
+                    "exampleMeaning": ""
+                }
+            ]
+        },
+        {
+            "id": "unit_0_23",
+            "title": "Unit 23",
+            "words": [
+                {
+                    "id": 2301,
+                    "word": "onion",
+                    "meaning": "양파",
+                    "example": "I eat an onion.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2302,
+                    "word": "sheep",
+                    "meaning": "양",
+                    "example": "I see a sheep.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2303,
+                    "word": "balloon",
+                    "meaning": "풍선",
+                    "example": "I have a balloon.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2304,
+                    "word": "shirt",
+                    "meaning": "셔츠",
+                    "example": "I wear a shirt.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2305,
+                    "word": "plant",
+                    "meaning": "식물, (씨앗 등을) 심다",
+                    "example": "I plant a tree.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2306,
+                    "word": "swim",
+                    "meaning": "수영하다",
+                    "example": "I can swim.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2307,
+                    "word": "party",
+                    "meaning": "파티",
+                    "example": "I go to a party.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2308,
+                    "word": "boot",
+                    "meaning": "부츠 한 짝",
+                    "example": "I wear a boot.",
+                    "exampleMeaning": ""
+                }
+            ]
+        },
+        {
+            "id": "unit_0_24",
+            "title": "Unit 24",
+            "words": [
+                {
+                    "id": 2401,
+                    "word": "class",
+                    "meaning": "학급, 수업",
+                    "example": "I am in class.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2402,
+                    "word": "jump",
+                    "meaning": "뛰다, 점프하다",
+                    "example": "I jump high.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2403,
+                    "word": "fire",
+                    "meaning": "불",
+                    "example": "I see fire.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2404,
+                    "word": "beetle",
+                    "meaning": "딱정벌레",
+                    "example": "I see a beetle.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2405,
+                    "word": "black",
+                    "meaning": "검은, 검은색",
+                    "example": "It is black.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2406,
+                    "word": "roll",
+                    "meaning": "구르다, 굴리다",
+                    "example": "The ball rolls.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2407,
+                    "word": "floor",
+                    "meaning": "바닥",
+                    "example": "The floor is clean.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2408,
+                    "word": "pretty",
+                    "meaning": "예쁜",
+                    "example": "It is pretty.",
+                    "exampleMeaning": ""
+                }
+            ]
+        },
+        {
+            "id": "unit_0_25",
+            "title": "Unit 25",
+            "words": [
+                {
+                    "id": 2501,
+                    "word": "pizza",
+                    "meaning": "피자",
+                    "example": "I eat pizza.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2502,
+                    "word": "lunch",
+                    "meaning": "점심",
+                    "example": "I eat lunch.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2503,
+                    "word": "get",
+                    "meaning": "받다, 얻다",
+                    "example": "I get a toy.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2504,
+                    "word": "bounce",
+                    "meaning": "튀다, 튀기다",
+                    "example": "The ball bounces.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2505,
+                    "word": "angry",
+                    "meaning": "화난",
+                    "example": "I am angry.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2506,
+                    "word": "dry",
+                    "meaning": "마른, 말리다",
+                    "example": "It is dry.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2507,
+                    "word": "sand",
+                    "meaning": "모래",
+                    "example": "I play with sand.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2508,
+                    "word": "beach",
+                    "meaning": "해변",
+                    "example": "I go to the beach.",
+                    "exampleMeaning": ""
+                }
+            ]
+        },
+        {
+            "id": "unit_0_26",
+            "title": "Unit 26",
+            "words": [
+                {
+                    "id": 2601,
+                    "word": "pool",
+                    "meaning": "수영장",
+                    "example": "I swim in the pool.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2602,
+                    "word": "zebra",
+                    "meaning": "얼룩말",
+                    "example": "I see a zebra.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2603,
+                    "word": "glass",
+                    "meaning": "유리잔, 유리",
+                    "example": "I drink water.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2604,
+                    "word": "catch",
+                    "meaning": "~을 잡다",
+                    "example": "I catch the ball.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2605,
+                    "word": "candy",
+                    "meaning": "사탕",
+                    "example": "I eat candy.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2606,
+                    "word": "mask",
+                    "meaning": "마스크, 가면",
+                    "example": "I wear a mask.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2607,
+                    "word": "taste",
+                    "meaning": "맛, 맛이 나다",
+                    "example": "It tastes good.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2608,
+                    "word": "sofa",
+                    "meaning": "소파",
+                    "example": "I sit on the sofa.",
+                    "exampleMeaning": ""
+                }
+            ]
+        },
+        {
+            "id": "unit_0_27",
+            "title": "Unit 27",
+            "words": [
+                {
+                    "id": 2701,
+                    "word": "lamp",
+                    "meaning": "램프, 등",
+                    "example": "The lamp is on.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2702,
+                    "word": "dinner",
+                    "meaning": "(잘 차린) 식사, 정식",
+                    "example": "I eat dinner.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2703,
+                    "word": "mirror",
+                    "meaning": "거울",
+                    "example": "I see me.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2704,
+                    "word": "hit",
+                    "meaning": "때리다, 치다",
+                    "example": "I hit the ball.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2705,
+                    "word": "meat",
+                    "meaning": "고기",
+                    "example": "I eat meat.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2706,
+                    "word": "dance",
+                    "meaning": "춤, 춤을 추다",
+                    "example": "I dance.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2707,
+                    "word": "down",
+                    "meaning": "아래로",
+                    "example": "Sit down.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2708,
+                    "word": "blow",
+                    "meaning": "(입으로) 불다",
+                    "example": "I blow air.",
+                    "exampleMeaning": ""
+                }
+            ]
+        },
+        {
+            "id": "unit_0_28",
+            "title": "Unit 28",
+            "words": [
+                {
+                    "id": 2801,
+                    "word": "throw",
+                    "meaning": "던지다",
+                    "example": "I throw the ball.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2802,
+                    "word": "close",
+                    "meaning": "닫다, 가까운",
+                    "example": "Close the door.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2803,
+                    "word": "ice",
+                    "meaning": "얼음",
+                    "example": "I see ice.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2804,
+                    "word": "clock",
+                    "meaning": "시계",
+                    "example": "I see the clock.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2805,
+                    "word": "helmet",
+                    "meaning": "헬멧",
+                    "example": "I wear a helmet.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2806,
+                    "word": "chin",
+                    "meaning": "턱",
+                    "example": "This is my chin.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2807,
+                    "word": "fox",
+                    "meaning": "여우",
+                    "example": "I see a fox.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2808,
+                    "word": "kick",
+                    "meaning": "(발로) 차다",
+                    "example": "I kick the ball.",
+                    "exampleMeaning": ""
+                }
+            ]
+        },
+        {
+            "id": "unit_0_29",
+            "title": "Unit 29",
+            "words": [
+                {
+                    "id": 2901,
+                    "word": "drink",
+                    "meaning": "음료, 마시다",
+                    "example": "I drink water.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2902,
+                    "word": "pet",
+                    "meaning": "애완동물",
+                    "example": "I have a pet.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2903,
+                    "word": "juice",
+                    "meaning": "주스",
+                    "example": "I drink juice.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2904,
+                    "word": "farmer",
+                    "meaning": "농부",
+                    "example": "The farmer works.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2905,
+                    "word": "carrot",
+                    "meaning": "당근",
+                    "example": "I eat a carrot.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2906,
+                    "word": "pull",
+                    "meaning": "당기다",
+                    "example": "I pull the door.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2907,
+                    "word": "monster",
+                    "meaning": "괴물",
+                    "example": "I see a monster.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 2908,
+                    "word": "skirt",
+                    "meaning": "치마",
+                    "example": "I wear a skirt.",
+                    "exampleMeaning": ""
+                }
+            ]
+        },
+        {
+            "id": "unit_0_30",
+            "title": "Unit 30",
+            "words": [
+                {
+                    "id": 3001,
+                    "word": "box",
+                    "meaning": "상자",
+                    "example": "I have a box.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 3002,
+                    "word": "roof",
+                    "meaning": "지붕",
+                    "example": "The roof is high.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 3003,
+                    "word": "monkey",
+                    "meaning": "원숭이",
+                    "example": "I see a monkey.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 3004,
+                    "word": "pants",
+                    "meaning": "바지",
+                    "example": "I wear pants.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 3005,
+                    "word": "blanket",
+                    "meaning": "담요",
+                    "example": "I use a blanket.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 3006,
+                    "word": "draw",
+                    "meaning": "그리다",
+                    "example": "I draw a cat.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 3007,
+                    "word": "red",
+                    "meaning": "빨간, 빨간색",
+                    "example": "It is red.",
+                    "exampleMeaning": ""
+                },
+                {
+                    "id": 3008,
+                    "word": "closet",
+                    "meaning": "옷장",
+                    "example": "The closet is big.",
+                    "exampleMeaning": ""
+                }
+            ]
+        }
+    ]
+}

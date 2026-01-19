@@ -15,7 +15,7 @@ if (!existsSync(OUTPUT_DIR)) {
     mkdirSync(OUTPUT_DIR, { recursive: true });
 }
 
-const files = readdirSync(DATA_TEMPLATE_DIR).filter(f => f.match(/TES_VOCA_Lv\d+\.xlsx/));
+const files = readdirSync(DATA_TEMPLATE_DIR).filter(f => f.match(/TES_VOCA_Lv\d+\.xls[xm]/));
 
 console.log(`Found ${files.length} Excel files in ${DATA_TEMPLATE_DIR}`);
 
