@@ -12,6 +12,7 @@ import Recall from './pages/Recall';
 import Test from './pages/Test';
 import Result from './pages/Result';
 import ReportCard from './pages/ReportCard';
+import SharedReport from './pages/SharedReport';
 
 // Protected Route Component
 const ProtectedRoute = ({ children }) => {
@@ -26,6 +27,7 @@ function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Login />} />
+      <Route path="/shared-report/:id" element={<SharedReport />} />
       <Route element={<Layout />}>
         <Route
           path="/dashboard"

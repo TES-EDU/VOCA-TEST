@@ -1,9 +1,12 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useData } from '../context/DataContext';
-import { Home, Check, FileText, X, RotateCcw } from 'lucide-react';
+import { Home, Check, FileText, X, RotateCcw, Share2, Loader2 } from 'lucide-react';
+import { supabase } from '../lib/supabase';
 
 const Result = () => {
+    const [isSharing, setIsSharing] = useState(false);
+    const [shareMessage, setShareMessage] = useState('');
     const navigate = useNavigate();
     const location = useLocation();
     const { selectedUnit, updateProgress, updateStudyStats, testResults } = useData();
@@ -98,6 +101,44 @@ const Result = () => {
         }
     };
 
+    const handleShare = async () => {
+        setIsSharing(true);
+        setShareMessage('');
+        try {
+            const resultData = {
+                user_name: user?.name || 'Anonymous',
+                book_title: selectedUnit?.bookTitle || 'TES VOCA',
+                unit_title: selectedUnit?.title || 'Unknown Unit',
+                score: score,
+                total_questions: currentResults.length,
+                correct_answers: currentResults.filter(r => r.isCorrect).map(r => r.word),
+                incorrect_answers: currentResults.filter(r => !r.isCorrect).map(r => ({ word: r.word, userAnswer: r.userAnswer || '', meaning: r.meaning || '' })),
+                time_taken: 0
+            };
+
+            const { data, error } = await supabase
+                .from('test_results')
+                .insert([resultData])
+                .select();
+
+            if (error) throw error;
+
+            const shareId = data[0].id;
+            const shareUrl = `${window.location.origin}/shared-report/${shareId}`;
+
+            await navigator.clipboard.writeText(`[TES VOCA] ${user?.name || '익명'}님의 단어 시험 성적표!\n점수: ${score}점\n확인하기 👉 ${shareUrl}`);
+            setShareMessage('링크가 복사되었습니다!');
+
+            setTimeout(() => setShareMessage(''), 3000);
+        } catch (error) {
+            console.error('Error sharing result:', error);
+            setShareMessage('공유 실패. 테이블을 확인해주세요.');
+            setTimeout(() => setShareMessage(''), 3000);
+        } finally {
+            setIsSharing(false);
+        }
+    };
+
     return (
         <div className="animate-fade-in pb-8">
             {/* Header */}
@@ -124,6 +165,12 @@ const Result = () => {
             </div>
 
             {/* Action Buttons */}
+            {shareMessage && (
+                <div className="mb-4 p-3 bg-indigo-100 text-indigo-700 text-center rounded-xl font-medium animate-fade-in shadow-sm">
+                    {shareMessage}
+                </div>
+            )}
+
             <div className="grid grid-cols-2 gap-4 mb-8">
                 {retryWords.length > 0 ? (
                     <button
@@ -142,8 +189,17 @@ const Result = () => {
                 )}
 
                 <button
+                    onClick={handleShare}
+                    disabled={isSharing}
+                    className={`bg-indigo-50 hover:bg-indigo-100 text-indigo-700 p-4 rounded-2xl font-bold shadow-sm border border-indigo-100 flex items-center justify-center gap-2 ${retryWords.length === 0 && !isRetryResult ? 'col-span-2' : ''}`}
+                >
+                    {isSharing ? <Loader2 size={20} className="animate-spin" /> : <Share2 size={20} />}
+                    {isSharing ? '생성 중...' : '결과 공유하기'}
+                </button>
+
+                <button
                     onClick={handleHome}
-                    className={`bg-white hover:bg-slate-50 text-slate-700 p-4 rounded-2xl font-bold shadow-sm border border-slate-100 flex items-center justify-center gap-2 ${retryWords.length === 0 && !isRetryResult ? 'col-span-2' : ''}`}
+                    className={`bg-white hover:bg-slate-50 text-slate-700 p-4 rounded-2xl font-bold shadow-sm border border-slate-100 flex items-center justify-center gap-2 col-span-2`}
                 >
                     <Home size={20} />
                     Home
