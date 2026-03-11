@@ -9,7 +9,7 @@ const Result = () => {
     const [shareMessage, setShareMessage] = useState('');
     const navigate = useNavigate();
     const location = useLocation();
-    const { selectedUnit, updateProgress, updateStudyStats, testResults } = useData();
+    const { user, selectedUnit, updateProgress, updateStudyStats, testResults } = useData();
 
     // Check if we are viewing the result of a retry test
     const isRetryResult = location.state?.isRetryResult;
