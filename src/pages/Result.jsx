@@ -9,7 +9,7 @@ const Result = () => {
     const [shareMessage, setShareMessage] = useState('');
     const navigate = useNavigate();
     const location = useLocation();
-    const { user, selectedUnit, updateProgress, updateStudyStats, testResults } = useData();
+    const { user, selectedUnit, selectedTextbook, updateProgress, updateStudyStats, testResults } = useData();
 
     // Check if we are viewing the result of a retry test
     const isRetryResult = location.state?.isRetryResult;
@@ -105,14 +105,30 @@ const Result = () => {
         setIsSharing(true);
         setShareMessage('');
         try {
+            if (!supabase) {
+                setShareMessage('성적표 공유 기능이 설정되지 않았습니다. (환경 변수 확인 필요)');
+                setTimeout(() => setShareMessage(''), 3000);
+                return;
+            }
+
+            // Build recall/spell breakdown for the shared report
+            const recallData = hasContextResults ? testResults.recall : [];
+            const spellData = hasContextResults ? testResults.spell : [];
+
             const resultData = {
                 user_name: user?.name || 'Anonymous',
-                book_title: selectedUnit?.bookTitle || 'TES VOCA',
+                book_title: selectedUnit?.bookTitle || selectedTextbook?.title || 'TES VOCA',
                 unit_title: selectedUnit?.title || 'Unknown Unit',
                 score: score,
                 total_questions: currentResults.length,
                 correct_answers: currentResults.filter(r => r.isCorrect).map(r => r.word),
                 incorrect_answers: currentResults.filter(r => !r.isCorrect).map(r => ({ word: r.word, userAnswer: r.userAnswer || '', meaning: r.meaning || '' })),
+                recall_total: recallData.length,
+                recall_correct: recallData.filter(r => r.isCorrect).length,
+                recall_wrong: recallData.filter(r => !r.isCorrect).map(r => ({ word: r.word, userAnswer: r.userAnswer || '', meaning: r.meaning || '' })),
+                spell_total: spellData.length,
+                spell_correct: spellData.filter(r => r.isCorrect).length,
+                spell_wrong: spellData.filter(r => !r.isCorrect).map(r => ({ word: r.word, userAnswer: r.userAnswer || '', meaning: r.meaning || '' })),
                 time_taken: 0
             };
 

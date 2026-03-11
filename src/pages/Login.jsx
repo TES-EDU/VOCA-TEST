@@ -75,6 +75,16 @@ const Login = () => {
                         시작하기
                     </button>
                 </form>
+
+                {/* Teacher Login Link */}
+                <div className="mt-8 text-right">
+                    <button 
+                        onClick={() => navigate('/teacher')}
+                        className="text-xs text-slate-400 hover:text-indigo-500 transition-colors font-medium flex items-center justify-end gap-1 w-full"
+                    >
+                        선생님 로그인 &rarr;
+                    </button>
+                </div>
             </div>
         </div>
     );
