@@ -33,19 +33,31 @@ const TeacherDashboard = () => {
                     throw new Error('Supabase client is not initialized. Please check environment variables.');
                 }
 
-                // Fetch all test results, ordered by most recent first
-                const { data, error } = await supabase
-                    .from('test_results')
-                    .select('*')
-                    .order('created_at', { ascending: false });
+                // Fetch test results and students in parallel
+                const [resultsRes, studentsRes] = await Promise.all([
+                    supabase.from('test_results').select('*').order('created_at', { ascending: false }),
+                    supabase.from('students').select('*')
+                ]);
 
-                if (error) throw error;
+                if (resultsRes.error) throw resultsRes.error;
 
-                // Group by student name
-                const grouped = data.reduce((acc, curr) => {
-                    const name = curr.user_name || 'Anonymous';
-                    if (!acc[name]) acc[name] = [];
-                    acc[name].push(curr);
+                // Build a student lookup map by id
+                const studentMap = {};
+                if (studentsRes.data) {
+                    studentsRes.data.forEach(s => {
+                        studentMap[s.id] = s;
+                    });
+                }
+
+                // Group by student - prefer student_id, fallback to user_name
+                const grouped = resultsRes.data.reduce((acc, curr) => {
+                    const studentInfo = curr.student_id ? studentMap[curr.student_id] : null;
+                    const name = studentInfo?.name || curr.user_name || 'Anonymous';
+                    const grade = studentInfo?.grade || '';
+                    const key = name;
+
+                    if (!acc[key]) acc[key] = { grade, tests: [] };
+                    acc[key].tests.push(curr);
                     return acc;
                 }, {});
 
@@ -204,7 +216,7 @@ const TeacherDashboard = () => {
                             <div className="flex-1 bg-white p-4 rounded-2xl border border-slate-100 shadow-sm flex flex-col items-center justify-center">
                                 <span className="text-slate-400 text-xs font-medium mb-1">총 시험 건수</span>
                                 <span className="text-2xl font-bold text-indigo-600">
-                                    {Object.values(groupedData).flat().length}건
+                                    {Object.values(groupedData).reduce((sum, s) => sum + s.tests.length, 0)}건
                                 </span>
                             </div>
                         </div>
@@ -216,7 +228,8 @@ const TeacherDashboard = () => {
                                 <p className="text-center text-slate-400 py-8">검색 결과가 없습니다.</p>
                             ) : (
                                 filteredStudents.map(studentName => {
-                                    const studentTests = groupedData[studentName];
+                                    const studentData = groupedData[studentName];
+                                    const studentTests = studentData.tests;
                                     const latestTest = studentTests[0]; // ordered by desc
                                     
                                     return (
@@ -231,6 +244,9 @@ const TeacherDashboard = () => {
                                                 </div>
                                                 <div>
                                                     <h3 className="font-bold text-slate-800 text-lg group-hover:text-indigo-600 transition-colors">{studentName}</h3>
+                                                    {studentData.grade && (
+                                                        <p className="text-xs text-indigo-500 font-medium mb-0.5">{studentData.grade}</p>
+                                                    )}
                                                     <p className="text-xs text-slate-500 flex items-center gap-1">
                                                         <Calendar size={12} />
                                                         최근: {formatDate(latestTest.created_at)}
@@ -261,15 +277,19 @@ const TeacherDashboard = () => {
                             </div>
                             <div>
                                 <h2 className="text-xl font-bold text-slate-800">{selectedStudent}</h2>
-                                <p className="text-sm text-slate-500">총 {groupedData[selectedStudent].length}번의 시험 응시</p>
+                                {groupedData[selectedStudent]?.grade && (
+                                    <p className="text-xs text-indigo-500 font-medium">{groupedData[selectedStudent].grade}</p>
+                                )}
+                                <p className="text-sm text-slate-500">총 {groupedData[selectedStudent]?.tests.length || 0}번의 시험 응시</p>
                             </div>
                         </div>
 
                         {/* Test Timeline */}
                         <div className="pl-4 border-l-2 border-indigo-100 space-y-6 relative ml-4">
-                            {groupedData[selectedStudent].map((test, index) => {
+                            {(groupedData[selectedStudent]?.tests || []).map((test, index) => {
                                 const hasSubScores = test.recall_total > 0 || test.spell_total > 0;
                                 const isPerfect = test.score === 100;
+                                const totalTests = groupedData[selectedStudent]?.tests.length || 0;
                                 
                                 return (
                                     <div key={test.id} className="relative">
@@ -287,7 +307,7 @@ const TeacherDashboard = () => {
                                                     </span>
                                                 </div>
                                                 <div className="text-xs font-bold text-slate-400 bg-white px-2 py-1 rounded-md border border-slate-100 shadow-sm">
-                                                    #{groupedData[selectedStudent].length - index}
+                                                    #{totalTests - index}
                                                 </div>
                                             </div>
                                             

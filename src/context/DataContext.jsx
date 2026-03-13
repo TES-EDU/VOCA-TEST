@@ -21,9 +21,13 @@ export const DataProvider = ({ children }) => {
         setTextbooks(vocabularyData.textbooks);
     }, []);
 
-    const login = (name) => {
-        setUser({ name });
-        localStorage.setItem('voca_user', JSON.stringify({ name }));
+    const login = (studentData) => {
+        // Accept either a full student object {id, name, grade} or just a name string
+        const userData = typeof studentData === 'string'
+            ? { name: studentData }
+            : { id: studentData.id, name: studentData.name, grade: studentData.grade };
+        setUser(userData);
+        localStorage.setItem('voca_user', JSON.stringify(userData));
     };
 
     const logout = () => {

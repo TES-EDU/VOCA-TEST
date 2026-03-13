@@ -1,18 +1,21 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useData } from '../context/DataContext';
-import { UserCircle, Lock } from 'lucide-react';
+import { UserCircle, Lock, Loader2 } from 'lucide-react';
+import { supabase } from '../lib/supabase';
 
 const ADMIN_PASSWORD = '1234';
 
 const Login = () => {
     const [name, setName] = useState('');
+    const [grade, setGrade] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+    const [isLoading, setIsLoading] = useState(false);
     const { login } = useData();
     const navigate = useNavigate();
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setError('');
 
@@ -21,13 +24,69 @@ const Login = () => {
             return;
         }
 
+        if (!grade) {
+            setError('학년을 선택해주세요.');
+            return;
+        }
+
         if (password !== ADMIN_PASSWORD) {
             setError('비밀번호가 올바르지 않습니다.');
             return;
         }
 
-        login(name);
-        navigate('/dashboard');
+        setIsLoading(true);
+
+        try {
+            let student = null;
+
+            if (supabase) {
+                // Try to find existing student in Supabase (same as speaking app)
+                const { data: found } = await supabase
+                    .from('students')
+                    .select('*')
+                    .eq('name', name.trim())
+                    .order('created_at', { ascending: true })
+                    .limit(1);
+
+                if (found && found.length > 0) {
+                    student = found[0];
+                    // Update grade if different
+                    if (student.grade !== grade) {
+                        await supabase
+                            .from('students')
+                            .update({ grade })
+                            .eq('id', student.id);
+                        student.grade = grade;
+                    }
+                } else {
+                    // Create new student (same as speaking app)
+                    const { data: created, error: createErr } = await supabase
+                        .from('students')
+                        .insert([{ name: name.trim(), grade }])
+                        .select()
+                        .single();
+
+                    if (!createErr && created) {
+                        student = created;
+                    }
+                }
+            }
+
+            // Fallback: if Supabase failed or not configured, use local data
+            if (!student) {
+                student = { id: Date.now().toString(), name: name.trim(), grade };
+            }
+
+            login(student);
+            navigate('/dashboard');
+        } catch (err) {
+            console.error('Login error:', err);
+            // Fallback to local
+            login({ id: Date.now().toString(), name: name.trim(), grade });
+            navigate('/dashboard');
+        } finally {
+            setIsLoading(false);
+        }
     };
 
     return (
@@ -53,6 +112,28 @@ const Login = () => {
                         />
                     </div>
 
+                    <div>
+                        <select
+                            value={grade}
+                            onChange={(e) => setGrade(e.target.value)}
+                            className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition-all text-slate-700 appearance-none bg-white"
+                        >
+                            <option value="">학년을 선택하세요</option>
+                            <option value="초등 1학년">초등 1학년</option>
+                            <option value="초등 2학년">초등 2학년</option>
+                            <option value="초등 3학년">초등 3학년</option>
+                            <option value="초등 4학년">초등 4학년</option>
+                            <option value="초등 5학년">초등 5학년</option>
+                            <option value="초등 6학년">초등 6학년</option>
+                            <option value="중등 1학년">중등 1학년</option>
+                            <option value="중등 2학년">중등 2학년</option>
+                            <option value="중등 3학년">중등 3학년</option>
+                            <option value="고등 1학년">고등 1학년</option>
+                            <option value="고등 2학년">고등 2학년</option>
+                            <option value="고등 3학년">고등 3학년</option>
+                        </select>
+                    </div>
+
                     <div className="relative">
                         <input
                             type="password"
@@ -70,9 +151,14 @@ const Login = () => {
 
                     <button
                         type="submit"
-                        className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 rounded-xl transition-colors shadow-lg shadow-indigo-200"
+                        disabled={isLoading}
+                        className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 rounded-xl transition-colors shadow-lg shadow-indigo-200 flex items-center justify-center gap-2 disabled:opacity-50"
                     >
-                        시작하기
+                        {isLoading ? (
+                            <><Loader2 size={20} className="animate-spin" /> 로그인 중...</>
+                        ) : (
+                            '시작하기'
+                        )}
                     </button>
                 </form>
 
