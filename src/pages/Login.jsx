@@ -8,7 +8,6 @@ const ADMIN_PASSWORD = '1234';
 
 const Login = () => {
     const [name, setName] = useState('');
-    const [grade, setGrade] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const [isLoading, setIsLoading] = useState(false);
@@ -21,11 +20,6 @@ const Login = () => {
 
         if (!name.trim()) {
             setError('이름을 입력해주세요.');
-            return;
-        }
-
-        if (!grade) {
-            setError('학년을 선택해주세요.');
             return;
         }
 
@@ -50,19 +44,11 @@ const Login = () => {
 
                 if (found && found.length > 0) {
                     student = found[0];
-                    // Update grade if different
-                    if (student.grade !== grade) {
-                        await supabase
-                            .from('students')
-                            .update({ grade })
-                            .eq('id', student.id);
-                        student.grade = grade;
-                    }
                 } else {
                     // Create new student (same as speaking app)
                     const { data: created, error: createErr } = await supabase
                         .from('students')
-                        .insert([{ name: name.trim(), grade }])
+                        .insert([{ name: name.trim() }])
                         .select()
                         .single();
 
@@ -74,7 +60,7 @@ const Login = () => {
 
             // Fallback: if Supabase failed or not configured, use local data
             if (!student) {
-                student = { id: Date.now().toString(), name: name.trim(), grade };
+                student = { name: name.trim() };
             }
 
             login(student);
@@ -82,7 +68,7 @@ const Login = () => {
         } catch (err) {
             console.error('Login error:', err);
             // Fallback to local
-            login({ id: Date.now().toString(), name: name.trim(), grade });
+            login({ name: name.trim() });
             navigate('/dashboard');
         } finally {
             setIsLoading(false);
@@ -110,28 +96,6 @@ const Login = () => {
                             placeholder="이름 (Your Name)"
                             className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition-all"
                         />
-                    </div>
-
-                    <div>
-                        <select
-                            value={grade}
-                            onChange={(e) => setGrade(e.target.value)}
-                            className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition-all text-slate-700 appearance-none bg-white"
-                        >
-                            <option value="">학년을 선택하세요</option>
-                            <option value="초등 1학년">초등 1학년</option>
-                            <option value="초등 2학년">초등 2학년</option>
-                            <option value="초등 3학년">초등 3학년</option>
-                            <option value="초등 4학년">초등 4학년</option>
-                            <option value="초등 5학년">초등 5학년</option>
-                            <option value="초등 6학년">초등 6학년</option>
-                            <option value="중등 1학년">중등 1학년</option>
-                            <option value="중등 2학년">중등 2학년</option>
-                            <option value="중등 3학년">중등 3학년</option>
-                            <option value="고등 1학년">고등 1학년</option>
-                            <option value="고등 2학년">고등 2학년</option>
-                            <option value="고등 3학년">고등 3학년</option>
-                        </select>
                     </div>
 
                     <div className="relative">

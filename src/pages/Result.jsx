@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useData } from '../context/DataContext';
-import { Home, Check, FileText, X, RotateCcw } from 'lucide-react';
+import { Home, Check, FileText, X, RotateCcw, CloudOff } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 
 const Result = () => {
+    const [saveStatus, setSaveStatus] = useState(''); // 'saved', 'error', ''
     const navigate = useNavigate();
     const location = useLocation();
     const { user, selectedUnit, selectedTextbook, updateProgress, updateStudyStats, testResults } = useData();
@@ -76,7 +77,6 @@ const Result = () => {
                     const spellData = hasContextResults ? testResults.spell : [];
 
                     const resultData = {
-                        student_id: user?.id || null,
                         user_name: user?.name || 'Anonymous',
                         book_title: selectedUnit?.bookTitle || selectedTextbook?.title || 'TES VOCA',
                         unit_title: selectedUnit?.title || 'Unknown Unit',
@@ -93,9 +93,18 @@ const Result = () => {
                         time_taken: 0
                     };
 
-                    await supabase.from('test_results').insert([resultData]);
+                    console.log('📝 Auto-saving test result to Supabase...');
+                    const { error: saveError } = await supabase.from('test_results').insert([resultData]);
+                    if (saveError) {
+                        console.error('❌ Supabase save error:', saveError);
+                        setSaveStatus('error');
+                    } else {
+                        console.log('✅ Test result saved successfully');
+                        setSaveStatus('saved');
+                    }
                 } catch (err) {
-                    console.error('Auto-save failed:', err);
+                    console.error('❌ Auto-save failed:', err);
+                    setSaveStatus('error');
                 }
             };
             autoSaveResult();
@@ -160,6 +169,20 @@ const Result = () => {
             </div>
 
             {/* Action Buttons */}
+            {/* Save Status Indicator */}
+            {saveStatus && (
+                <div className={`mb-4 py-2 px-4 rounded-xl text-sm font-medium text-center flex items-center justify-center gap-2 animate-fade-in ${
+                    saveStatus === 'saved' 
+                        ? 'bg-emerald-50 text-emerald-600 border border-emerald-200' 
+                        : 'bg-orange-50 text-orange-600 border border-orange-200'
+                }`}>
+                    {saveStatus === 'saved' ? (
+                        <><Check size={16} /> 성적이 저장되었습니다</>
+                    ) : (
+                        <><CloudOff size={16} /> 저장 실패 - 인터넷 연결을 확인해주세요</>
+                    )}
+                </div>
+            )}
             <div className="grid grid-cols-1 gap-4 mb-8">
                 {retryWords.length > 0 ? (
                     <button
