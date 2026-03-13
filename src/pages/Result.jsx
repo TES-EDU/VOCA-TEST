@@ -73,9 +73,6 @@ const Result = () => {
                 try {
                     if (!supabase) return;
 
-                    const recallData = hasContextResults ? testResults.recall : [];
-                    const spellData = hasContextResults ? testResults.spell : [];
-
                     const resultData = {
                         user_name: user?.name || 'Anonymous',
                         book_title: selectedUnit?.bookTitle || selectedTextbook?.title || 'TES VOCA',
@@ -84,12 +81,6 @@ const Result = () => {
                         total_questions: currentResults.length,
                         correct_answers: currentResults.filter(r => r.isCorrect).map(r => r.word),
                         incorrect_answers: currentResults.filter(r => !r.isCorrect).map(r => ({ word: r.word, userAnswer: r.userAnswer || '', meaning: r.meaning || '' })),
-                        recall_total: recallData.length,
-                        recall_correct: recallData.filter(r => r.isCorrect).length,
-                        recall_wrong: recallData.filter(r => !r.isCorrect).map(r => ({ word: r.word, userAnswer: r.userAnswer || '', meaning: r.meaning || '' })),
-                        spell_total: spellData.length,
-                        spell_correct: spellData.filter(r => r.isCorrect).length,
-                        spell_wrong: spellData.filter(r => !r.isCorrect).map(r => ({ word: r.word, userAnswer: r.userAnswer || '', meaning: r.meaning || '' })),
                         time_taken: 0
                     };
 
