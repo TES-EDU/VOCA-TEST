@@ -12,9 +12,12 @@ const TeacherDashboard = () => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
     const [groupedData, setGroupedData] = useState({});
+    const [studentGroups, setStudentGroups] = useState({});
     const [studentMap, setStudentMap] = useState({});
     
+    const [viewMode, setViewMode] = useState('date'); // 'date' | 'student'
     const [selectedDate, setSelectedDate] = useState(null);
+    const [selectedStudentName, setSelectedStudentName] = useState(null);
     const [searchQuery, setSearchQuery] = useState('');
     const [copiedId, setCopiedId] = useState(null);
     const [totalStudents, setTotalStudents] = useState(0);
@@ -50,8 +53,10 @@ const TeacherDashboard = () => {
             }
             setStudentMap(tempStudentMap);
 
-            // Group by Date (YYYY-MM-DD local time)
-            const grouped = resultsRes.data.reduce((acc, curr) => {
+            const groupedByDate = {};
+            const groupedByStudent = {};
+
+            resultsRes.data.forEach(curr => {
                 const d = new Date(curr.created_at);
                 const dateStr = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
 
@@ -59,16 +64,23 @@ const TeacherDashboard = () => {
                 const name = studentInfo?.name || curr.user_name || 'Anonymous';
                 const grade = studentInfo?.grade || '';
                 
-                if (!acc[dateStr]) acc[dateStr] = [];
-                acc[dateStr].push({
+                const testRecord = {
                     ...curr,
                     student_name: name,
                     grade: grade
-                });
-                return acc;
-            }, {});
+                };
 
-            setGroupedData(grouped);
+                // For date view
+                if (!groupedByDate[dateStr]) groupedByDate[dateStr] = [];
+                groupedByDate[dateStr].push(testRecord);
+
+                // For student view
+                if (!groupedByStudent[name]) groupedByStudent[name] = [];
+                groupedByStudent[name].push(testRecord);
+            });
+
+            setGroupedData(groupedByDate);
+            setStudentGroups(groupedByStudent);
         } catch (err) {
             console.error("Error fetching data:", err);
             setError(err.message || '데이터를 불러오는데 실패했습니다.');
@@ -86,25 +98,27 @@ const TeacherDashboard = () => {
 
     const handleDeleteStudent = async (e, studentId, studentName) => {
         e.stopPropagation();
-        if (!studentId) {
-            alert('초기 버전에서 생성된 계정(ID 없음)이라 삭제할 수 없습니다.');
-            return;
-        }
 
-        const confirmed = window.confirm(`[경고] '${studentName}' 학생을 정말 삭제하시겠습니까?\n\n학생 정보와 모든 시험 기록이 영구적으로 삭제되며 절대 복구할 수 없습니다.`);
+        const confirmed = window.confirm(`[경고] '${studentName}' 학생을 정말 삭제하시겠습니까?\n\n이 작업은 선생님 목록에서 계정을 가리며, 이 학생의 모든 시험 기록이 영구적으로 삭제됩니다. 계속하시겠습니까?`);
         if (!confirmed) return;
 
         try {
-            // Because test_results table has a foreign key to students, 
-            // deleting from students will fail if it's not cascaded, OR it might cascade.
-            // Let's delete test_results first to be safe if no CASCADE was set up.
-            await supabase.from('test_results').delete().eq('student_id', studentId);
-            const { error: deleteStudentError } = await supabase.from('students').delete().eq('id', studentId);
-            
-            if (deleteStudentError) throw deleteStudentError;
+            if (studentId) {
+                await supabase.from('test_results').delete().eq('student_id', studentId);
+                await supabase.from('students').delete().eq('id', studentId);
+            } else {
+                // Legacy records (no student_id from speaking app integration yet)
+                await supabase.from('test_results').delete().eq('user_name', studentName);
+            }
             
             alert('성공적으로 삭제되었습니다.');
             setLoading(true);
+            
+            // Clean up state selections if the selected entity was deleted
+            if (viewMode === 'student' && selectedStudentName === studentName) {
+                setSelectedStudentName(null);
+            }
+            
             fetchAllResults();
         } catch (err) {
             console.error('Delete error:', err);
@@ -125,8 +139,19 @@ const TeacherDashboard = () => {
         window.open(`/shared-report/${id}`, '_blank');
     };
 
-    const formatTime = (dateString) => {
+    const formatTime = (dateString, includeDate = false) => {
         const date = new Date(dateString);
+        
+        if (includeDate) {
+            return new Intl.DateTimeFormat('ko-KR', {
+                month: 'short',
+                day: 'numeric',
+                hour: 'numeric',
+                minute: '2-digit',
+                hour12: true
+            }).format(date);
+        }
+        
         return new Intl.DateTimeFormat('ko-KR', {
             hour: 'numeric',
             minute: '2-digit',
@@ -135,7 +160,6 @@ const TeacherDashboard = () => {
     };
 
     const getDayName = (dateStr) => {
-        // Create dates using local midnight to avoid timezone shift issues
         const [year, month, day] = dateStr.split('-');
         const d = new Date(year, month - 1, day);
         
@@ -156,7 +180,7 @@ const TeacherDashboard = () => {
         }).format(d);
     };
 
-    // Filter by search query
+    // Filter by search query based on current viewMode
     const rawDates = Object.keys(groupedData).sort((a,b) => b.localeCompare(a));
     const filteredGroups = rawDates.map(dateStr => {
         const matchingTests = groupedData[dateStr].filter(test => 
@@ -165,8 +189,47 @@ const TeacherDashboard = () => {
         return { dateStr, label: getDayName(dateStr), tests: matchingTests };
     }).filter(group => group.tests.length > 0);
 
-    const activeGroup = filteredGroups.find(g => g.dateStr === selectedDate) || filteredGroups[0];
+    const rawStudents = Object.keys(studentGroups).sort((a,b) => a.localeCompare(b));
+    const filteredStudents = rawStudents.filter(name => name.toLowerCase().includes(searchQuery.toLowerCase()));
+
     const totalTestsCount = rawDates.reduce((sum, dateStr) => sum + groupedData[dateStr].length, 0);
+
+    // Derived Right Panel State
+    let activeListTitle = '';
+    let activeListSubtitle = '';
+    let activeTests = [];
+    let hasZeroTestsForSelectedDate = false;
+
+    if (viewMode === 'date') {
+        const activeGroup = selectedDate ? filteredGroups.find(g => g.dateStr === selectedDate) : filteredGroups[0];
+        
+        if (activeGroup) {
+            activeListTitle = activeGroup.label.includes('월') ? activeGroup.label : `${activeGroup.label} (${activeGroup.dateStr})`;
+            activeListSubtitle = `총 ${activeGroup.tests.length}번의 시험 결과가 있습니다.`;
+            activeTests = activeGroup.tests;
+        } else if (selectedDate) {
+            hasZeroTestsForSelectedDate = true;
+            activeListTitle = `${selectedDate}`;
+            activeListSubtitle = `이 날짜에는 시험 기록이 없습니다.`;
+            activeTests = [];
+        }
+    } else {
+        const activeStudentName = selectedStudentName || filteredStudents[0];
+        if (activeStudentName && studentGroups[activeStudentName]) {
+            activeListTitle = activeStudentName;
+            const subTitleTestsCount = studentGroups[activeStudentName].length;
+            const grade = studentGroups[activeStudentName][0].grade;
+            activeListSubtitle = grade ? `${grade} • 총 ${subTitleTestsCount}번의 시험 기록이 있습니다.` : `총 ${subTitleTestsCount}번의 시험 기록이 있습니다.`;
+            activeTests = studentGroups[activeStudentName];
+        }
+    }
+
+    const isMobileHiddenLeft = (viewMode === 'date' && selectedDate) || (viewMode === 'student' && selectedStudentName);
+
+    const handleBackToMenu = () => {
+        if (viewMode === 'date') setSelectedDate(null);
+        if (viewMode === 'student') setSelectedStudentName(null);
+    };
 
     if (!isAuthenticated) {
         return (
@@ -243,12 +306,12 @@ const TeacherDashboard = () => {
             <header className="bg-indigo-600 text-white shadow-sm sticky top-0 z-20">
                 <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                        {selectedDate && (
-                            <button onClick={() => setSelectedDate(null)} className="p-2 -ml-2 rounded-full hover:bg-white/10 transition-colors md:hidden">
+                        {isMobileHiddenLeft && (
+                            <button onClick={handleBackToMenu} className="p-2 -ml-2 rounded-full hover:bg-white/10 transition-colors md:hidden">
                                 <ArrowLeft size={20} />
                             </button>
                         )}
-                        <Users size={24} className="hidden md:block" />
+                        <Users size={24} className={isMobileHiddenLeft ? 'hidden md:block' : 'block'} />
                         <h1 className="font-bold text-lg">
                             선생님 대시보드
                         </h1>
@@ -259,21 +322,9 @@ const TeacherDashboard = () => {
             {/* Main 2-Column Responsive Layout */}
             <main className="flex-1 w-full max-w-7xl mx-auto p-4 flex flex-col md:flex-row gap-6">
                 
-                {/* LEFT PANEL: Master List (Dates/Stats) */}
-                <div className={`w-full md:w-80 lg:w-96 shrink-0 flex flex-col gap-4 ${selectedDate ? 'hidden md:flex' : 'flex'}`}>
+                {/* LEFT PANEL: Master List */}
+                <div className={`w-full md:w-80 lg:w-96 shrink-0 flex flex-col gap-4 ${isMobileHiddenLeft ? 'hidden md:flex' : 'flex'}`}>
                     
-                    {/* Search Bar */}
-                    <div className="relative">
-                        <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
-                        <input
-                            type="text"
-                            placeholder="학생 이름 검색..."
-                            value={searchQuery}
-                            onChange={(e) => setSearchQuery(e.target.value)}
-                            className="w-full bg-white border border-slate-200 rounded-xl py-3 pl-10 pr-4 text-slate-700 outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all shadow-sm"
-                        />
-                    </div>
-
                     {/* Stats Summary */}
                     <div className="flex gap-3">
                         <div className="flex-1 bg-white p-4 rounded-2xl border border-slate-100 shadow-sm flex flex-col items-center justify-center">
@@ -286,78 +337,156 @@ const TeacherDashboard = () => {
                         </div>
                     </div>
 
-                    {/* Date List (Calendar mode) */}
+                    {/* View Toggle */}
+                    <div className="flex bg-slate-200/50 p-1 rounded-xl gap-1">
+                        <button
+                            onClick={() => setViewMode('date')}
+                            className={`flex-1 py-2 text-sm font-bold rounded-lg transition-all ${viewMode === 'date' ? 'bg-white text-indigo-600 shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}
+                        >
+                            <Calendar size={16} className="inline mr-1 -mt-0.5" /> 날짜별 보기
+                        </button>
+                        <button
+                            onClick={() => setViewMode('student')}
+                            className={`flex-1 py-2 text-sm font-bold rounded-lg transition-all ${viewMode === 'student' ? 'bg-white text-indigo-600 shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}
+                        >
+                            <Users size={16} className="inline mr-1 -mt-0.5" /> 전체 학생 보기
+                        </button>
+                    </div>
+
+                    {/* Search Bar */}
+                    <div className="relative">
+                        <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
+                        <input
+                            type="text"
+                            placeholder="학생 이름 검색..."
+                            value={searchQuery}
+                            onChange={(e) => setSearchQuery(e.target.value)}
+                            className="w-full bg-white border border-slate-200 rounded-xl py-3 pl-10 pr-4 text-slate-700 outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all shadow-sm"
+                        />
+                    </div>
+
+                    {/* Dynamic List */}
                     <div className="flex-1 bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden flex flex-col">
-                        <div className="p-4 border-b border-slate-100 bg-slate-50/50">
-                            <h2 className="text-sm font-bold text-slate-500 flex items-center gap-2">
-                                <Calendar size={16} />
-                                날짜별 시험 기록
-                            </h2>
-                        </div>
-                        <div className="p-2 overflow-y-auto space-y-1 max-h-[calc(100vh-280px)]">
-                            {filteredGroups.length === 0 ? (
-                                <p className="text-center text-slate-400 py-8 text-sm">기록이 없습니다.</p>
-                            ) : (
-                                filteredGroups.map(group => {
-                                    const isActive = (selectedDate || filteredGroups[0]?.dateStr) === group.dateStr;
-                                    return (
-                                        <button
-                                            key={group.dateStr}
-                                            onClick={() => setSelectedDate(group.dateStr)}
-                                            className={`w-full p-3 rounded-xl transition-all flex items-center justify-between text-left group
-                                                ${isActive ? 'bg-indigo-50 border-indigo-100 text-indigo-700 shadow-sm' : 'bg-transparent border-transparent text-slate-600 hover:bg-slate-50'}`}
-                                        >
-                                            <div className="flex items-center gap-3">
-                                                <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold
-                                                    ${isActive ? 'bg-indigo-600 text-white' : 'bg-slate-100 text-slate-400 group-hover:bg-slate-200'}`}>
-                                                    {group.label === '오늘' ? '금' : group.label === '어제' ? '작' : group.dateStr.split('-')[2]}
+                        <div className="p-2 overflow-y-auto space-y-1 max-h-[calc(100vh-340px)] min-h-[300px]">
+                            {viewMode === 'date' && (
+                                <div className="mb-2 px-1">
+                                    <input 
+                                       type="date"
+                                       max={new Date().toISOString().split('T')[0]} // Max today
+                                       value={selectedDate || ''}
+                                       onChange={(e) => setSelectedDate(e.target.value)}
+                                       className="w-full bg-white border border-slate-200 rounded-xl py-2 px-3 text-slate-700 outline-none focus:border-indigo-500 shadow-sm text-sm"
+                                    />
+                                </div>
+                            )}
+                            {viewMode === 'date' && (
+                                filteredGroups.length === 0 ? (
+                                    <p className="text-center text-slate-400 py-8 text-sm">기록이 없습니다.</p>
+                                ) : (
+                                    filteredGroups.slice(0, 4).map(group => {
+                                        const isActive = (selectedDate || filteredGroups[0]?.dateStr) === group.dateStr;
+                                        return (
+                                            <button
+                                                key={group.dateStr}
+                                                onClick={() => setSelectedDate(group.dateStr)}
+                                                className={`w-full p-3 rounded-xl transition-all flex items-center justify-between text-left group
+                                                    ${isActive ? 'bg-indigo-50 border-indigo-100 text-indigo-700 shadow-sm' : 'bg-transparent border-transparent text-slate-600 hover:bg-slate-50'}`}
+                                            >
+                                                <div className="flex items-center gap-3">
+                                                    <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold
+                                                        ${isActive ? 'bg-indigo-600 text-white' : 'bg-slate-100 text-slate-400 group-hover:bg-slate-200'}`}>
+                                                        {group.label === '오늘' ? '금' : group.label === '어제' ? '작' : group.dateStr.split('-')[2]}
+                                                    </div>
+                                                    <div>
+                                                        <h3 className={`font-bold text-sm ${isActive ? 'text-indigo-900' : 'text-slate-700'}`}>
+                                                            {group.label.includes('월') ? group.label : `${group.label} (${group.dateStr.replace('2026-','')})`}
+                                                        </h3>
+                                                    </div>
                                                 </div>
-                                                <div>
-                                                    <h3 className={`font-bold text-sm ${isActive ? 'text-indigo-900' : 'text-slate-700'}`}>
-                                                        {group.label.includes('월') ? group.label : `${group.label} (${group.dateStr.replace('2026-','')})`}
-                                                    </h3>
+                                                <div className="flex items-center gap-2">
+                                                    <div className={`text-xs font-bold px-2 py-0.5 rounded-md
+                                                        ${isActive ? 'bg-indigo-200/50 text-indigo-700' : 'bg-slate-100 text-slate-500'}`}>
+                                                        {group.tests.length}건
+                                                    </div>
+                                                    <ChevronRight size={16} className={`hidden md:block ${isActive ? 'text-indigo-400' : 'opacity-0'}`} />
                                                 </div>
-                                            </div>
-                                            <div className="flex items-center gap-2">
-                                                <div className={`text-xs font-bold px-2 py-0.5 rounded-md
-                                                    ${isActive ? 'bg-indigo-200/50 text-indigo-700' : 'bg-slate-100 text-slate-500'}`}>
-                                                    {group.tests.length}명
+                                            </button>
+                                        );
+                                    })
+                                )
+                            )}
+
+                            {viewMode === 'student' && (
+                                filteredStudents.length === 0 ? (
+                                    <p className="text-center text-slate-400 py-8 text-sm">검색 결과가 없습니다.</p>
+                                ) : (
+                                    filteredStudents.map(studentName => {
+                                        const tests = studentGroups[studentName];
+                                        const isActive = (selectedStudentName || filteredStudents[0]) === studentName;
+                                        return (
+                                            <button
+                                                key={studentName}
+                                                onClick={() => setSelectedStudentName(studentName)}
+                                                className={`w-full p-3 rounded-xl transition-all flex items-center justify-between text-left group
+                                                    ${isActive ? 'bg-indigo-50 border-indigo-100 text-indigo-700 shadow-sm' : 'bg-transparent border-transparent text-slate-600 hover:bg-slate-50'}`}
+                                            >
+                                                <div className="flex items-center gap-3">
+                                                    <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold
+                                                        ${isActive ? 'bg-indigo-600 text-white' : 'bg-slate-100 text-slate-400 group-hover:bg-slate-200'}`}>
+                                                        {studentName.charAt(0)}
+                                                    </div>
+                                                    <div>
+                                                        <h3 className={`font-bold text-sm ${isActive ? 'text-indigo-900' : 'text-slate-700'}`}>
+                                                            {studentName}
+                                                        </h3>
+                                                        {tests[0].grade && <p className="text-[10px] text-indigo-400 font-medium">{tests[0].grade}</p>}
+                                                    </div>
                                                 </div>
-                                                <ChevronRight size={16} className={`hidden md:block ${isActive ? 'text-indigo-400' : 'opacity-0'}`} />
-                                            </div>
-                                        </button>
-                                    );
-                                })
+                                                <div className="flex items-center gap-2">
+                                                    <div className={`text-xs font-bold px-2 py-0.5 rounded-md
+                                                        ${isActive ? 'bg-indigo-200/50 text-indigo-700' : 'bg-slate-100 text-slate-500'}`}>
+                                                        총 {tests.length}건
+                                                    </div>
+                                                    <ChevronRight size={16} className={`hidden md:block ${isActive ? 'text-indigo-400' : 'opacity-0'}`} />
+                                                </div>
+                                            </button>
+                                        );
+                                    })
+                                )
                             )}
                         </div>
                     </div>
                 </div>
 
-                {/* RIGHT PANEL: Detail Board for Selected Date */}
-                <div className={`flex-1 flex flex-col gap-4 ${!selectedDate && filteredGroups.length > 0 ? 'hidden md:flex' : 'flex'}`}>
+                {/* RIGHT PANEL: Detail Board (Dynamic) */}
+                <div className={`flex-1 flex flex-col w-full gap-4 ${!isMobileHiddenLeft && (filteredGroups.length > 0 || filteredStudents.length > 0) ? 'hidden md:flex' : 'flex'}`}>
                     
-                    {!activeGroup ? (
+                    {activeTests.length === 0 ? (
                         <div className="flex-1 bg-white rounded-3xl border border-slate-100 shadow-sm flex flex-col items-center justify-center p-8">
                             <CalendarCheck size={48} className="text-slate-200 mb-4" />
-                            <h2 className="text-xl font-bold text-slate-400">선택된 날짜가 없습니다</h2>
-                            <p className="text-slate-400 mt-2 text-sm">왼쪽 목록에서 날짜를 선택해주세요.</p>
+                            <h2 className="text-xl font-bold text-slate-400">선택된 항목이 없습니다</h2>
+                            <p className="text-slate-400 mt-2 text-sm">왼쪽 목록에서 기록을 선택해주세요.</p>
                         </div>
                     ) : (
                         <div className="flex-1 bg-white rounded-3xl border border-slate-100 shadow-sm overflow-hidden flex flex-col animate-fade-in relative pb-10">
                             {/* Panel Header */}
-                            <div className="bg-slate-50 border-b border-slate-100 p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 sticky top-0 z-10">
+                            <div className="bg-slate-50 border-b border-slate-100 p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 sticky top-0 z-10 w-full">
                                 <div>
-                                    <div className="flex items-center gap-2 text-indigo-600 mb-1">
-                                        <Calendar size={18} />
-                                        <h2 className="text-lg font-bold">{activeGroup.label.includes('월') ? activeGroup.label : `${activeGroup.label} (${activeGroup.dateStr})`}</h2>
+                                    <div className="flex items-center gap-2 text-indigo-600 mb-1 w-full flex-wrap">
+                                        {viewMode === 'date' ? <Calendar size={18} /> : 
+                                            <div className="w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center text-sm font-bold text-indigo-600 border border-indigo-200">
+                                                {activeListTitle.charAt(0)}
+                                            </div>
+                                        }
+                                        <h2 className="text-lg font-bold break-words pr-4">{activeListTitle}</h2>
                                     </div>
-                                    <p className="text-slate-500 text-sm">총 {activeGroup.tests.length}명의 학생이 이 날 시험을 완료했습니다.</p>
+                                    <p className="text-slate-500 text-sm">{activeListSubtitle}</p>
                                 </div>
                             </div>
 
                             {/* Test Cards List */}
                             <div className="p-4 sm:p-6 space-y-4 overflow-y-auto">
-                                {activeGroup.tests.map((test, index) => {
+                                {activeTests.map((test) => {
                                     const isPerfect = test.score === 100;
                                     
                                     return (
@@ -368,18 +497,22 @@ const TeacherDashboard = () => {
                                                 
                                                 {/* Left Profile Area */}
                                                 <div className="flex items-center gap-4 sm:w-1/3 shrink-0">
-                                                    <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-sm">
-                                                        {test.student_name.charAt(0)}
-                                                    </div>
+                                                    {viewMode === 'date' && (
+                                                        <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-sm">
+                                                            {test.student_name.charAt(0)}
+                                                        </div>
+                                                    )}
                                                     <div>
-                                                        <h3 className="font-bold text-slate-800 text-lg flex items-center gap-2">
-                                                            {test.student_name}
-                                                        </h3>
-                                                        <div className="flex items-center gap-2 text-xs font-medium text-slate-500 mt-0.5">
-                                                            {test.grade && <span className="text-indigo-500">{test.grade}</span>}
-                                                            <span>•</span>
+                                                        {viewMode === 'date' && (
+                                                            <h3 className="font-bold text-slate-800 text-lg flex items-center gap-2">
+                                                                {test.student_name}
+                                                            </h3>
+                                                        )}
+                                                        <div className="flex items-center gap-2 text-xs font-medium text-slate-500 mt-1">
+                                                            {viewMode === 'date' && test.grade && <span className="text-indigo-500">{test.grade}</span>}
+                                                            {viewMode === 'date' && test.grade && <span>•</span>}
                                                             <span className="flex items-center gap-1">
-                                                                {formatTime(test.created_at)} 제출
+                                                                {formatTime(test.created_at, viewMode === 'student')} 제출
                                                             </span>
                                                         </div>
                                                     </div>
@@ -426,15 +559,13 @@ const TeacherDashboard = () => {
                                                         >
                                                             <ExternalLink size={16} />
                                                         </button>
-                                                        {test.student_id && (
-                                                            <button 
-                                                                onClick={(e) => handleDeleteStudent(e, test.student_id, test.student_name)}
-                                                                className="p-2 bg-red-50 text-red-500 hover:bg-red-100 hover:text-red-700 rounded-lg transition-colors ml-1"
-                                                                title="학생 및 시험 기록 전체 삭제"
-                                                            >
-                                                                <Trash2 size={16} />
-                                                            </button>
-                                                        )}
+                                                        <button 
+                                                            onClick={(e) => handleDeleteStudent(e, test.student_id, test.student_name)}
+                                                            className="p-2 bg-red-50 text-red-500 hover:bg-red-100 hover:text-red-700 rounded-lg transition-colors ml-1"
+                                                            title="이 시험 결과 및 학생 계정 영구 삭제 (초기 기록 포함)"
+                                                        >
+                                                            <Trash2 size={16} />
+                                                        </button>
                                                     </div>
                                                 </div>
 
